@@ -1,0 +1,17 @@
+{
+  "name": "senchabot-docs",
+  "version": "0.1.0",
+  "description": "Official Senchabot Documentation",
+  "main": "index.js",
+  "repository": "https://github.com/senchabot-opensource/docs.git",
+  "author": "Senchabot Dev Krew",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.10"
+  }
+}
