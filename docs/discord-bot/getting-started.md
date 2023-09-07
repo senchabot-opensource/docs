@@ -1,1 +1,1 @@
-# Discord Getting Started
+# Getting Started
