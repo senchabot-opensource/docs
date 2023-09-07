@@ -35,12 +35,37 @@ export default defineConfig({
     ],
 
     search: {
-      provider: "local",
+      provider: 'local',
+      options: {
+        locales: {
+          tr: {
+            translations: {
+              button: {
+                buttonText: 'Arama',
+                buttonAriaLabel: 'Arama'
+              },
+              modal: {
+
+                displayDetails: 'Ayrıntılı listeyi görüntüle',
+                resetButtonTitle: 'Arama kriterlerini temizleyin',
+                backButtonTitle: 'Aramayı kapat',
+                noResultsText: 'Hiçbir sonuç bulunamadı',
+                footer: {
+                  selectText: 'navigasyon için',
+                  navigateText: 'seçmek için',
+                  navigateUpKeyAriaLabel: 'yukarı ok',
+                  navigateDownKeyAriaLabel: 'aşağı ok',
+                  closeText: 'kapatmak için'
+                }
+              }
+            }
+          }
+        }
+      }
     },
 
     editLink: {
-      pattern:
-        "https://github.com/senchabot-opensource/docs/edit/main/docs/:path",
+      pattern: "https://github.com/senchabot-opensource/docs/edit/main/docs/:path",
     },
   },
   locales: {
@@ -136,6 +161,17 @@ export default defineConfig({
       lang: "tr",
       link: "/tr",
       themeConfig: {
+        docFooter: {
+          prev: 'Önceki sayfa',
+          next: 'Sonraki sayfa',
+        },
+        outlineTitle: 'Bu sayfadaki',
+        lastUpdatedText: 'Son güncelleme',
+        editLink: {
+          pattern: "https://github.com/senchabot-opensource/docs/edit/main/docs/:path",
+          text: "Bu sayfayı düzenle",
+        },
+
         sidebar: [
           // Sidebar Top - TR
           {
