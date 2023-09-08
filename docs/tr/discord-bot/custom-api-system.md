@@ -1,1 +1,1 @@
-# Custom API Sistemi <Badge type="warning" text="soon"/>
+# Custom API Sistemi <Badge type="info" text="planned"/>

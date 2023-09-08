@@ -93,6 +93,6 @@
 
 <br/>
 
-::: info Cooldown System
+::: info Cooldown Sistemi
 Komut kullanım bekleme süresi kullanıcı başına 2 dakikadır.
 :::
