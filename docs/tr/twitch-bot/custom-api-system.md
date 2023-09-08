@@ -1,1 +1,1 @@
-# Custom API Sistemi <Badge type="tip" text="beta" />
+# Custom API Sistemi <Badge type="info" text="planned"/>
