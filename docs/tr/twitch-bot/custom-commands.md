@@ -1,15 +1,135 @@
-# Özel Komutlar <Badge type="tip" text="beta"/>
+---
+outline: [1, 3]
+---
 
-### Kanal Komutları
+# Özel Komutlar <Badge type="tip" text="BETA"/>
 
-Bu komutlarla Twitch kanallarına kişiselleştirilmiş komutlar eklenebilmektedir.
+## Kanal Komutları
 
-| Komut                                                      | Açıklama veya Yanıt                                            |
-| :--------------------------------------------------------- | -------------------------------------------------------------- |
-| !acmd [command_name] [command_content]                     | Komut ekle.                                                    |
-| !ucmd [command_name / command_alias] [new_command_content] | Komut metnini veya takma adların orijinal metnini güncelle.    |
-| !dcmd [command_name]                                       | Komutu, kendisini veya takma adlarından birini kullanarak sil. |
-| !acmda [command_name] [command_alias(es) boşluk bırakarak] | Takma adlar ekle.                                              |
-| !dcmda [command_alias]                                     | Takma adlardan birini sil.                                     |
+### Komut Ekleme
 
-### Kanal Komutlarına Erişim
+```
+!acmd [komut_adı] [komut_içeriği]
+```
+
+::: details Örnek Kullanım
+
+```
+!acmd senchabot https://senchabot.app/
+```
+
+:::
+
+### Komut Güncelleme
+
+```
+!ucmd [komut_adı] [yeni_komut_içeriği]
+```
+
+::: details Örnek Kullanım
+
+```
+!ucmd senchabot https://github.com/senchabot-opensource/monorepo
+```
+
+:::
+
+```
+!ucmd [komut_takma_adı] [yeni_komut_içeriği]
+```
+
+::: details Örnek Kullanım
+
+```
+!ucmd senchabot-link https://github.com/senchabot-opensource/
+```
+
+:::
+
+### Komut Silme
+
+```
+!dcmd [komut_adı]
+```
+
+::: details Örnek Kullanım
+
+```
+!dcmd senchabot
+```
+
+:::
+
+### Alias Add
+
+```
+!acmda [komut_adı] [komut_takma_adı]
+```
+
+::: details Örnek Kullanım
+
+```
+!acmda senchabot senchabot-link
+```
+
+:::
+
+#### Çoklu takma ad ekleme <Badge type="warning" text="new" />
+
+```
+!acmda [komut_adı] [komut_takma_adları (boşluk bırakarak)]
+```
+
+::: details Örnek Kullanım
+
+```
+!acmda senchabot senchabot-link senchabot-github senchabot-app
+```
+
+:::
+
+### Takma Ad Silme
+
+```
+!dcmda [komut_takma_adı]
+```
+
+::: details Örnek Kullanım
+
+```
+!dcmda senchabot-link
+```
+
+:::
+
+#### Çoklu takma ad silme <Badge type="info" text="planned"/>
+
+```
+!dcmda [komut_takma_adları (boşluk bırakarak)]
+```
+
+::: details Örnek Kullanım
+
+```
+!dcmda senchabot-link senchabot-github
+```
+
+:::
+
+## Kanal Komutlarına Erişim
+
+```
+!cmds
+```
+
+::: details Örnek Yanıt
+
+```
+Senchabot's Channel Commands: senchabot, senchabot-site.
+```
+
+:::
+
+<!-- Kanal komutlarına linkle erişim
+    buton konulabilir
+ -->

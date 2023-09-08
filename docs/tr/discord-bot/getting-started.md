@@ -1,59 +1,18 @@
 # Senchabot - Discord Kullanım Kılavuzu
 
-
 ## Discord Sunucunuza Davet Edin
 
-[Senchabot](https://senchabot.app/)'u sunucunuza [davet ediniz.](https://discord.com/oauth2/authorize?client_id=1039550209274945587&permissions=681697203976878&scope=bot) Ardından dilediğiniz rolleri Senchabot'a veriniz. *İşaretli rollerin verilmesi önerilir.*
+Senchabot'u sunucunuza davet ediniz.
 
-# (new) Senchabot - Discord Kullanım Kılavuzu
+<!-- CONTENT REFERANCE SMALL -->
+<style src="@theme/style.css"></style>
+<div>
+<a class="content-ref-s" href="https://discord.com/api/oauth2/authorize?client_id=1039550209274945587&permissions=2199022698327&scope=bot%20applications.commands">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Senchabot'u Topluluğuna Ekle</span> 
+        </span>
+    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+</a>
+</div>
 
-## Giriş / Introduction
-
-  - alt başlıklara yönlendirme linkleri
-    - invite
-    - command list
-    - feature list (?)
-    - ...
-
-## Sunucuya Davet
-
-  - Dış davet: tarayıcıdan linkle
-  - İç davet: discord içinde botun üstüne tıklayarak yapılan
-
-## Feature List
-
-### Twitch: Yayın Duyuru Mesajı ve Etkinliği
-
-#### Yayın Duyuru Mesajları
-
-  1. 
-  2. 
-
-#### Yayın Etkinlikleri
-
-  1. 
-  2. 
-
-### Purge komutu (başlık türkçeleşip değişebilir -> Temizlik İşlemleri)
-
-## Command List (özelliğe göre table yapılacak)
-
-### Twitch: Yayın Duyuru Mesajı ve Etkinliği
-
-##### Yayın Duyuru Mesajları
-
-| command | description |
-| ------- | ----------- |
-|         |             |
-
-#### Yayın Etkinlikleri
-
-| command | description |
-| ------- | ----------- |
-|         |             |
-
-### Purge komutu (başlık türkçeleşip değişebilir -> Temizlik İşlemleri)
-
-| command | description |
-| ------- | ----------- |
-|         |             |
+Ardından dilediğiniz rolleri Senchabot'a veriniz. _İşaretli rollerin verilmesi önerilir._

@@ -1,1 +1,1 @@
-# Command Timer System <Badge type="warning" text="soon" />
+# Command Timer System <Badge type="info" text="planned" />

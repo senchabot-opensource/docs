@@ -1,3 +1,1 @@
-# Komut Zamanlayıcı Sistemi <Badge type="warning" text="soon" />
-
-!timer
+# Komut Zamanlayıcı Sistemi <Badge type="info" text="planned"/>

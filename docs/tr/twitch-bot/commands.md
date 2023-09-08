@@ -1,6 +1,6 @@
 # Komutlar
 
-## Ön Tanımlı Komutlar <Badge type="tip" text="beta"/>
+## Ön Tanımlı Komutlar <Badge type="tip" text="BETA"/>
 
 | Komut        | Senchabot'un Yanıtı                                                                                                                                                                                                                  |
 | :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -13,7 +13,7 @@
 | lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
 
-## Takip Çağrısı <Badge type="tip" text="beta"/>
+## Takip Çağrısı <Badge type="warning" text="NEW"/>
 
 ```
 !so {user.name}
@@ -29,7 +29,7 @@
 
 <!-- Result Photo ? -->
 
-## Sözlük <Badge type="tip" text="beta"/>
+## Sözlük <Badge type="warning" text="NEW"/>
 
 ```
 !sozluk [term_name]
@@ -38,13 +38,61 @@
 ### Girdi
 
 ```
-!so @senchabot
+!sozluk senchabot
 ```
 
 ### Çıktı
 
 <!-- Result Photo ? -->
 
+## Modül Komutları
+
+<!-- Custom API System - CONTENT REFERANCE SMALL -->
+<style src="@theme/style.css"></style>
+<div>
+<a class="content-ref-s" href="/tr/twitch-bot/custom-api-system">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Custom API Sistemi <Badge type="info" text="planned"/></span> 
+        </span>
+    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+</a>
+</div>
+
+<!-- Command Timer System - CONTENT REFERANCE SMALL -->
+<style src="@theme/style.css"></style>
+<div>
+<a class="content-ref-s" href="/tr/twitch-bot/command-timer-system">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Komut Zamanlayıcı Sistemi <Badge type="info" text="planned"/></span> 
+        </span>
+    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+</a>
+</div>
+
+<!-- Reminder System - CONTENT REFERANCE SMALL -->
+<style src="@theme/style.css"></style>
+<div>
+<a class="content-ref-s" href="/tr/twitch-bot/reminder-system">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Hatırlatıcı Sistemi <Badge type="info" text="planned"/></span> 
+        </span>
+    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+</a>
+</div>
+
+<!-- Note Taking System - CONTENT REFERANCE SMALL -->
+<style src="@theme/style.css"></style>
+<div>
+<a class="content-ref-s" href="/tr/twitch-bot/note-taking-system">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Not Sistemi <Badge type="info" text="planned"/></span> 
+        </span>
+    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+</a>
+</div>
+
+<br/>
+
 ::: info Cooldown System
-translate EN: komut kullanım cooldown süresi kullanıcı başına 2dk'dır.
+Komut kullanım bekleme süresi kullanıcı başına 2 dakikadır.
 :::

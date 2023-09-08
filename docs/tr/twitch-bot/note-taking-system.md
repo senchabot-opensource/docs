@@ -1,1 +1,1 @@
-# Note Taking System <Badge type="warning" text="soon" />
+# Note Taking System <Badge type="info" text="planned"/>
