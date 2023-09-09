@@ -48,7 +48,7 @@
 ## Modül Komutları
 
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/tr/twitch-bot/custom-api-system">
         <span class="ref-details-s">
@@ -59,7 +59,7 @@
 </div>
 
 <!-- Command Timer System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/tr/twitch-bot/command-timer-system">
         <span class="ref-details-s">
@@ -70,7 +70,7 @@
 </div>
 
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/tr/twitch-bot/reminder-system">
         <span class="ref-details-s">
@@ -81,7 +81,7 @@
 </div>
 
 <!-- Note Taking System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/tr/twitch-bot/note-taking-system">
         <span class="ref-details-s">
