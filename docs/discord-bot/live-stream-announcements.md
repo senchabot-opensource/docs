@@ -1,1 +1,1 @@
-# Live Stream Announcements <Badge type="tip" text="beta" />
+# Live Stream Announcements <Badge type="warning" text="NEW" />
