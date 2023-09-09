@@ -32,18 +32,18 @@
 ## Module Commands
 
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/twitch-bot/custom-api-system">
         <span class="ref-details-s">
-            <span class="content-ref-page-title-s">Custom API System <Badge type="info" text="planned"/></span> 
+            <span class="content-ref-page-title-s">Custom API System <Badge type="warning" text="NEW"/></span> 
         </span>
     <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
 </a>
 </div>
 
 <!-- Command Timer System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/twitch-bot/command-timer-system">
         <span class="ref-details-s">
@@ -54,7 +54,7 @@
 </div>
 
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/twitch-bot/reminder-system">
         <span class="ref-details-s">
@@ -65,7 +65,7 @@
 </div>
 
 <!-- Note Taking System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/custom.css"></style>
 <div>
 <a class="content-ref-s" href="/twitch-bot/note-taking-system">
         <span class="ref-details-s">
