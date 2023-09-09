@@ -196,7 +196,7 @@ footer span a {
 
     /* Discord Button */
     .discord-button {
-        width: 25%;
+        width: 40%;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -215,7 +215,7 @@ footer span a {
 
     .discord-button-title {
         display: block;
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: var(--brand-white);
         transition: color 0.25s;
     }
@@ -235,7 +235,7 @@ footer span a {
 
     /* Twitch Button */
     .twitch-button {
-        width: 25%;
+        width: 40%;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -254,7 +254,7 @@ footer span a {
 
     .twitch-button-title {
         display: block;
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: var(--brand-white);
         transition: color 0.25s;
     }
