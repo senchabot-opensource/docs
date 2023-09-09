@@ -1,0 +1,274 @@
+/* Global */
+.vp-doc a {
+    text-decoration: inherit;
+}
+
+footer {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 0.1px solid var(--vp-c-divider);
+}
+
+footer span {
+    font-size: 0.7rem;
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: var(--vp-c-text-3);
+}
+
+footer span a {
+    text-decoration: underline;
+}
+
+/* Light Theme */
+:root {
+
+    /* Content ref large */
+    .content-ref {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: var(--vp-c-default-soft);
+        border-radius: 12px;
+        box-shadow: none;
+        transition: box-shadow 0.25s;
+    }
+
+    .content-ref:hover {
+        box-shadow: var(--vp-shadow-2);
+    }
+
+    .content-ref-section-title {
+        display: block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: var(--vp-c-text-3);
+    }
+
+    .content-ref-page-title {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--brand-primary);
+        transition: color 0.25s;
+    }
+
+    .content-ref:hover .content-ref-page-title {
+        color: var(--brand-secondary);
+    }
+
+    .content-ref-svg {
+        color: var(--brand-primary);
+        transition: color 0.25s;
+    }
+
+    .content-ref:hover .content-ref-svg {
+        color: var(--brand-secondary);
+    }
+
+    /* Content ref small */
+    .content-ref-s {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: var(--vp-c-default-soft);
+        border-radius: 12px;
+        box-shadow: none;
+        transition: box-shadow 0.25s;
+    }
+
+    .content-ref-s:hover {
+        box-shadow: var(--vp-shadow-2);
+    }
+
+    .content-ref-page-title-s {
+        display: block;
+        font-size: 1rem;
+        color: var(--brand-primary);
+        transition: color 0.25s;
+    }
+
+    .content-ref-s:hover .content-ref-page-title-s {
+        color: var(--brand-secondary);
+    }
+
+    .content-ref-svg-s {
+        color: var(--brand-primary);
+        transition: color 0.25s;
+    }
+
+    .content-ref-s:hover .content-ref-svg-s {
+        color: var(--brand-secondary);
+    }
+}
+
+/* Dark Theme */
+.dark {
+
+    /* Content ref large */
+    .content-ref {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: var(--vp-c-default-soft);
+        border-radius: 12px;
+        box-shadow: none;
+        transition: box-shadow 0.25s;
+    }
+
+    .content-ref:hover {
+        box-shadow: var(--vp-shadow-2);
+    }
+
+    .content-ref-section-title {
+        display: block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: var(--vp-c-text-3);
+    }
+
+    .content-ref-page-title {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .content-ref:hover .content-ref-page-title {
+        color: var(--brand-primary);
+    }
+
+    .content-ref-svg {
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .content-ref:hover .content-ref-svg {
+        color: var(--brand-primary);
+    }
+
+    /* Content ref small */
+    .content-ref-s {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: var(--vp-c-default-soft);
+        border-radius: 12px;
+        box-shadow: none;
+        transition: box-shadow 0.25s;
+    }
+
+    .content-ref-s:hover {
+        box-shadow: var(--vp-shadow-2);
+    }
+
+    .content-ref-page-title-s {
+        display: block;
+        font-size: 1rem;
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .content-ref-s:hover .content-ref-page-title-s {
+        color: var(--brand-primary);
+    }
+
+    .content-ref-svg-s {
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .content-ref-s:hover .content-ref-svg-s {
+        color: var(--brand-primary);
+    }
+
+    /* Discord Button */
+    .discord-button {
+        width: 40%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 32px;
+        margin: 16px 0;
+        background-color: var(--discord-brand);
+        border-radius: 28px;
+        box-shadow: none;
+        transition: box-shadow 0.25s;
+    }
+
+    .discord-button:hover {
+        box-shadow: var(--vp-shadow-2);
+    }
+
+    .discord-button-title {
+        display: block;
+        font-size: 1.05rem;
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .discord-button:hover .discord-button-title {
+        color: var(--brand-black);
+    }
+
+    .discord-button-svg {
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .discord-button:hover .discord-button-svg {
+        color: var(--brand-black);
+    }
+
+    /* Twitch Button */
+    .twitch-button {
+        width: 40%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 32px;
+        margin: 16px 0;
+        background-color: var(--twitch-brand);
+        border-radius: 28px;
+        box-shadow: none;
+        transition: box-shadow 0.25s;
+    }
+
+    .twitch-button:hover {
+        box-shadow: var(--vp-shadow-2);
+    }
+
+    .twitch-button-title {
+        display: block;
+        font-size: 1.05rem;
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .twitch-button:hover .twitch-button-title {
+        color: var(--brand-black);
+    }
+
+    .twitch-button-svg {
+        color: var(--brand-white);
+        transition: color 0.25s;
+    }
+
+    .twitch-button:hover .twitch-button-svg {
+        color: var(--brand-black);
+    }
+}
