@@ -19,13 +19,13 @@ outline: [1, 3]
 <!-- AidenWallis - CONTENT REFERANCE LARGE -->
 <style src="@theme/style.css"></style>
 <div>
-<a class="content-ref" href="https://spotify.aidenwallis.co.uk/" target="blank_">
+    <a class="content-ref" href="https://spotify.aidenwallis.co.uk/" target="blank_">
         <span class="ref-details">
             <span class="content-ref-section-title">AIDEN WALLIS</span>
             <span class="content-ref-page-title">Spotify'ını Bağla</span>
         </span>
-    <svg style="width:48px;height:48px;" viewBox="0 0 24 24" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
-</a>
+        <svg style="width:48px;height:48px;" viewBox="0 0 24 24" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
 </div>
 
 #### Yayın Sohbetine Komut Ekle
