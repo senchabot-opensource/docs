@@ -279,6 +279,38 @@ We have custom button style
   </a>
 </div>
 
+## Displaying Discord messages
+
+We use [@discord-message-components/vue](https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md) to display "fake" Discord messages on pages. The reason for this is to make it easy for you to create, easy for anyone in the future to edit, and avoid having to take screenshots and using too many images on a page at once. Here's a preview of the components:
+
+<DiscordMessages>
+	<DiscordMessage profile="user">
+		!ping
+	</DiscordMessage>
+	<DiscordMessage profile="bot">
+		<DiscordMention :highlight="true" profile="user" />, pong! Took 50ms
+	</DiscordMessage>
+</DiscordMessages>
+
+The syntax to make this display is quite simple as well:
+
+```js
+<DiscordMessages>
+	<DiscordMessage profile="user">
+		!ping
+	</DiscordMessage>
+	<DiscordMessage profile="bot" avatar="https://avatars.githubusercontent.com/u/125701962" >
+		<DiscordMention :highlight="true" profile="user" />, pong! Took 50ms
+	</DiscordMessage>
+</DiscordMessages>
+```
+
+These components are made with [Vue](https://vuejs.org/), but if you aren't familiar with Vue, don't worry about it. Just understand that you'll usually only need the `profile="user"`/`profile="bot"` attribute for the `<DiscordMessage>` component. All `<DiscordMessage>` components must be children of a single `<DiscordMessages>` component for it to display properly.
+
+Do note the casing in `<DiscordMessages>` syntax instead of `<discord-messages>`. This is due to how VuePress renders markdown and HTML inside markdown files. It doesn't recognize `<discord-messages>` as an HTML element, therefore rendering anything indented inside it as a regular code block.
+
+These components feature messages, mentions, embeds, interactions, and more. You can read more about how to use them by checking out [@discord-message-components/vue](https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md).
+
 ## Advanced
 
 This docs uses [markdown-it](https://github.com/markdown-it/markdown-it) as the Markdown renderer.
