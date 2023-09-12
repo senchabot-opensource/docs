@@ -3,7 +3,6 @@ import "../custom.css";
 </script>
 
 <template>
-  <Layout>
     <footer>
         <span>
             Released under the  <a href="https://github.com/senchabot-opensource/monorepo/blob/dev/LICENSE">GPL-3.0 License</a>
@@ -17,5 +16,4 @@ import "../custom.css";
             <a href="https://senchabot.app/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
         </span>
     </footer>
-  </Layout>
 </template>
