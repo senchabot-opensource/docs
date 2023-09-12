@@ -260,7 +260,7 @@ We have custom button style
 <div>
   <a class="content-ref-s" href="/MARKDOWN-EXTENSIONS">
     <span class="ref-details-s">
-      <span class="content-ref-page-title-s">MARKDOWN-EXTENSIONS</span> 
+      <span class="content-ref-page-title-s">MARKDOWN-EXTENSIONS</span>
     </span>
     <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
   </a>
@@ -310,6 +310,20 @@ These components are made with [Vue](https://vuejs.org/), but if you aren't fami
 Do note the casing in `<DiscordMessages>` syntax instead of `<discord-messages>`. This is due to how VuePress renders markdown and HTML inside markdown files. It doesn't recognize `<discord-messages>` as an HTML element, therefore rendering anything indented inside it as a regular code block.
 
 These components feature messages, mentions, embeds, interactions, and more. You can read more about how to use them by checking out [@discord-message-components/vue](https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md).
+
+<DiscordMessages>
+    <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :highlight="true" profile="user" :command="true">input
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            OUTPUT
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+
+## Özelleştirilmiş Duyuru Mesajı
 
 ## Advanced
 
