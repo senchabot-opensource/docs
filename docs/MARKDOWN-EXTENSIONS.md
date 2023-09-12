@@ -65,10 +65,10 @@ And providing you are in `foo/one.md`:
 The badge lets you add status to your headers.
 
 ```html
-### Title <Badge type="info" text="default" /> ### Title
-<Badge type="tip" text="BETA" /> ### Title
-<Badge type="warning" text="NEW" /> ### Title
-<Badge type="danger" text="caution" />
+### Title <Badge type="info" text="default" />
+### Title <Badge type="tip" text="BETA" />
+### Title <Badge type="warning" text="NEW" />
+### Title <Badge type="danger" text="caution" />
 ```
 
 Code above renders like:
@@ -305,25 +305,72 @@ The syntax to make this display is quite simple as well:
 </DiscordMessages>
 ```
 
+### Slash Command messages
+
+<DiscordMessages>
+  <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
+    <template #interactions>
+      <DiscordInteraction :ephemeral="true" profile="user" :command="true">input
+        </DiscordInteraction>
+    </template>
+    <DiscordMarkdown>
+      OUTPUT
+    </DiscordMarkdown>
+  </DiscordMessage>
+</DiscordMessages>
+
+```js
+<DiscordMessages>
+  <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
+    <template #interactions>
+      <DiscordInteraction :highlight="true" profile="user" :command="true">ping</DiscordInteraction>
+    </template>
+    <DiscordMarkdown>
+      Pong
+    </DiscordMarkdown>
+  </DiscordMessage>
+</DiscordMessages>
+```
+
+### Embed messages
+
+<DiscordMessages>
+	<DiscordMessage profile="bot">
+    <DiscordMention :highlight="true">everyone</DiscordMention>, TestUser is live on Twitch! Go check it out!
+		<template #embeds>
+			<DiscordEmbed
+				embed-title="TestUser - Twitch"
+				url="https://twitch.tv/senchabot"
+				image="https://i.imgur.com/JIkTOA6.png"
+				author-name="Twitch"
+			>
+			</DiscordEmbed>
+		</template>
+	</DiscordMessage>
+</DiscordMessages>
+
+```js
+<DiscordMessages>
+	<DiscordMessage profile="bot">
+    <DiscordMention>everyone</DiscordMention>, TestUser is live on Twitch! Go check it out!
+		<template #embeds>
+			<DiscordEmbed
+				embed-title="TestUser - Twitch"
+				url="https://twitch.tv/senchabot"
+				image="https://i.imgur.com/JIkTOA6.png" // This is test image
+				author-name="Twitch"
+			>
+			</DiscordEmbed>
+		</template>
+	</DiscordMessage>
+</DiscordMessages>
+```
+
 These components are made with [Vue](https://vuejs.org/), but if you aren't familiar with Vue, don't worry about it. Just understand that you'll usually only need the `profile="user"`/`profile="bot"` attribute for the `<DiscordMessage>` component. All `<DiscordMessage>` components must be children of a single `<DiscordMessages>` component for it to display properly.
 
 Do note the casing in `<DiscordMessages>` syntax instead of `<discord-messages>`. This is due to how VuePress renders markdown and HTML inside markdown files. It doesn't recognize `<discord-messages>` as an HTML element, therefore rendering anything indented inside it as a regular code block.
 
 These components feature messages, mentions, embeds, interactions, and more. You can read more about how to use them by checking out [@discord-message-components/vue](https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md).
-
-<DiscordMessages>
-    <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
-        <template #interactions>
-            <DiscordInteraction :highlight="true" profile="user" :command="true">input
-            </DiscordInteraction>
-        </template>
-        <DiscordMarkdown>
-            OUTPUT
-        </DiscordMarkdown>
-    </DiscordMessage>
-</DiscordMessages>
-
-## Özelleştirilmiş Duyuru Mesajı
 
 ## Advanced
 
