@@ -1,5 +1,5 @@
 ---
-outline: [1, 3]
+outline: [2, 3]
 ---
 
 # Özel Komutlar <Badge type="tip" text="BETA"/>
