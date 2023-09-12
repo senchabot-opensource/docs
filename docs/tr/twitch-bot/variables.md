@@ -8,7 +8,7 @@ Komut içeriğine eklenen değişkenlerdir.
 
 ## `{user.name}`
 
-Komutu kullanan kişinin kullanıcı adını yazar.
+Komutu kullanan kişinin kullanıcı adını döndürür.
 
 ::: details Örnek Kullanım
 
@@ -39,7 +39,7 @@ Senchabot: Günaydın senchabot-app!
 Komut Eklleme
 
 ```
-!acmd yas {random.number}
+!acmd yas {random.number} yaşındasın, bence!
 ```
 
 Kullanıcı Mesajı ve Yanıtı

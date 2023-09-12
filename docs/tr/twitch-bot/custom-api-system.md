@@ -1,15 +1,19 @@
 ---
-outline: [1, 3]
+outline: [2, 3]
 ---
 
 # Custom API Sistemi <Badge type="warning" text="NEW"/>
 
-{customapi.https://spotify.aidenwallis.co.uk/u/6480254ee1ec4a6adba45c92}
-
-## fORMAT
+Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kanalınıza eklemiş olduğunuz özel komut aracılığıyla yanıt almanıza olanak tanıyan sistemdir.
 
 ```
 {customapi.https://...}
+```
+
+#### Yayın Sohbetine Komut Ekle
+
+```
+!acmd [komut_adı] [komut_içeriği {customapi.https://...}]
 ```
 
 ## Custom API'yle Yapılabilecekler
@@ -27,12 +31,6 @@ outline: [1, 3]
         <svg style="width:48px;height:48px;" viewBox="0 0 24 24" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>
 </div>
-
-#### Yayın Sohbetine Komut Ekle
-
-```
-!acmd [komut_adı] [komut_içeriği {customapi.https://spotify.aidenwallis.co.uk/u/...}]
-```
 
 ::: details Örnek Kullanım
 Komut Ekleme
@@ -61,24 +59,29 @@ Aiden Wallis'in sitesinde bulunan _Now Playin Widget_ başlığı altındaki `ht
 
 :::
 
----
+### Rastgele Metin Yazdırma
 
-!acmd [command_name] [command text with {customapi.https://spotify.aidenwallis.co.uk/u/...}]
-
-{customapi.https://spotify.aidenwallis.co.uk/u/6480254ee1ec4a6adba45c92}
-
-https://spotify.aidenwallis.co.uk/
-
-https://aidenwallis.co.uk/
-
-!acmd song Current Song: {customapi.https://spotify.aidenwallis.co.uk/u/...}
-!song
-Current Song: {customapi.https://spotify.aidenwallis.co.uk/u/...}
-
-Current Song: ANGELPLAYA - DANGEROUS
-
-https://nowplaying.aidenwallis.co.uk/...
-
-###
-
+```
 {customapi.https://techy-api.vercel.app/api/text}
+```
+
+::: details Örnek Kullanım
+Komut Ekleme
+
+```
+!acmd metin {customapi.https://techy-api.vercel.app/api/text}.
+```
+
+Kullanıcı Mesajı
+
+```
+!metin
+```
+
+Senchabot'un Yanıtı
+
+```
+The hardest part was setting the traffic velocity
+```
+
+:::

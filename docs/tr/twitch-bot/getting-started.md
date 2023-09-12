@@ -8,4 +8,4 @@ Komutu [Senchabot](https://twitch.tv/senchabot/)'un sohbetine yazarak botu kanal
 !invite [your_channel_name]
 ```
 
-Ardından Senchabot'a moderatör rolü veriniz.
+Ardından Senchabot'a `moderatör` rolü veriniz.
