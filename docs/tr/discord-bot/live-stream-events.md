@@ -12,14 +12,24 @@ Discord etkinliklerini oluşturmak için Senchabot'un mesajlarını takip edece�
 
 ::: details Örnek Kullanım
 
-```
-User:
-  /set stream-event-channel channel-name: twitch-yayınları
-
-Senchabot:
-  `twitch-yayınları` isimli kanal Twitch yayın duyurusu etkinlikleri için listeye eklendi.
-```
-
+<!-- EXAMPLE - /set stream-event-channel channel-name: -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /set stream-event-channel channel-name: twitch-yayınları
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set stream-event-channel
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+        `twitch-yayınları` isimli kanal Twitch yayın duyurusu etkinlikleri için listeye eklendi.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
 :::
 
 ## Etkinlik Kanalını Silme
@@ -32,12 +42,22 @@ Senchabot'un mesajlarını takip ettiği kanallar listesinden belirtilen kanalı
 
 ::: details Örnek Kullanım
 
-```
-User:
-  /delete stream-event-channel channel-name: twitch-yayınları
-
-Senchabot:
-  `twitch-yayınları` isimli yazı kanalı yayın etkinlik yazı kanalları listesinden kaldırıldı.
-```
-
+<!-- EXAMPLE - /delete stream-event-channel channel-name: -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /delete stream-event-channel channel-name: twitch-yayınları
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">delete stream-event-channel
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+        `twitch-yayınları` isimli yazı kanalı yayın etkinlik yazı kanalları listesinden kaldırıldı.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
 :::
