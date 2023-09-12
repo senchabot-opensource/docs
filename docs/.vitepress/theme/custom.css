@@ -1,8 +1,12 @@
 /* Global */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+/* Links */
 .vp-doc a {
     text-decoration: inherit;
 }
 
+/* Footer */
 footer {
     margin-top: 24px;
     padding-top: 24px;
@@ -21,6 +25,7 @@ footer span a {
     text-decoration: underline;
 }
 
+/* Scrollbar Styles */
 *::-webkit-scrollbar {
     width: 16px;
 }
@@ -126,6 +131,62 @@ footer span a {
     .content-ref-s:hover .content-ref-svg-s {
         color: var(--brand-secondary);
     }
+
+    /* Discord Message Input Dark Theme*/
+    .message-input {
+        height: 42px;
+        display: flex;
+        align-items: center;
+        margin: 8px;
+        background-color: #40444B;
+        font-weight: 400;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 8px;
+        border-radius: 8px;
+      }
+      
+      .sencha-icon {
+        width: 20px;
+        height: 20px;
+        margin: 8px 14px 8px 14px;
+      }
+    
+      .cmd-inline-text {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 5px;
+        color: #DBDEE1;
+      }
+      
+      .cmd-inline {
+        display: flex;
+        align-items: center;
+        background-color: #111214;
+        padding: 1px ;
+        border-radius: 4px;
+      }
+      
+      .cmd-inline-opt {
+        font-size: 14px;
+        color: #DBDEE1;
+        display: inline-block;
+        padding: 1px 8px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        user-select: none;
+        flex-shrink: 0
+      }
+      
+      .cmd-inline-input {
+        font-size: 14px;
+        color: #DBDEE1;
+        display: block;
+        padding: 1px 6px;
+        background-color: #36393e;
+        white-space: pre-wrap;
+        flex: 1
+    }
 }
 
 /* Dark Theme */
@@ -212,83 +273,5 @@ footer span a {
 
     .content-ref-s:hover .content-ref-svg-s {
         color: var(--brand-primary);
-    }
-
-    /* Discord Button */
-    .discord-button {
-        width: 40%;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 32px;
-        margin: 16px 0;
-        background-color: var(--discord-brand);
-        border-radius: 28px;
-        box-shadow: none;
-        transition: box-shadow 0.25s;
-    }
-
-    .discord-button:hover {
-        box-shadow: var(--vp-shadow-2);
-    }
-
-    .discord-button-title {
-        display: block;
-        font-size: 1.05rem;
-        color: var(--brand-white);
-        transition: color 0.25s;
-    }
-
-    .discord-button:hover .discord-button-title {
-        color: var(--brand-black);
-    }
-
-    .discord-button-svg {
-        color: var(--brand-white);
-        transition: color 0.25s;
-    }
-
-    .discord-button:hover .discord-button-svg {
-        color: var(--brand-black);
-    }
-
-    /* Twitch Button */
-    .twitch-button {
-        width: 40%;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 32px;
-        margin: 16px 0;
-        background-color: var(--twitch-brand);
-        border-radius: 28px;
-        box-shadow: none;
-        transition: box-shadow 0.25s;
-    }
-
-    .twitch-button:hover {
-        box-shadow: var(--vp-shadow-2);
-    }
-
-    .twitch-button-title {
-        display: block;
-        font-size: 1.05rem;
-        color: var(--brand-white);
-        transition: color 0.25s;
-    }
-
-    .twitch-button:hover .twitch-button-title {
-        color: var(--brand-black);
-    }
-
-    .twitch-button-svg {
-        color: var(--brand-white);
-        transition: color 0.25s;
-    }
-
-    .twitch-button:hover .twitch-button-svg {
-        color: var(--brand-black);
     }
 }

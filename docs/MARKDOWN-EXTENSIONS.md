@@ -233,7 +233,7 @@ We have custom button style
       <span class="content-ref-section-title">EXAMPLE SECTION TITLE</span>
       <span class="content-ref-page-title">EXAMPLE PAGE REFERANCE</span>
     </span>
-    <svg style="width:48px;height:48px;" viewBox="0 0 24 24" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    <svg style="width:32px;height:32px;" viewBox="0 0 20 20" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M6 8h5.293L5 14.293l1.414 1.414 6.293-6.293V15h2V6H6v2z"></path></svg>
   </a>
 </div>
 ```
@@ -247,7 +247,7 @@ We have custom button style
       <span class="content-ref-section-title">EXAMPLE SECTION TITLE</span>
       <span class="content-ref-page-title">EXAMPLE PAGE REFERANCE</span>
     </span>
-    <svg style="width:48px;height:48px;" viewBox="0 0 24 24" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    <svg style="width:32px;height:32px;" viewBox="0 0 20 20" class="content-ref-svg" aria-hidden="true"><path fill="currentColor" d="M6 8h5.293L5 14.293l1.414 1.414 6.293-6.293V15h2V6H6v2z"></path></svg>
   </a>
 </div>
 
@@ -262,7 +262,7 @@ We have custom button style
     <span class="ref-details-s">
       <span class="content-ref-page-title-s">MARKDOWN-EXTENSIONS</span>
     </span>
-    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    <svg style="width:32px;height:32px;" viewBox="0 0 20 20" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M6 8h5.293L5 14.293l1.414 1.414 6.293-6.293V15h2V6H6v2z"></path></svg>
   </a>
 </div>
 ```
@@ -275,8 +275,44 @@ We have custom button style
     <span class="ref-details-s">
       <span class="content-ref-page-title-s">MARKDOWN-EXTENSIONS</span> 
     </span>
-    <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    <svg style="width:32px;height:32px;" viewBox="0 0 20 20" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M6 8h5.293L5 14.293l1.414 1.414 6.293-6.293V15h2V6H6v2z"></path></svg>
   </a>
+</div>
+
+### Discord Button Style
+
+**Input**
+
+```js
+<style src="@theme/custom.css"></style>
+<div>
+  <div class="message-input">
+    <img alt="" class="sencha-icon" src="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp">
+    <span class="cmd-inline-text">/set streamer</span>
+    <span class="cmd-inline">
+      <span class="cmd-inline-opt">twitch-url-or-username</span>
+      <span class="cmd-inline-input">
+        <span>TestUser</span>
+      </span>
+    </span>
+  </div>
+</div>
+```
+
+**Output**
+
+<style src="@theme/custom.css"></style>
+<div>
+  <div class="message-input">
+    <img alt="" class="sencha-icon" src="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp">
+    <span class="cmd-inline-text">/set streamer</span>
+    <span class="cmd-inline">     
+      <span class="cmd-inline-opt">twitch-url-or-username</span>
+      <span class="cmd-inline-input">
+        <span>TestUser</span>
+      </span>
+    </span>
+  </div>
 </div>
 
 ## Displaying Discord messages
@@ -307,6 +343,25 @@ The syntax to make this display is quite simple as well:
 
 ### Slash Command messages
 
+**`ephemeral` Version**
+
+**Input**
+
+```js
+<DiscordMessages>
+  <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
+    <template #interactions>
+      <DiscordInteraction :ephemeral="true" profile="user" :command="true">input</DiscordInteraction>
+    </template>
+    <DiscordMarkdown>
+      OUTPUT
+    </DiscordMarkdown>
+  </DiscordMessage>
+</DiscordMessages>
+```
+
+**Output**
+
 <DiscordMessages>
   <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
     <template #interactions>
@@ -319,35 +374,40 @@ The syntax to make this display is quite simple as well:
   </DiscordMessage>
 </DiscordMessages>
 
+**`highlight` Version**
+
+**Input**
+
 ```js
 <DiscordMessages>
   <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
     <template #interactions>
-      <DiscordInteraction :highlight="true" profile="user" :command="true">ping</DiscordInteraction>
+      <DiscordInteraction :highlight="true" profile="user" :command="true">input</DiscordInteraction>
     </template>
     <DiscordMarkdown>
-      Pong
+      OUTPUT
     </DiscordMarkdown>
   </DiscordMessage>
 </DiscordMessages>
 ```
 
-### Embed messages
+**Output**
 
 <DiscordMessages>
-	<DiscordMessage profile="bot">
-    <DiscordMention :highlight="true">everyone</DiscordMention>, TestUser is live on Twitch! Go check it out!
-		<template #embeds>
-			<DiscordEmbed
-				embed-title="TestUser - Twitch"
-				url="https://twitch.tv/senchabot"
-				image="https://i.imgur.com/JIkTOA6.png"
-				author-name="Twitch"
-			>
-			</DiscordEmbed>
-		</template>
-	</DiscordMessage>
+  <DiscordMessage :bot="true" profile="bot" role-color="#1fab89">
+    <template #interactions>
+      <DiscordInteraction :highlight="true" profile="user" :command="true">input
+        </DiscordInteraction>
+    </template>
+    <DiscordMarkdown>
+      OUTPUT
+    </DiscordMarkdown>
+  </DiscordMessage>
 </DiscordMessages>
+
+### Embed messages
+
+**Input**
 
 ```js
 <DiscordMessages>
@@ -365,6 +425,23 @@ The syntax to make this display is quite simple as well:
 	</DiscordMessage>
 </DiscordMessages>
 ```
+
+**Output**
+
+<DiscordMessages>
+	<DiscordMessage profile="bot">
+    <DiscordMention :highlight="true">everyone</DiscordMention>, TestUser is live on Twitch! Go check it out!
+		<template #embeds>
+			<DiscordEmbed
+				embed-title="TestUser - Twitch"
+				url="https://twitch.tv/senchabot"
+				image="https://i.imgur.com/JIkTOA6.png"
+				author-name="Twitch"
+			>
+			</DiscordEmbed>
+		</template>
+	</DiscordMessage>
+</DiscordMessages>
 
 These components are made with [Vue](https://vuejs.org/), but if you aren't familiar with Vue, don't worry about it. Just understand that you'll usually only need the `profile="user"`/`profile="bot"` attribute for the `<DiscordMessage>` component. All `<DiscordMessage>` components must be children of a single `<DiscordMessages>` component for it to display properly.
 
