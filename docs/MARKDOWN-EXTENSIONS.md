@@ -287,7 +287,7 @@ We use [@discord-message-components/vue](https://github.com/Danktuary/discord-me
 	<DiscordMessage profile="user">
 		!ping
 	</DiscordMessage>
-	<DiscordMessage profile="bot">
+	<DiscordMessage profile="bot" >
 		<DiscordMention :highlight="true" profile="user" />, pong! Took 50ms
 	</DiscordMessage>
 </DiscordMessages>
@@ -299,7 +299,7 @@ The syntax to make this display is quite simple as well:
 	<DiscordMessage profile="user">
 		!ping
 	</DiscordMessage>
-	<DiscordMessage profile="bot" avatar="https://avatars.githubusercontent.com/u/125701962" >
+	<DiscordMessage profile="bot" >
 		<DiscordMention :highlight="true" profile="user" />, pong! Took 50ms
 	</DiscordMessage>
 </DiscordMessages>

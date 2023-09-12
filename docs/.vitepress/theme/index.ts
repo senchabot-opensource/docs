@@ -34,6 +34,7 @@ export default {
       profiles: {
         user: {
           author: 'Test User',
+          avatar: "https://i.imgur.com/9HlPIUx.jpg",
         },
         bot: {
           author: 'Senchabot',
