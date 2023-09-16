@@ -1,28 +1,57 @@
 # Komutlar
 
-## Ön Tanımlı Komutlar <Badge type="tip" text="beta"/>
+## Ön Tanımlı Komutlar <Badge type="warning" text="NEW"/>
 
-| Komut  | Senchabot'un Yanıtı                         |
-| :----- | ------------------------------------------- |
-| invite | Senchabot'un sunucu davet linkini gönderir. |
-|        |                                             |
-|        |                                             |
+| Komut        | Senchabot'un Yanıtı                                                                                                                                                                                                                  |
+| :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| invite       | Senchabot'un sunucu davet linkini gönderir.                                                                                                                                                                                          |
+| cmds         | {channel.name}'s Channel Commands: ...                                                                                                                                                                                               |
+| help         | Senchabot's Commands: cmds, acmda, dcmda, ping, invite, dcmd, help, sozluk, acmd, ucmd                                                                                                                                               |
+| senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
+| kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
+| frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
+| astra        | [We did it!] Astra UI Kit: https://docs.astraui.com                                                                                                                                                                                  |
+| lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
+| ping         | pong! VoHiYo                                                                                                                                                                                                                         |
 
-## Temizleme <Badge type="tip" text="beta"/>
+<!-- PURGE -->
+<!-- ## Temizleme <Badge type="warning" text="NEW"/>
 
-## Sözlük <Badge type="tip" text="beta"/>
+```
+/purge events
+```
+
+```
+/purge last-100-channel-messages message-content-contains:
+```
+
+```
+/purge last-100-channel-messages message-content-contains: user-name-contains:
+``` -->
+
+## Sözlük <Badge type="warning" text="NEW"/>
 
 ```
 !sozluk [term_name]
 ```
 
-### Girdi
+::: details Örnek Kullanım
 
-```
-!so @senchabot
-```
-
-### Çıktı
+<!-- EXAMPLE - !sozluk senchabot -->
+<DiscordMessages>
+<!-- TODO: NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            !sozluk senchabot
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <DiscordMarkdown>
+        Senchabot: Açık kaynak Discord ve Twitch botu.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
 
 <!-- Result Photo ? -->
 
@@ -53,7 +82,7 @@
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css"></style>
 <div>
-    <a class="content-ref-s" href="/tr/discord-bot/custom-api-system">
+    <a class="content-ref-s" href="">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Custom API Sistemi <Badge type="info" text="planned"/></span> 
         </span>
@@ -64,7 +93,7 @@
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css"></style>
 <div>
-    <a class="content-ref-s" href="/tr/discord-bot/reminder-system">
+    <a class="content-ref-s" href="">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Hatırlatıcı Sistemi <Badge type="info" text="planned"/></span> 
         </span>
