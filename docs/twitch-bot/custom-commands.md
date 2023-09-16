@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Custom Commands <Badge type="tip" text="BETA"/>
+# Custom Commands <Badge type="warning" text="NEW"/>
 
 ## Channel Commands
 

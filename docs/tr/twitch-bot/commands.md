@@ -1,6 +1,6 @@
 # Komutlar
 
-## Ön Tanımlı Komutlar <Badge type="tip" text="BETA"/>
+## Ön Tanımlı Komutlar <Badge type="warning" text="NEW"/>
 
 | Komut        | Senchabot'un Yanıtı                                                                                                                                                                                                                  |
 | :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -13,37 +13,50 @@
 | lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
 
-## Takip Çağrısı <Badge type="warning" text="NEW"/>
-
-```
-!so {user.name}
-```
-
-### Girdi
-
-```
-!so @senchabot
-```
-
-### Çıktı
-
-<!-- Result Photo ? -->
-
 ## Sözlük <Badge type="warning" text="NEW"/>
 
 ```
 !sozluk [term_name]
 ```
 
-### Girdi
+::: details Örnek Kullanım
+
+Kullanıcı Mesajı
 
 ```
 !sozluk senchabot
 ```
 
-### Çıktı
+Senchabot'un Yanıtı
 
-<!-- Result Photo ? -->
+```
+Açık kaynak Discord ve Twitch botu.
+```
+
+:::
+
+## Takip Çağrısı <Badge type="info" text="planned"/>
+
+```
+!so {user.name}
+```
+
+<!-- Örnek Kullanım -->
+<!-- ::: details Örnek Kullanım
+
+Kullanıcı Mesajı
+
+```
+!so senchabot
+```
+
+Senchabot'un Yanıtı
+
+```
+Announcement örneği
+```
+
+::: -->
 
 ## Modül Komutları
 

@@ -1,8 +1,33 @@
 # Commands
 
-## Global Commands <Badge type="tip" text="beta"/>
+## Global Commands <Badge type="warning" text="NEW"/>
 
-## Purge <Badge type="tip" text="beta"/>
+| Command      | Response                                                                                                                                                                                                                             |
+| :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| invite       | Senchabot Discord bot invite url.                                                                                                                                                                                                    |
+| cmds         | {channel.name}'s Channel Commands: ...                                                                                                                                                                                               |
+| help         | Senchabot's Commands: cmds, acmda, dcmda, ping, invite, dcmd, help, sozluk, acmd, ucmd                                                                                                                                               |
+| senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
+| kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
+| frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
+| astra        | [We did it!] Astra UI Kit: https://docs.astraui.com                                                                                                                                                                                  |
+| lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
+| ping         | pong! VoHiYo                                                                                                                                                                                                                         |
+
+<!-- PURGE -->
+<!-- ## Purge <Badge type="info" text="planned"/>
+
+```
+/purge events
+```
+
+```
+/purge last-100-channel-messages message-content-contains:
+```
+
+```
+/purge last-100-channel-messages message-content-contains: user-name-contains:
+``` -->
 
 ## Module Commands
 
@@ -31,7 +56,7 @@
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css"></style>
 <div>
-    <a class="content-ref-s" href="/discord-bot/custom-api-system">
+    <a class="content-ref-s" href="">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Custom API System <Badge type="info" text="planned"/></span> 
         </span>
@@ -42,7 +67,7 @@
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css"></style>
 <div>
-    <a class="content-ref-s" href="/discord-bot/reminder-system">
+    <a class="content-ref-s" href="">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Reminder System <Badge type="info" text="planned"/></span> 
         </span>
