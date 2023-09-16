@@ -1,6 +1,6 @@
 # Commands
 
-## Global Commands <Badge type="tip" text="BETA"/>
+## Global Commands <Badge type="warning" text="NEW"/>
 
 | Command      | Response                                                                                                                                                                                                                             |
 | :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -13,21 +13,28 @@
 | lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
 
-## Shoutout <Badge type="warning" text="NEW"/>
+## Shoutout <Badge type="info" text="planned"/>
 
 ```
 !so {user.name}
 ```
 
-### Input
+<!-- Example Usage - ENGLISH -->
+<!-- ::: details Example Usage
+
+Kullanıcı Mesajı
 
 ```
-!so @senchabot
+!so senchabot
 ```
 
-### Output
+Senchabot'un Yanıtı
 
-<!-- Result Photo ? -->
+```
+Announcement örneği
+```
+
+::: -->
 
 ## Module Commands
 
