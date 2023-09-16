@@ -2,7 +2,7 @@
 outline: [2, 3]
 ---
 
-# Özel Komutlar <Badge type="tip" text="BETA"/>
+# Özel Komutlar <Badge type="warning" text="NEW"/>
 
 ## Kanal Komutları
 
