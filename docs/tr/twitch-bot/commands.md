@@ -5,12 +5,17 @@
 | Komut        | Senchabot'un Yanıtı                                                                                                                                                                                                                  |
 | :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | cmds         | {channel.name}'s Channel Commands: ...                                                                                                                                                                                               |
-| help         | Senchabot's Commands: cmds, acmda, dcmda, ping, invite, dcmd, help, sozluk, acmd, ucmd                                                                                                                                               |
+| help         | Senchabot's Commands: cmds, acmd, dcmd, ucmd, acmda, dcmda, sozluk, ping, invite, help.                                                                                                                                               |
 | senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
 | kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
 | frontendship | discord.gg/frontendship                                                                                                                                                                                                              |                                                                                                                                                        |
 | lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
+
+::: info Bilgilendirme
+
+Ön tanımlı komutlarda [`!ucmd`](/tr/twitch-bot/custom-commands#komut-guncelleme) güncelleme komutu çalışmamaktadır. `!lurk` komutu bu konuda istisnadır.
+:::
 
 ## Sözlük <Badge type="warning" text="NEW"/>
 
