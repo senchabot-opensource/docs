@@ -5,13 +5,16 @@
 | Command      | Response                                                                                                                                                                                                                             |
 | :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | cmds         | {channel.name}'s Channel Commands: ...                                                                                                                                                                                               |
-| help         | Senchabot's Commands: cmds, acmda, dcmda, ping, invite, dcmd, help, sozluk, acmd, ucmd                                                                                                                                               |
+| help         | Senchabot's Commands: cdms, acmd, dcmd, ucmd, acmda, dcmda, sozluk, ping, invite, help.                                                                                                                                               |
 | senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
 | kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
 | frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
-| astra        | [We did it!] Astra UI Kit: https://docs.astraui.com                                                                                                                                                                                  |
-| lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
+
+::: info Information
+
+In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) update command does not work. The `!lurk` command is an exception in this regard.
+:::
 
 ## Shoutout <Badge type="info" text="planned"/>
 
