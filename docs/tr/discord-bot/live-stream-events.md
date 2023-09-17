@@ -7,22 +7,22 @@ Senchabot, belirtilen kanallarda [canlı yayın duyurularını](/tr/discord-bot/
 Discord etkinliklerini oluşturmak için Senchabot'un mesajlarını takip edeceği canlı yayın duyuruları kanalı seçiniz.
 
 ```
-/set stream-event-channel channel-name:
+/set-twitch event-channel channel:
 ```
 
 ::: details Örnek Kullanım
 
-<!-- EXAMPLE - /set stream-event-channel channel-name: -->
+<!-- EXAMPLE - /set-twitch event-channel channel: -->
 <DiscordMessages>
 <!-- NEW COMPONENT (user message) => change user message -->
     <DiscordMessage profile="user">
         <DiscordMarkdown>
-            /set stream-event-channel channel-name: twitch-yayınları
+            /set-twitch event-channel channel: twitch-yayınları
         </DiscordMarkdown>
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set stream-event-channel
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch event-channel
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
@@ -37,22 +37,22 @@ Discord etkinliklerini oluşturmak için Senchabot'un mesajlarını takip edece�
 Senchabot'un mesajlarını takip ettiği kanallar listesinden belirtilen kanalı kaldırınız.
 
 ```
-/delete stream-event-channel channel-name:
+/del-twitch event-channel channel:
 ```
 
 ::: details Örnek Kullanım
 
-<!-- EXAMPLE - /delete stream-event-channel channel-name: -->
+<!-- EXAMPLE - /del-twitch event-channel channel: -->
 <DiscordMessages>
 <!-- NEW COMPONENT (user message) => change user message -->
     <DiscordMessage profile="user">
         <DiscordMarkdown>
-            /delete stream-event-channel channel-name: twitch-yayınları
+            /del-twitch event-channel channel: twitch-yayınları
         </DiscordMarkdown>
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">delete stream-event-channel
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch event-channel
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>

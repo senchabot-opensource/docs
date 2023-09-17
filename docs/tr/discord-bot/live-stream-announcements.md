@@ -1,28 +1,30 @@
 ---
-outline: [2, 3]
+outline: [2, 4]
 ---
 
 # Canlı Yayın Duyuruları <Badge type="warning" text="NEW"/>
 
-## Yayıncı Ekleme ve Kaldırma
+## Yayın ve Yayıncı Özel Ayarları
 
 ### Yayıncı Ekleme
 
 ```
-/set streamer twitch-url-or-username:
+/set-twitch streamer url-or-username:
 ```
 
-<!-- EXAMPLE - /set streamer twitch-url-or-username: -->
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /set-twitch streamer url-or-username: -->
 <DiscordMessages>
 <!-- NEW COMPONENT (user message) => change user message -->
     <DiscordMessage profile="user">
         <DiscordMarkdown>
-            /set streamer twitch-url-or-username: senchabot
+            /set-twitch streamer url-or-username: senchabot
         </DiscordMarkdown>
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set streamer
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
@@ -30,10 +32,11 @@ outline: [2, 3]
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
+:::
 
 ::: info Bilgilendirme
 
-Twitch yayıncısı eklerken daha önce `/set stream-default-anno-channel channel-name` komutuyla varsayılan duyuru kanalı eklemiş olmalı veya isteğe bağlı kanal adını belirtmelisiniz.
+Twitch yayıncısı eklerken daha önce `/set-twitch announcement default-content` komutuyla varsayılan duyuru kanalı eklemiş olmalı veya isteğe bağlı kanal adını belirtmelisiniz.
 :::
 
 ### Duyuru Kanalı Özelleştirme
@@ -41,21 +44,23 @@ Twitch yayıncısı eklerken daha önce `/set stream-default-anno-channel channe
 Yayıncılara özel duyuru kanalı atayabilirsininiz.
 
 ```
-/set streamer twitch-url-or-username: channel-name:
+/set-twitch streamer url-or-username: channel:
 
 ```
 
-<!-- EXAMPLE - /set streamer twitch-url-or-username: channel-name:-->
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /set-twitch streamer url-or-username: channel:-->
 <DiscordMessages>
 <!-- NEW COMPONENT (user message) => change user message -->
     <DiscordMessage profile="user">
         <DiscordMarkdown>
-            /set streamer twitch-url-or-username: senchabot channel-name: twitch-yayınları
+            /set-twitch streamer url-or-username: senchabot channel: twitch-yayınları
         </DiscordMarkdown>
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set streamer
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
@@ -63,135 +68,36 @@ Yayıncılara özel duyuru kanalı atayabilirsininiz.
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
+:::
 
 ::: info Bilgilendirme
 
-Yayıncı eklenirken `channel-name` opsiyonu yazılmazsa yayıncının duyuru mesajları [varsayılan duyuru kanalına](#varsayılan-duyuru-kanalı) gönderilir.
+Yayıncı eklenirken `channel` opsiyonu yazılmazsa yayıncının duyuru mesajları [varsayılan duyuru kanalına](#varsayılan-duyuru-kanalı) gönderilir.
 :::
-
-### Yayıncı Silme
-
-```
-/delete streamer twitch-url-or-username:
-```
-
-<!-- EXAMPLE - /delete streamer twitch-url-or-username: -->
-<DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /delete streamer twitch-url-or-username: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
-    <DiscordMessage profile="bot" role-color="#1fab89">
-        <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">delete streamer
-            </DiscordInteraction>
-        </template>
-        <DiscordMarkdown>
-            `senchabot` kullanıcı adlı Twitch streamer veritabanından silindi.
-        </DiscordMarkdown>
-    </DiscordMessage>
-</DiscordMessages>
-
-## Varsayılan Duyuru Kanalı
-
-Twitch yayıncıları eklenirken `channel-name` opsiyonu girilmediğinde yayıncıların duyuruları varsayılan duyuru kanalında yapılır.
-
-### Kanal Ekleme
-
-```
-/set stream-anno-default-channel channel-name:
-```
-
-<!-- EXAMPLE - /set stream-anno-default-channel channel-name: -->
-<DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set stream-anno-default-channel channel-name: twitch-yayınları
-        </DiscordMarkdown>
-    </DiscordMessage>
-    <DiscordMessage profile="bot" role-color="#1fab89">
-        <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set stream-anno-default-channel
-            </DiscordInteraction>
-        </template>
-        <DiscordMarkdown>
-            `senchabot` isimli kanal varsayılan duyuru kanalı olarak ayarlandı.
-        </DiscordMarkdown>
-    </DiscordMessage>
-</DiscordMessages>
-
-### Kanalı Kaldırma
-
-```
-/delete stream-anno-default-channel
-```
-
-<!-- EXAMPLE - /delete stream-anno-default-channel -->
-<DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /delete stream-anno-default-channel
-        </DiscordMarkdown>
-    </DiscordMessage>
-    <DiscordMessage profile="bot" role-color="#1fab89">
-        <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">delete stream-anno-default-channel
-            </DiscordInteraction>
-        </template>
-        <DiscordMarkdown>
-            Varsayılan Twitch canlı yayın duyuru kanalı ayarı kaldırıldı.
-        </DiscordMarkdown>
-    </DiscordMessage>
-</DiscordMessages>
-
-## Duyuru Mesajı
-
-### Varsayılan Duyuru Mesajı
-
-```
-/set stream-anno-default-content anno-content:
-```
-
-<!-- EXAMPLE - /set stream-anno-default-content anno-content: -->
-<DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set stream-anno-default-content twitch-username-or-url:aysart announcement-content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
-        </DiscordMarkdown>
-    </DiscordMessage>
-    <DiscordMessage profile="bot" role-color="#1fab89">
-        <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set stream-anno-default-content
-            </DiscordInteraction>
-        </template>
-        <DiscordMarkdown>
-            Yayın duyuru mesajı içeriği ayarlandı: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} -> {twitch.url}`
-        </DiscordMarkdown>
-    </DiscordMessage>
-</DiscordMessages>
 
 ### Özelleştirilmiş Duyuru Mesajı
 
+<br/>
+
+#### Duyuru Mesajı Ekleme
+
 ```
-/set stream-anno-custom-content twitch-username-or-url: announcement-content:
+/set-twitch announcement custom-content username-or-url: content:
 ```
 
-<!-- EXAMPLE - /set stream-anno-custom-content twitch-username-or-url: announcement-content: -->
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /set-twitch announcement custom-content username-or-url: content: -->
 <DiscordMessages>
 <!-- NEW COMPONENT (user message) => change user message -->
     <DiscordMessage profile="user">
         <DiscordMarkdown>
-            /set stream-anno-custom-content twitch-username-or-url: senchabot announcement-content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
+            /set-twitch announcement custom-content username-or-url: senchabot content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
         </DiscordMarkdown>
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set stream-anno-custom-content
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement custom-content
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
@@ -199,19 +105,178 @@ Twitch yayıncıları eklenirken `channel-name` opsiyonu girilmediğinde yayınc
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
+:::
 
-## Delete
-
-```
-/delete stream-anno-default-content anno-content:
-```
+#### Duyuru Mesajını Kaldırma
 
 ```
-/delete streamer twitch-url-or-username: channel-name:
+/del-twitch announcement custom-content username-or-url:
 ```
 
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /del-twitch announcement custom-content username-or-url: -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /del-twitch announcement custom-content username-or-url: senchabot
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement custom-content
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            senchabot kullanıcı adlı Twitch yayıncısı için özelleştirilmiş duyuru mesajı içeriği kaldırıldı. Varsayılan duyuru mesajı içeriği: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}`
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+### Yayıncı Silme
+
 ```
-/delete stream-anno-custom-content twitch-username-or-url: announcement-content:
+/del-twitch streamer username-or-url:
 ```
 
-## Önerilen Kullanım Sırası -edit title
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /del-twitch streamer username-or-url: -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /del-twitch streamer username-or-url: senchabot
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch streamer
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            `senchabot` kullanıcı adlı Twitch streamer veritabanından silindi.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+## Varsayılan Duyuru Kanalı
+
+Twitch yayıncıları eklenirken `channel` opsiyonu girilmediğinde yayıncıların duyuruları varsayılan duyuru kanalında yapılır.
+
+### Kanal Ekleme
+
+```
+/set-twitch announcement default-channel channel:
+```
+
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /set-twitch announcement default-channel channel: -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /set-twitch announcement default-channel channel: twitch-yayınları
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement default-channel
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            `twitch-yayınları` isimli kanal varsayılan duyuru kanalı olarak ayarlandı.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+### Kanalı Kaldırma
+
+```
+/del-twitch announcement default-channel
+```
+
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /del-twitch announcement default-channel -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /del-twitch announcement default-channe
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement default-channel
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            Varsayılan Twitch canlı yayın duyuru kanalı ayarı kaldırıldı.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+## Varsayılan Duyuru Mesajı
+
+### Duyuru Mesajı Ekleme
+
+```
+/set-twitch announcement default-content content:
+```
+
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /set-twitch announcement default-content content: -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /set-twitch announcement default-content content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement default-content
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            Yayın duyuru mesajı içeriği ayarlandı: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} -> {twitch.url}`
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+### Duyuru Mesajını Kaldırma
+
+```
+/del-twitch announcement default-content
+```
+
+::: details Örnek Kullanım
+
+<!-- EXAMPLE - /del-twitch announcement default-content -->
+<DiscordMessages>
+<!-- NEW COMPONENT (user message) => change user message -->
+    <DiscordMessage profile="user">
+        <DiscordMarkdown>
+            /del-twitch announcement default-content
+        </DiscordMarkdown>
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement default-content
+            </DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            Varsayılan yayın duyuru mesajı içeriği kaldırıldı. Özelleştirilmiş duyuru mesajı olmayan yayıncıların duyuruları belirtilen formatta gönderilecektir. `{twitch.username}, {stream.category} yayınına başladı! {stream.title}: {twitch.url}`
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::

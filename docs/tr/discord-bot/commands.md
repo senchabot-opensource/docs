@@ -10,8 +10,6 @@
 | senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
 | kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
 | frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
-| astra        | [We did it!] Astra UI Kit: https://docs.astraui.com                                                                                                                                                                                  |
-| lurk         | Teşekkürler! {user.name}                                                                                                                                                                                                             |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
 
 <!-- PURGE -->
