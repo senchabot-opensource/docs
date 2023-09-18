@@ -226,7 +226,7 @@ We have custom button style
 **Input**
 
 ```js
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
   <a class="content-ref" href="/MARKDOWN-EXTENSIONS">
     <span class="ref-details">
@@ -240,7 +240,7 @@ We have custom button style
 
 **Output**
 
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
   <a class="content-ref" href="/MARKDOWN-EXTENSIONS">
     <span class="ref-details">
@@ -256,7 +256,7 @@ We have custom button style
 **Input**
 
 ```js
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
   <a class="content-ref-s" href="/MARKDOWN-EXTENSIONS">
     <span class="ref-details-s">
@@ -269,7 +269,7 @@ We have custom button style
 
 **Output**
 
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
   <a class="content-ref-s" href="/MARKDOWN-EXTENSIONS">
     <span class="ref-details-s">

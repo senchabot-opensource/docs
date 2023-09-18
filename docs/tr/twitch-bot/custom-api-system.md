@@ -21,7 +21,7 @@ Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kana
 ### Spotify'da Çalan Şarkıyı Göster <Badge type="warning" text="NEW"/>
 
 <!-- AidenWallis - CONTENT REFERANCE LARGE -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref" href="https://spotify.aidenwallis.co.uk/" target="blank_">
         <span class="ref-details">
