@@ -3,9 +3,6 @@ import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import '@theme/style.css'
 
-import Footer from './components/Footer.vue'
-import ApplicationCommands from './components/ApplicationCommands.vue'
-
 import {
 	DiscordButton,
 	DiscordButtons,
@@ -22,6 +19,9 @@ import {
 	install as DiscordMessageComponents,
 } from '@discord-message-components/vue';
 import '@discord-message-components/vue/dist/style.css';
+
+import Footer from './components/Footer.vue'
+import ApplicationCommands from './components/ApplicationCommands.vue'
 
 export default {
   extends: Theme,

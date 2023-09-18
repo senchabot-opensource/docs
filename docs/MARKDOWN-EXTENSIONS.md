@@ -315,7 +315,7 @@ We use [@discord-message-components/vue](https://github.com/Danktuary/discord-me
 	<DiscordMessage profile="user">
 		!ping
 	</DiscordMessage>
-	<DiscordMessage profile="bot" >
+	<DiscordMessage profile="bot" role-color="#1fab89" >
 		<DiscordMention :highlight="true" profile="user" />, pong! Took 50ms
 	</DiscordMessage>
 </DiscordMessages>
@@ -327,7 +327,7 @@ The syntax to make this display is quite simple as well:
 	<DiscordMessage profile="user">
 		!ping
 	</DiscordMessage>
-	<DiscordMessage profile="bot" >
+	<DiscordMessage profile="bot" role-color="#1fab89" >
 		<DiscordMention :highlight="true" profile="user" />, pong! Took 50ms
 	</DiscordMessage>
 </DiscordMessages>
@@ -403,7 +403,7 @@ The syntax to make this display is quite simple as well:
 
 ```js
 <DiscordMessages>
-	<DiscordMessage profile="bot">
+	<DiscordMessage profile="bot" role-color="#1fab89">
     <DiscordMention>everyone</DiscordMention>, TestUser is live on Twitch! Go check it out!
 		<template #embeds>
 			<DiscordEmbed
@@ -421,7 +421,7 @@ The syntax to make this display is quite simple as well:
 **Output**
 
 <DiscordMessages>
-	<DiscordMessage profile="bot">
+	<DiscordMessage profile="bot" role-color="#1fab89">
     <DiscordMention :highlight="true">everyone</DiscordMention>, TestUser is live on Twitch! Go check it out!
 		<template #embeds>
 			<DiscordEmbed
