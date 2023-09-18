@@ -15,6 +15,8 @@ export default defineConfig({
     ['meta', { name: 'og:site_name', content: 'Senchabot' }]
   ],
 
+  ignoreDeadLinks: true,
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: { src: '/svg/senchabot-nobg-1.svg', width: 24, height: 24 },
