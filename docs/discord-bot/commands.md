@@ -30,7 +30,7 @@
 ## Module Commands
 
 <!-- Live Stream Announcements - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref-s" href="/discord-bot/live-stream-announcements">
         <span class="ref-details-s">
@@ -41,7 +41,7 @@
 </div>
 
 <!-- Live Stream Events - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref-s" href="/discord-bot/live-stream-events">
         <span class="ref-details-s">
@@ -52,7 +52,7 @@
 </div>
 
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref-s" href="">
         <span class="ref-details-s">
@@ -63,7 +63,7 @@
 </div>
 
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref-s" href="">
         <span class="ref-details-s">
