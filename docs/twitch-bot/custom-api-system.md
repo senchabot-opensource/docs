@@ -21,7 +21,7 @@ This system allows you to send a GET request to a URL through the specified temp
 ### Display the Currently Playing Song on Spotify <Badge type="warning" text="NEW"/>
 
 <!-- AidenWallis - CONTENT REFERANCE LARGE -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref" href="https://spotify.aidenwallis.co.uk/" target="blank_">
         <span class="ref-details">

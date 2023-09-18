@@ -5,7 +5,7 @@
 Senchabot'u sunucunuza davet ediniz.
 
 <!-- CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css"></style>
+<style src="@theme/style.css" scoped></style>
 <div>
     <a class="content-ref-s" href="https://discord.com/api/oauth2/authorize?client_id=1039550209274945587&permissions=2199022698327&scope=bot%20applications.commands">
         <span class="ref-details-s">

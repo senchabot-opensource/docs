@@ -42,7 +42,7 @@ Announcement örneği
 ## Module Commands
 
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
     <a class="content-ref-s" href="/twitch-bot/custom-api-system">
         <span class="ref-details-s">
@@ -53,7 +53,7 @@ Announcement örneği
 </div>
 
 <!-- Command Timer System - CONTENT REFERANCE SMALL -->
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
     <a class="content-ref-s" href="/twitch-bot/command-timer-system">
         <span class="ref-details-s">
@@ -64,7 +64,7 @@ Announcement örneği
 </div>
 
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
     <a class="content-ref-s" href="/twitch-bot/reminder-system">
         <span class="ref-details-s">
@@ -75,7 +75,7 @@ Announcement örneği
 </div>
 
 <!-- Note Taking System - CONTENT REFERANCE SMALL -->
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>
 <div>
     <a class="content-ref-s" href="/twitch-bot/note-taking-system">
         <span class="ref-details-s">
