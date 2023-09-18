@@ -4,7 +4,7 @@
 !timer [command_name] [time]
 ```
 
-Returns the [custom command](/en/twitch-bot/custom-commands) you specified within the specified time.
+Returns the [custom command](/twitch-bot/custom-commands) you specified within the specified time.
 
 ::: details Example Usage
 
