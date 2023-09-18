@@ -21,6 +21,10 @@ footer span {
   color: var(--vp-c-text-3);
 }
 
+footer a:hover {
+  color: var(--brand-primary);;
+}
+
 footer span a {
   text-decoration: underline;
 }
@@ -131,14 +135,15 @@ footer span a {
     color: var(--brand-secondary);
   }
 
+  /* Application Command Light Theme*/
   .applicationCommand {
-    color: #dbdee1;
+    color: #40444b;
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Noto Sans', sans-serif;
     border-radius: 8px;
-    background-color: #40444b;
+    background-color: #dbdee1;
   }
 
   .applicationCommandIcon {
@@ -160,7 +165,7 @@ footer span a {
     margin: 6px 0px 6px 6px;
     border: 1px solid transparent;
     align-self: flex-start;
-    background-color: #101113;
+    background-color: #E3E5E8;
     justify-content: flex-start;
     vertical-align: top;
     max-width: calc(100% - 30px);
@@ -180,7 +185,7 @@ footer span a {
     display: block;
     padding: 1px 8px;
     white-space: pre-wrap;
-    background-color: #222226;
+    background-color: #fff;
     flex: 1;
   }
 
@@ -190,7 +195,7 @@ footer span a {
     margin: 6px 0px 6px 6px;
     border: 1px solid transparent;
     align-self: flex-start;
-    background-color: #101113;
+    background-color: #E3E5E8;
     justify-content: flex-start;
     vertical-align: top;
     max-width: calc(100% - 30px);
@@ -210,13 +215,14 @@ footer span a {
     display: block;
     padding: 1px 8px;
     white-space: pre-wrap;
-    background-color: #222226;
+    background-color: #fff;
     flex: 1;
   }
 }
 
 /* Dark Theme */
 .dark {
+
   /* Content ref large */
   .content-ref {
     display: flex;
@@ -299,4 +305,88 @@ footer span a {
   .content-ref-s:hover .content-ref-svg-s {
     color: var(--brand-primary);
   }
+
+    /* Application Command Dark Theme*/
+    .applicationCommand {
+      color: #dbdee1;
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'Noto Sans', sans-serif;
+      border-radius: 8px;
+      background-color: #40444b;
+    }
+  
+    .applicationCommandIcon {
+      width: 20px;
+      height: 20px;
+      margin: 8px 14px 8px 14px;
+      position: sticky;
+    }
+  
+    .applicationCommandName {
+      font-weight: 600;
+      margin-left: 4px;
+      padding: 8px 0px 0px;
+    }
+  
+    .optionPill {
+      display: flex;
+      border-radius: 4px;
+      margin: 6px 0px 6px 6px;
+      border: 1px solid transparent;
+      align-self: flex-start;
+      background-color: #101113;
+      justify-content: flex-start;
+      vertical-align: top;
+      max-width: calc(100% - 30px);
+      margin-top: 6px;
+    }
+  
+    .optionPillKey {
+      display: inline-block;
+      padding: 1px 8px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      user-select: none;
+      flex-shrink: 0;
+    }
+  
+    .optionPillValue {
+      display: block;
+      padding: 1px 8px;
+      white-space: pre-wrap;
+      background-color: #222226;
+      flex: 1;
+    }
+  
+    .optionPill2 {
+      display: flex;
+      border-radius: 4px;
+      margin: 6px 0px 6px 6px;
+      border: 1px solid transparent;
+      align-self: flex-start;
+      background-color: #101113;
+      justify-content: flex-start;
+      vertical-align: top;
+      max-width: calc(100% - 30px);
+      margin-top: 6px;
+    }
+  
+    .optionPillKey2 {
+      display: inline-block;
+      padding: 1px 8px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      user-select: none;
+      flex-shrink: 0;
+    }
+  
+    .optionPillValue2 {
+      display: block;
+      padding: 1px 8px;
+      white-space: pre-wrap;
+      background-color: #222226;
+      flex: 1;
+    }
 }

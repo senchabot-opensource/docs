@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
-import './style.css'
+import '@theme/style.css'
 
 import Footer from './components/Footer.vue'
 import ApplicationCommands from './components/ApplicationCommands.vue'
