@@ -1,10 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
-import './style.css'
-
-import Footer from './components/Footer.vue'
-import ApplicationCommands from './components/ApplicationCommands.vue'
+import '@theme/style.css'
+import '@theme/custom.css'
 
 import {
 	DiscordButton,
@@ -23,6 +21,9 @@ import {
 } from '@discord-message-components/vue';
 import '@discord-message-components/vue/dist/style.css';
 
+import Footer from './components/Footer.vue'
+import ApplicationCommands from './components/ApplicationCommands.vue'
+
 export default {
   extends: Theme,
   Layout: () => {
@@ -31,7 +32,7 @@ export default {
       'sidebar-nav-after': () => h(Footer)
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.use(DiscordMessageComponents, {
       profiles: {
         user: {
