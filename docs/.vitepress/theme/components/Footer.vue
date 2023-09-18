@@ -14,4 +14,4 @@
     </footer>
 </template>
 
-<style src="@theme/custom.css"></style>
+<style src="@theme/custom.css" scoped></style>

@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import '@theme/style.css'
+import '@theme/custom.css'
 
 import {
 	DiscordButton,
@@ -31,7 +32,7 @@ export default {
       'sidebar-nav-after': () => h(Footer)
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.use(DiscordMessageComponents, {
       profiles: {
         user: {

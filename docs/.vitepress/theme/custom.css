@@ -31,7 +31,7 @@ footer span a {
 
 /* Scrollbar Styles */
 *::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
 }
 
 *::-webkit-scrollbar-track {

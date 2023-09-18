@@ -2,11 +2,17 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    ssr: { 
+        noExternal: ['@discord-message-components/vue'] 
+    } 
+  },
   title: 'Senchabot',
   description: 'Documentation',
 
   lastUpdated: true,
   cleanUrls: true,
+  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -14,8 +20,6 @@ export default defineConfig({
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:site_name', content: 'Senchabot' }]
   ],
-
-  ignoreDeadLinks: true,
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
