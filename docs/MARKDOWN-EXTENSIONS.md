@@ -284,36 +284,28 @@ We have custom button style
 **Input**
 
 ```js
-<style src="@theme/custom.css"></style>
-<div>
-  <div class="message-input">
-    <img alt="" class="sencha-icon" src="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp">
-    <span class="cmd-inline-text">/set streamer</span>
-    <span class="cmd-inline">
-      <span class="cmd-inline-opt">twitch-url-or-username</span>
-      <span class="cmd-inline-input">
-        <span>TestUser</span>
-      </span>
-    </span>
-  </div>
-</div>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="/set-twitch streamer"
+    optionPillKey="url-or-username"
+    optionPillValue="senchabot"
+    optionPillKey2="channel"
+    optionPillValue2="twitch"
+    >
+</ApplicationCommands>
 ```
 
 **Output**
 
-<style src="@theme/custom.css"></style>
-<div>
-  <div class="message-input">
-    <img alt="" class="sencha-icon" src="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp">
-    <span class="cmd-inline-text">/set streamer</span>
-    <span class="cmd-inline">     
-      <span class="cmd-inline-opt">twitch-url-or-username</span>
-      <span class="cmd-inline-input">
-        <span>TestUser</span>
-      </span>
-    </span>
-  </div>
-</div>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="/set-twitch streamer"
+    optionPillKey="url-or-username"
+    optionPillValue="senchabot"
+    optionPillKey2="channel"
+    optionPillValue2="twitch"
+    >
+</ApplicationCommands>
 
 ## Displaying Discord messages
 

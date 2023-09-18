@@ -1,8 +1,10 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
-import Footer from './components/Footer.vue'
 import './style.css'
+
+import Footer from './components/Footer.vue'
+import ApplicationCommands from './components/ApplicationCommands.vue'
 
 import {
 	DiscordButton,
@@ -44,6 +46,8 @@ export default {
       },
     });
   
+    app.component('ApplicationCommands', ApplicationCommands);
+    
     app.component('DiscordButton', DiscordButton);
     app.component('DiscordButtons', DiscordButtons);
     app.component('DiscordEmbed', DiscordEmbed);
