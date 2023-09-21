@@ -3,10 +3,10 @@
 		<img v-if="appCmd.icon" class="applicationCommandIcon" :src="appCmd.icon" alt="" />
 		<div v-if="appCmd.name" class="applicationCommandName">
 			<span>
-				{{ appCmd.name }}
+				/{{ appCmd.name }}
 			</span>
 		</div>
-		<div class="optionPill">
+		<div v-if="optionPillKey" class="optionPill">
 				<span v-if="optionPillKey" class="optionPillKey">
 					{{ optionPillKey }}
 				</span>
@@ -14,7 +14,7 @@
 					{{ optionPillValue }}
 				</span>
 		</div>
-		<div class="optionPill2">
+		<div v-if="optionPillKey2" class="optionPill2">
 			<span v-if="optionPillKey2" class="optionPillKey2">
 				{{ optionPillKey2 }}
 			</span>
