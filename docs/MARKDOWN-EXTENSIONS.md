@@ -279,18 +279,18 @@ We have custom button style
   </a>
 </div>
 
-### Discord Button Style
+### Discord Application Commands Style
+
+We use a special component for Discord application commands.
 
 **Input**
 
 ```js
 <ApplicationCommands
     appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
-    appCmd-name="/set-twitch streamer"
-    optionPillKey="url-or-username"
-    optionPillValue="senchabot"
-    optionPillKey2="channel"
-    optionPillValue2="twitch"
+    appCmd-name="command-name"
+    optionPillKey="options1"
+    optionPillValue="option1-value"
     >
 </ApplicationCommands>
 ```
@@ -299,11 +299,37 @@ We have custom button style
 
 <ApplicationCommands
     appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
-    appCmd-name="/set-twitch streamer"
-    optionPillKey="url-or-username"
-    optionPillValue="senchabot"
-    optionPillKey2="channel"
-    optionPillValue2="twitch"
+    appCmd-name="command-name"
+    optionPillKey="options1"
+    optionPillValue="option1-value"
+    >
+</ApplicationCommands>
+
+You can also use it with two options:
+
+**Input**
+
+```js
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="command-name"
+    optionPillKey="options1"
+    optionPillValue="option1-value"
+    optionPillKey2="options2"
+    optionPillValue2="options2-value"
+    >
+</ApplicationCommands>
+```
+
+**Output**
+
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="command-name"
+    optionPillKey="options1"
+    optionPillValue="option1-value"
+    optionPillKey2="options2"
+    optionPillValue2="options2-value"
     >
 </ApplicationCommands>
 
