@@ -12,7 +12,7 @@ Here are some Discord servers that can help you out with everything Senchabot:
 
 The [Official Senchabot Support/Developers server](https://discord.com/invite/h3NqsbHW4a) has plenty of help channels with knowledgeable people and Senchabot's developers to get you help with something you need, and get updates straight from the developers. However do keep in mind this is a purely on-topic server. If you are looking for a community, join the server below.
 
-The [Kamp US server](https://discord.gg/kampus) is a common hangout for libraries and developers alike. It's a great starting point for those looking to dive in and learn how to developer.
+The [Kamp US server](https://discord.gg/kampus) is a common hangout for developers. It's a great starting point for those looking to dive in and learn how to developer.
 
 ## License
 
