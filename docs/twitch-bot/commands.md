@@ -16,28 +16,26 @@
 In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) update command does not work. The `!lurk` command is an exception in this regard.
 :::
 
-## Shoutout <Badge type="info" text="planned"/>
+## Shoutout <Badge type="warning" text="NEW"/>
 
 ```
 !so {user.name}
 ```
+::: details Example Usage
 
-<!-- Example Usage - ENGLISH -->
-<!-- ::: details Example Usage
-
-Kullanıcı Mesajı
+User Message
 
 ```
 !so senchabot
 ```
 
-Senchabot'un Yanıtı
+Senchabot's Response
 
 ```
-Announcement örneği
+Follow @senchabot over at twitch.tv/senchabot <3
 ```
-
-::: -->
+*Returns the above message and generates a shoutout.*
+:::
 
 ## Module Commands
 

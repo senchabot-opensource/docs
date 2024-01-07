@@ -39,14 +39,13 @@ Açık kaynak Discord ve Twitch botu.
 
 :::
 
-## Takip Çağrısı <Badge type="info" text="planned"/>
+## Takip Çağrısı <Badge type="warning" text="NEW"/>
 
 ```
 !so {user.name}
 ```
 
-<!-- Örnek Kullanım -->
-<!-- ::: details Örnek Kullanım
+::: details Örnek Kullanım
 
 Kullanıcı Mesajı
 
@@ -57,10 +56,10 @@ Kullanıcı Mesajı
 Senchabot'un Yanıtı
 
 ```
-Announcement örneği
+Follow @senchabot over at twitch.tv/senchabot <3
 ```
-
-::: -->
+*Yukarıdaki mesajı yazdırıp takip çağrısı oluşturur.*
+:::
 
 ## Modül Komutları
 
