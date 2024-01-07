@@ -26,6 +26,19 @@ export default defineConfig({
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:description', content: 'Open-source Discord and Twitch bot' }],
     ['meta', { name: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/125701962' }],
+    ['meta', { name: 'robots', content: 'index,follow' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-0N948SR48C' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0N948SR48C');`
+    ],
   ],
 
   themeConfig: {
