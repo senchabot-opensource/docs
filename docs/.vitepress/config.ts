@@ -3,9 +3,9 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: {
-    ssr: { 
-        noExternal: ['@discord-message-components/vue'] 
-    } 
+    ssr: {
+      noExternal: ['@discord-message-components/vue']
+    }
   },
   title: 'Senchabot',
   description: 'Documentation',
@@ -16,20 +16,55 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'description', content: 'Open-source multi-platform bot development project, which works on Twitch and Discord.' }],
+    [
+      'meta',
+      {
+        name: 'description',
+        content:
+          'Open-source multi-platform bot development project, which works on Twitch and Discord.'
+      }
+    ],
     ['meta', { name: 'theme-color', content: '#20AB8C' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:site_name', content: 'Senchabot' }],
-    ['meta', { name: 'og:image', content: 'https://avatars.githubusercontent.com/u/125701962' }],
-    ['meta', { name: 'og:description', content: 'Open-source multi-platform bot development project, which works on Twitch and Discord.' }],
+    [
+      'meta',
+      {
+        name: 'og:image',
+        content: 'https://avatars.githubusercontent.com/u/125701962'
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'og:description',
+        content:
+          'Open-source multi-platform bot development project, which works on Twitch and Discord.'
+      }
+    ],
     ['meta', { name: 'twitter:site', content: '@senchabot' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['meta', { name: 'twitter:description', content: 'Open-source Discord and Twitch bot' }],
-    ['meta', { name: 'twitter:image', content: 'https://avatars.githubusercontent.com/u/125701962' }],
+    [
+      'meta',
+      {
+        name: 'twitter:description',
+        content: 'Open-source Discord and Twitch bot'
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'twitter:image',
+        content: 'https://avatars.githubusercontent.com/u/125701962'
+      }
+    ],
     ['meta', { name: 'robots', content: 'index,follow' }],
     [
       'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-0N948SR48C' }
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-0N948SR48C'
+      }
     ],
     [
       'script',
@@ -38,7 +73,7 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-0N948SR48C');`
-    ],
+    ]
   ],
 
   themeConfig: {
@@ -208,7 +243,7 @@ export default defineConfig({
     tr: {
       label: 'Türkçe',
       lang: 'tr',
-      link: '/tr',
+      link: '/tr/',
       themeConfig: {
         docFooter: {
           prev: 'Önceki sayfa',
