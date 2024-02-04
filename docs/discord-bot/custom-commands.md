@@ -1,1 +1,1 @@
-# Custom Commands <Badge type="tip" text="beta"/>
+# Custom Commands <Badge type="warning" text="NEW"/>

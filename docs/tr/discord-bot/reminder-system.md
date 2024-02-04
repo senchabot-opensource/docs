@@ -1,1 +1,1 @@
-# Hatırlatıcı Sistemi <Badge type="info" text="planned"/>
+# Hatırlatıcı Sistemi <Badge type="danger" text="planned | not active" />

@@ -1,1 +1,1 @@
-# Özel Komutlar <Badge type="tip" text="beta"/>
+# Özel Komutlar <Badge type="warning" text="NEW"/>

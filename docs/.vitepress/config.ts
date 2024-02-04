@@ -61,7 +61,10 @@ export default defineConfig({
     ['meta', { name: 'robots', content: 'index,follow' }],
     [
       'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-ZXSVB4HQJH' }
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-ZXSVB4HQJH'
+      }
     ],
     [
       'script',
@@ -70,7 +73,7 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ZXSVB4HQJH');`
-    ],
+    ]
   ],
 
   themeConfig: {
@@ -166,12 +169,18 @@ export default defineConfig({
               },
               {
                 text: 'Modules',
-                collapsed: true,
+                collapsed: false,
                 items: [
                   {
                     text: 'Custom API System',
                     link: '/twitch-bot/custom-api-system'
-                  },
+                  }
+                ]
+              },
+              {
+                text: 'Planned (Not Active)',
+                collapsed: true,
+                items: [
                   {
                     text: 'Command Timer System',
                     link: '/twitch-bot/command-timer-system'
@@ -281,12 +290,18 @@ export default defineConfig({
               },
               {
                 text: 'Modüller',
-                collapsed: true,
+                collapsed: false,
                 items: [
                   {
                     text: 'Custom API Sistemi',
                     link: '/tr/twitch-bot/custom-api-system'
-                  },
+                  }
+                ]
+              },
+              {
+                text: 'Planlandı (Aktif Değil)',
+                collapsed: true,
+                items: [
                   {
                     text: 'Komut Zamanlayıcı Sistemi',
                     link: '/tr/twitch-bot/command-timer-system'

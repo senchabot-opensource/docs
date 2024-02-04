@@ -1,4 +1,4 @@
-# Komut Zamanlayıcı Sistemi <Badge type="info" text="planned"/>
+# Komut Zamanlayıcı Sistemi <Badge type="danger" text="planned | not active" />
 
 ```
 !timer [command_name] [time]

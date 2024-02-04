@@ -1,1 +1,1 @@
-# Reminder System <Badge type="info" text="planned"/>
+# Reminder System <Badge type="danger" text="planned | not active" />

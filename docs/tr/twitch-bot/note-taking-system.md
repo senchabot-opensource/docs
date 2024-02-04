@@ -1,4 +1,4 @@
-# Note Taking System <Badge type="info" text="planned"/>
+# Note Taking System <Badge type="danger" text="planned | not active" />
 
 ```
 !note [content]
