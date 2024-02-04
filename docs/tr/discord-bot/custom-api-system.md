@@ -1,1 +1,1 @@
-# Custom API Sistemi <Badge type="info" text="planned"/>
+# Custom API Sistemi <Badge type="danger" text="planned | not active" />

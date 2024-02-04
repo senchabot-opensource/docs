@@ -1,4 +1,4 @@
-# Command Timer System <Badge type="info" text="planned" />
+# Command Timer System <Badge type="danger" text="planned | not active" />
 
 ```
 !timer [command_name] [time]
