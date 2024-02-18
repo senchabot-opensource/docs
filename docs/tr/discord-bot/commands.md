@@ -11,10 +11,8 @@
 | kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
 | frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
 | ping         | pong! VoHiYo                                                                                                                                                                                                                         |
-
 <!-- PURGE -->
-
-## Temizleme <Badge type="warning" text="NEW"/>
+<!-- ## Temizleme <Badge type="warning" text="NEW"/>
 
 ```
 /purge events
@@ -27,14 +25,13 @@ Kullanıcı Mesajı
 
 Senchabot'un Yanıtı
 
-<!-- Component -->
-:::
+::: 
 
 ```
 /purge last-100-channel-messages message-content-contains: user-name-contains:
 ```
 14 günden eski olmayan mesajları kullanıcı adı veya mesaj iceriğindeki karakterlere göre siler.
-
+-->
 
 ## Sözlük <Badge type="warning" text="NEW"/>
 
@@ -89,9 +86,9 @@ Senchabot'un Yanıtı
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css" scoped></style>
 <div>
-    <a class="content-ref-s" href="">
+    <a class="content-ref-s" href="/tr/discord-bot/custom-api-system">
         <span class="ref-details-s">
-            <span class="content-ref-page-title-s">Custom API Sistemi <Badge type="danger" text="planned | not active" /></span>
+            <span class="content-ref-page-title-s">Custom API Sistemi <Badge type="warning" text="NEW"/></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>
@@ -111,5 +108,5 @@ Senchabot'un Yanıtı
 <br/>
 
 ::: info Cooldown Sistemi
-Komut kullanım bekleme süresi kullanıcı başına 2 dakikadır.
+Komut kullanım bekleme süresi kullanıcı başına 2 saniyedir.
 :::

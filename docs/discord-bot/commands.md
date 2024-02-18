@@ -10,7 +10,7 @@
 | senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
 | kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
 | frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
-| ping         | pong! VoHiYo                                                                                                                                                                                                                         |
+| ping         | pong! VoHiYo                                                                                                                                
 
 <!-- PURGE -->
 <!-- ## Purge <Badge type="info" text="planned"/>
@@ -54,9 +54,9 @@
 <!-- Custom API System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css" scoped></style>
 <div>
-    <a class="content-ref-s" href="">
+    <a class="content-ref-s" href="/discord-bot/custom-api-system">
         <span class="ref-details-s">
-            <span class="content-ref-page-title-s">Custom API System <Badge type="danger" text="planned | not active" /></span> 
+            <span class="content-ref-page-title-s">Custom API System <Badge type="warning" text="NEW"/></span> 
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>
@@ -76,5 +76,5 @@
 <br/>
 
 ::: info Cooldown System
-Command usage cooldown time is 2 minutes per user.
+Command usage cooldown time is 2 seconds per user.
 :::
