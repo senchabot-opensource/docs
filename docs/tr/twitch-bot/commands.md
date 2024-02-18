@@ -110,5 +110,5 @@ Follow @senchabot over at twitch.tv/senchabot <3
 <br/>
 
 ::: info Cooldown Sistemi
-Komut kullanım bekleme süresi kullanıcı başına 2 dakikadır.
+Komut kullanım bekleme süresi kullanıcı başına 2 saniyedir.
 :::
