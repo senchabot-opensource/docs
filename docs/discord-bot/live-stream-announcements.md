@@ -7,21 +7,25 @@ outline: [2, 4]
 ## Live Stream and Broadcaster Custom Settings
 
 ### Adding a Streamer
-
-```
-/set-twitch streamer url-or-username:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /set-twitch streamer url-or-username: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch streamer url-or-username: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
@@ -36,27 +40,34 @@ outline: [2, 4]
 
 ::: info Information
 
-When adding a Twitch streamer, you must have previously added a default announcement channel with the `/set-twitch announcement default-content`, or you can specify the channel name optionally.
+When adding a Twitch streamer, you must have previously added a default announcement channel with the `/set-twitch announcement default-channel`, or you can specify the channel name optionally.
 :::
 
 ### Customizing the Announcement Channel
 
 You can assign a custom announcement channel to streamers.
-
-```
-/set-twitch streamer url-or-username: channel:
-```
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    optionPillKey2="channel"
+    optionPillValue2="                "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /set-twitch streamer url-or-username: channel:-->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    optionPillKey2="channel"
+    optionPillValue2="twitch-streams"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch streamer url-or-username: senchabot channel: twitch-streams
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
@@ -80,20 +91,29 @@ If you don't specify the `channel` option when adding a streamer, the streamer's
 
 #### Adding an Announcement Message
 
-```
-/set-twitch announcement custom-content username-or-url: content:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="            "
+    optionPillKey2="announcement-content"
+    optionPillValue2="            "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /set-twitch announcement custom-content username-or-url: content: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    optionPillKey2="announcement-content"
+    optionPillValue2="{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch announcement custom-content username-or-url: senchabot content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement custom-content
@@ -108,27 +128,32 @@ If you don't specify the `channel` option when adding a streamer, the streamer's
 
 #### Removing an Announcement Message
 
-```
-/del-twitch announcement custom-content username-or-url:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /del-twitch announcement custom-content username-or-url: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch announcement custom-content username-or-url: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement custom-content
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
-            senchabot kullanıcı adlı Twitch yayıncısı için özelleştirilmiş duyuru mesajı içeriği kaldırıldı. Varsayılan duyuru mesajı içeriği: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}`
+            senchabot kullanıcı adlı Twitch yayıncısına özgü yayın duyuru mesajı silindi.
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
@@ -136,23 +161,28 @@ If you don't specify the `channel` option when adding a streamer, the streamer's
 
 ### Deleting a Streamer
 
-```
-/del-twitch streamer username-or-url:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /del-twitch streamer username-or-url: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch streamer username-or-url: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch streamer
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
@@ -167,21 +197,25 @@ If you don't specify the `channel` option when adding a streamer, the streamer's
 When adding Twitch streamers without specifying the `channel` option, their announcements are made in the default announcement channel.
 
 ### Adding a Channel
-
-```
-/set-twitch announcement default-channel channel:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-channel"
+    optionPillKey="channel"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /set-twitch announcement default-channel channel: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-channel"
+    optionPillKey="channel"
+    optionPillValue="twitch-streams"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch announcement default-channel channel: twitch-streams
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement default-channel
@@ -195,21 +229,21 @@ When adding Twitch streamers without specifying the `channel` option, their anno
 :::
 
 ### Removing the Channel
-
-```
-/del-twitch announcement default-channel
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-channel"
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /del-twitch announcement default-channel -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-channel"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch announcement default-channel
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement default-channel
@@ -226,27 +260,32 @@ When adding Twitch streamers without specifying the `channel` option, their anno
 
 ### Adding an Announcement Message
 
-```
-/set-twitch announcement default-content content:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-content"
+    optionPillKey="announcement-content"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /set-twitch announcement default-content content: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-content"
+    optionPillKey="announcement-content"
+    optionPillValue="{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch announcement default-content content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement default-content
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
-            Yayın duyuru mesajı içeriği ayarlandı: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} -> {twitch.url}`
+            Varsayılan yayın duyuru mesajı içeriği ayarlandı: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} -> {twitch.url}`
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
@@ -254,20 +293,21 @@ When adding Twitch streamers without specifying the `channel` option, their anno
 
 ### Removing the Announcement Message
 
-```
-/del-twitch announcement default-content
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-content"
+    >
+</ApplicationCommands>
 
 ::: details Example Usage
-
-<!-- EXAMPLE - /del-twitch announcement default-content -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-content"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch announcement default-content
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement default-content

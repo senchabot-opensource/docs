@@ -7,28 +7,32 @@ outline: [2, 4]
 ## Yayın ve Yayıncı Özel Ayarları
 
 ### Yayıncı Ekleme
-
-```
-/set-twitch streamer url-or-username:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /set-twitch streamer url-or-username: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch streamer url-or-username: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
-        `senchabot` kullanıcı adlı Twitch yayıncısının yayın duyuruları `twitch-yayınları` isimli yazı kanalı için aktif edildi.
+        `senchabot` kullanıcı adlı Twitch yayıncısının yayın duyuruları `twitch-streams` isimli yazı kanalı için aktif edildi.
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
@@ -36,28 +40,34 @@ outline: [2, 4]
 
 ::: info Bilgilendirme
 
-Twitch yayıncısı eklerken daha önce `/set-twitch announcement default-content` komutuyla varsayılan duyuru kanalı eklemiş olmalı veya isteğe bağlı kanal adını belirtmelisiniz.
+Twitch yayıncısı eklerken daha önce `/set-twitch announcement default-channel` komutuyla varsayılan duyuru kanalı eklemiş olmalı veya isteğe bağlı kanal adını belirtmelisiniz.
 :::
 
 ### Duyuru Kanalı Özelleştirme
 
 Yayıncılara özel duyuru kanalı atayabilirsininiz.
-
-```
-/set-twitch streamer url-or-username: channel:
-
-```
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    optionPillKey2="channel"
+    optionPillValue2="                "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /set-twitch streamer url-or-username: channel:-->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    optionPillKey2="channel"
+    optionPillValue2="twitch-streams"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch streamer url-or-username: senchabot channel: twitch-yayınları
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
@@ -76,25 +86,29 @@ Yayıncı eklenirken `channel` opsiyonu yazılmazsa yayıncının duyuru mesajla
 :::
 
 ### Özelleştirilmiş Duyuru Mesajı
-
-<br/>
-
-#### Duyuru Mesajı Ekleme
-
-```
-/set-twitch announcement custom-content username-or-url: content:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="            "
+    optionPillKey2="announcement-content"
+    optionPillValue2="            "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /set-twitch announcement custom-content username-or-url: content: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    optionPillKey2="announcement-content"
+    optionPillValue2="{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch announcement custom-content username-or-url: senchabot content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement custom-content
@@ -109,27 +123,32 @@ Yayıncı eklenirken `channel` opsiyonu yazılmazsa yayıncının duyuru mesajla
 
 #### Duyuru Mesajını Kaldırma
 
-```
-/del-twitch announcement custom-content username-or-url:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /del-twitch announcement custom-content username-or-url: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement custom-content"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch announcement custom-content username-or-url: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement custom-content
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
-            senchabot kullanıcı adlı Twitch yayıncısı için özelleştirilmiş duyuru mesajı içeriği kaldırıldı. Varsayılan duyuru mesajı içeriği: `{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}`
+            senchabot kullanıcı adlı Twitch yayıncısına özgü yayın duyuru mesajı silindi.
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>
@@ -137,23 +156,28 @@ Yayıncı eklenirken `channel` opsiyonu yazılmazsa yayıncının duyuru mesajla
 
 ### Yayıncı Silme
 
-```
-/del-twitch streamer username-or-url:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /del-twitch streamer username-or-url: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch streamer"
+    optionPillKey="twitch-username-or-url"
+    optionPillValue="senchabot"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch streamer username-or-url: senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch streamer
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
@@ -168,21 +192,25 @@ Yayıncı eklenirken `channel` opsiyonu yazılmazsa yayıncının duyuru mesajla
 Twitch yayıncıları eklenirken `channel` opsiyonu girilmediğinde yayıncıların duyuruları varsayılan duyuru kanalında yapılır.
 
 ### Kanal Ekleme
-
-```
-/set-twitch announcement default-channel channel:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-channel"
+    optionPillKey="channel"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /set-twitch announcement default-channel channel: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-channel"
+    optionPillKey="channel"
+    optionPillValue="twitch-streams"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch announcement default-channel channel: twitch-yayınları
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement default-channel
@@ -196,21 +224,21 @@ Twitch yayıncıları eklenirken `channel` opsiyonu girilmediğinde yayıncılar
 :::
 
 ### Kanalı Kaldırma
-
-```
-/del-twitch announcement default-channel
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-channel"
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /del-twitch announcement default-channel -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-channel"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch announcement default-channe
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement default-channel
@@ -227,20 +255,25 @@ Twitch yayıncıları eklenirken `channel` opsiyonu girilmediğinde yayıncılar
 
 ### Duyuru Mesajı Ekleme
 
-```
-/set-twitch announcement default-content content:
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-content"
+    optionPillKey="announcement-content"
+    optionPillValue="                 "
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /set-twitch announcement default-content content: -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement default-content"
+    optionPillKey="announcement-content"
+    optionPillValue="{twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /set-twitch announcement default-content content: {twitch.username}, {stream.category} yayınına başladı! {stream.title} → {twitch.url}
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch announcement default-content
@@ -255,20 +288,21 @@ Twitch yayıncıları eklenirken `channel` opsiyonu girilmediğinde yayıncılar
 
 ### Duyuru Mesajını Kaldırma
 
-```
-/del-twitch announcement default-content
-```
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-content"
+    >
+</ApplicationCommands>
 
 ::: details Örnek Kullanım
-
-<!-- EXAMPLE - /del-twitch announcement default-content -->
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement default-content"
+    >
+</ApplicationCommands>
+<br>
 <DiscordMessages>
-<!-- NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            /del-twitch announcement default-content
-        </DiscordMarkdown>
-    </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
             <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch announcement default-content
