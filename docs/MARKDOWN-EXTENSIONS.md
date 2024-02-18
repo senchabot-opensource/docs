@@ -279,6 +279,7 @@ We have custom button style
   </a>
 </div>
 
+## Discord
 ### Discord Application Commands Style
 
 We use a special component for Discord application commands.
@@ -333,7 +334,7 @@ You can also use it with two options:
     >
 </ApplicationCommands>
 
-## Displaying Discord messages
+### Displaying Discord messages
 
 We use [@discord-message-components/vue](https://github.com/Danktuary/discord-message-components/blob/main/packages/vue/README.md) to display "fake" Discord messages on pages. The reason for this is to make it easy for you to create, easy for anyone in the future to edit, and avoid having to take screenshots and using too many images on a page at once. Here's a preview of the components:
 
@@ -358,8 +359,30 @@ The syntax to make this display is quite simple as well:
 	</DiscordMessage>
 </DiscordMessages>
 ```
+#### Custom Command Messages
 
-### Slash Command messages
+**Input**
+```js
+<DiscordMessages>
+	<DiscordMessage profile="user">
+		!ping
+	</DiscordMessage>
+	<DiscordMessage profile="bot" role-color="#1fab89" >
+		pong! Took 50ms
+	</DiscordMessage>
+</DiscordMessages>
+```
+**Output**
+<DiscordMessages>
+	<DiscordMessage profile="user">
+		!ping
+	</DiscordMessage>
+	<DiscordMessage profile="bot" role-color="#1fab89" >
+		pong! Took 50ms
+	</DiscordMessage>
+</DiscordMessages>
+
+#### Slash Command messages
 
 **`ephemeral` Version**
 

@@ -34,18 +34,6 @@ outline: [2, 3]
 
 :::
 
-```
-!ucmd [komut_takma_adı] [yeni_komut_içeriği]
-```
-
-::: details Örnek Kullanım
-
-```
-!ucmd senchabot-link https://github.com/senchabot-opensource/
-```
-
-:::
-
 ### Komut Silme
 
 ```
@@ -102,7 +90,7 @@ outline: [2, 3]
 
 :::
 
-#### Çoklu takma ad silme <Badge type="info" text="planned"/>
+#### Çoklu takma ad silme <Badge type="danger" text="planned | not active"/>
 
 ```
 !dcmda [komut_takma_adları (boşluk bırakarak)]
@@ -129,7 +117,3 @@ Senchabot's Channel Commands: senchabot, senchabot-site.
 ```
 
 :::
-
-<!-- Kanal komutlarına linkle erişim
-    buton konulabilir
- -->

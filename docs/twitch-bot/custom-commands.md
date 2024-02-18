@@ -34,18 +34,6 @@ outline: [2, 3]
 
 :::
 
-```
-!ucmd [command_alias] [new_command_content]
-```
-
-::: details Example Usage
-
-```
-!ucmd senchabot-link https://github.com/senchabot-opensource/
-```
-
-:::
-
 ### Command Delete
 
 ```
@@ -63,7 +51,7 @@ outline: [2, 3]
 ### Alias Add
 
 ```
-acmda [command_name] [command_alias]
+!acmda [command_name] [command_alias]
 ```
 
 ::: details Example Usage
@@ -102,7 +90,7 @@ acmda [command_name] [command_alias]
 
 :::
 
-#### Delete multiple aliases <Badge type="info" text="planned"/>
+#### Delete multiple aliases <Badge type="danger" text="planned | not active"/>
 
 ```
 !dcmda [command_alias(es) separated by space]
@@ -127,9 +115,4 @@ acmda [command_name] [command_alias]
 ```
 Senchabot's Channel Commands: senchabot, senchabot-site.
 ```
-
 :::
-
-<!-- Kanal komutlarına linkle erişim
-    buton konulabilir
- -->

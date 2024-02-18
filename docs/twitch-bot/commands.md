@@ -86,5 +86,5 @@ Follow @senchabot over at twitch.tv/senchabot <3
 <br/>
 
 ::: info Cooldown System
-Command usage cooldown time is 2 minutes per user.
+Command usage cooldown time is 2 seconds per user.
 :::

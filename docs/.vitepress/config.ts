@@ -150,7 +150,7 @@ export default defineConfig({
           //     { text: "Getting Started", link: "/getting-started" },
           //   ],
           // },
-          // Twitch
+          // Twitch - EN
           {
             text: 'Twitch',
             collapsed: false,
@@ -201,7 +201,7 @@ export default defineConfig({
               }
             ]
           },
-          // Discord
+          // Discord - EN
           {
             text: 'Discord',
             collapsed: false,
@@ -211,7 +211,10 @@ export default defineConfig({
                 link: '/discord-bot/getting-started'
               },
               { text: 'Commands', link: '/discord-bot/commands' },
-              // { text: "Custom Commands", link: "/discord-bot/custom-commands" },
+              {
+                text: 'Custom Commands',
+                link: '/discord-bot/custom-commands'
+              },
               {
                 text: 'Modules',
                 collapsed: true,
@@ -223,11 +226,11 @@ export default defineConfig({
                   {
                     text: 'Live Stream Events',
                     link: '/discord-bot/live-stream-events'
+                  },
+                  {
+                    text: 'Custom API System',
+                    link: '/discord-bot/custom-api-system'
                   }
-                  // {
-                  //   text: "Custom API System",
-                  //   link: "/discord-bot/custom-api-system",
-                  // },
                   // {
                   //   text: "Reminder System",
                   //   link: "/discord-bot/reminder-system",
@@ -332,10 +335,10 @@ export default defineConfig({
                 link: '/tr/discord-bot/getting-started'
               },
               { text: 'Komutlar', link: '/tr/discord-bot/commands' },
-              // {
-              //   text: "Özel Komutlar",
-              //   link: "/tr/discord-bot/custom-commands",
-              // },
+              {
+                text: 'Özel Komutlar',
+                link: '/tr/discord-bot/custom-commands'
+              },
               {
                 text: 'Modüller',
                 collapsed: true,
@@ -347,11 +350,11 @@ export default defineConfig({
                   {
                     text: 'Canlı Yayın Etkinlikleri',
                     link: '/tr/discord-bot/live-stream-events'
+                  },
+                  {
+                    text: 'Custom API Sistemi',
+                    link: '/tr/discord-bot/custom-api-system'
                   }
-                  // {
-                  //   text: "Custom API Sistemi",
-                  //   link: "/tr/discord-bot/custom-api-system",
-                  // },
                   // {
                   //   text: "Hatırlatıcı Sistemi",
                   //   link: "/tr/discord-bot/reminder-system",
