@@ -182,7 +182,7 @@ If you don't specify the `channel` option when adding a streamer, the streamer's
 <DiscordMessages>
     <DiscordMessage profile="bot" role-color="#1fab89">
         <template #interactions>
-            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">set-twitch streamer
+            <DiscordInteraction :ephemeral="true"  profile="user" :command="true">del-twitch streamer
             </DiscordInteraction>
         </template>
         <DiscordMarkdown>
