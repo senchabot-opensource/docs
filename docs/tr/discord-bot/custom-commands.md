@@ -12,7 +12,7 @@ outline: [2, 3]
 !acmd [komut_adı] [komut_içeriği]
 ```
 
-::: details Example Usage
+::: details Örnek Kullanım
 
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
