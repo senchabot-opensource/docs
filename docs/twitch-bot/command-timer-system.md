@@ -1,6 +1,6 @@
 # Command Timer System <Badge type="warning" text="NEW" />
 
-## Command Add
+## Add Command Timer
 
 ```
 !atimer [command_name] [interval (integer, minute)]
@@ -9,7 +9,7 @@ Returns the [custom command](/twitch-bot/custom-commands) you specified within t
 
 ::: details Example Usage
 
-Adding the Command
+Adding the Command Timer
 
 ```
 !atimer drink-water 30
@@ -38,7 +38,7 @@ You can create up to 3 command timers.
 :::
 
 
-## Delete Command
+## Delete Command Timer
 
 ```
 !dtimer [command_name]
@@ -55,12 +55,12 @@ Deleting the Command
 Senchabot's Response
 
 ```
-Command Timer EnableDeleted: ays.
+Command Timer Deleted: drink-water.
 ```
 
 :::
 
-## Access to Timer Commands
+## Access to Command Timers
 
 ```
 !timers

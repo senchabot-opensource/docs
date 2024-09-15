@@ -1,6 +1,6 @@
 # Komut Zamanlayıcı Sistemi <Badge type="warning" text="NEW" />
 
-## Komut Ekleme
+## Komut Zamanlayıcısı Ekleme
 
 ```
 !atimer [command_name] [interval (integer, minute)]
@@ -38,7 +38,7 @@ En fazla 3 komut zamanlayıcısı oluşturabilirsiniz.
 :::
 
 
-## Komut Silme
+## Komut Zamanlayıcısı Silme
 
 ```
 !dtimer [command_name]
@@ -49,13 +49,13 @@ En fazla 3 komut zamanlayıcısı oluşturabilirsiniz.
 Komut Silme
 
 ```
-!dtimer drink-water
+!dtimer su-ic
 ```
 
 Senchabot'un Yanıtı
 
 ```
-Command Timer Deleted: ays.
+Command Timer Deleted: su-ic.
 ```
 
 :::
