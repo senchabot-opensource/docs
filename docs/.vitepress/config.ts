@@ -174,6 +174,10 @@ export default defineConfig({
                   {
                     text: 'Custom API System',
                     link: '/twitch-bot/custom-api-system'
+                  },
+                  {
+                    text: 'Command Timer System',
+                    link: '/twitch-bot/command-timer-system'
                   }
                 ]
               },
@@ -181,10 +185,6 @@ export default defineConfig({
                 text: 'Planned (Not Active)',
                 collapsed: true,
                 items: [
-                  {
-                    text: 'Command Timer System',
-                    link: '/twitch-bot/command-timer-system'
-                  },
                   {
                     text: 'Reminder System',
                     link: '/twitch-bot/reminder-system'
@@ -298,6 +298,10 @@ export default defineConfig({
                   {
                     text: 'Custom API Sistemi',
                     link: '/tr/twitch-bot/custom-api-system'
+                  },
+                  {
+                    text: 'Komut Zamanlayıcı Sistemi',
+                    link: '/tr/twitch-bot/command-timer-system'
                   }
                 ]
               },
@@ -305,10 +309,6 @@ export default defineConfig({
                 text: 'Planlandı (Aktif Değil)',
                 collapsed: true,
                 items: [
-                  {
-                    text: 'Komut Zamanlayıcı Sistemi',
-                    link: '/tr/twitch-bot/command-timer-system'
-                  },
                   {
                     text: 'Hatırlatıcı Sistemi',
                     link: '/tr/twitch-bot/reminder-system'
