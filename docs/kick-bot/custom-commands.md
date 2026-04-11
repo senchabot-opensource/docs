@@ -19,7 +19,7 @@ When creating a custom command (e.g., `!discord`) in the web dashboard, you can 
 ::: details Example Usage
 
 ```
-!acmd senchabot https://senchabot.com/
+!acmd socials Follow me on Kick: https://kick.com/yourname
 ```
 
 :::
@@ -33,7 +33,7 @@ When creating a custom command (e.g., `!discord`) in the web dashboard, you can 
 ::: details Example Usage
 
 ```
-!ucmd senchabot https://github.com/senchabot-opensource/monorepo
+!ucmd socials Updated socials: https://kick.com/yourname
 ```
 
 :::
@@ -47,7 +47,7 @@ When creating a custom command (e.g., `!discord`) in the web dashboard, you can 
 ::: details Example Usage
 
 ```
-!dcmd senchabot
+!dcmd socials
 ```
 
 :::
@@ -61,21 +61,7 @@ When creating a custom command (e.g., `!discord`) in the web dashboard, you can 
 ::: details Example Usage
 
 ```
-!acmda senchabot senchabot-link
-```
-
-:::
-
-#### Add multiple aliases <Badge type="warning" text="new" />
-
-```
-!acmda [command_name] [command_alias(es) separated by space]
-```
-
-::: details Example Usage
-
-```
-!acmda senchabot senchabot-link senchabot-github senchabot-app
+!acmda socials social
 ```
 
 :::
@@ -89,21 +75,7 @@ When creating a custom command (e.g., `!discord`) in the web dashboard, you can 
 ::: details Example Usage
 
 ```
-!dcmda senchabot-link
-```
-
-:::
-
-#### Delete multiple aliases <Badge type="danger" text="planned | not active"/>
-
-```
-!dcmda [command_alias(es) separated by space]
-```
-
-::: details Example Usage
-
-```
-!dcmda senchabot-link senchabot-github
+!dcmda social
 ```
 
 :::
@@ -119,4 +91,15 @@ When creating a custom command (e.g., `!discord`) in the web dashboard, you can 
 ```
 @user, senchabot's Commands: https://senchabot.com/senchabot/commands | View bot commands: !help
 ```
+
 :::
+
+## System Command Examples
+
+Use system commands together with your custom commands in the same channel.
+
+```
+!help
+!followage
+!uptime
+```

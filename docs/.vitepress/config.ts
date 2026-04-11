@@ -100,7 +100,7 @@ export default defineConfig({
     // Footer
     footer: {
       message: `<span>Released under the  <a href="https://github.com/senchabot-opensource/monorepo/blob/dev/LICENSE">GPL-3.0 License</a></span>`,
-      copyright: `<span>Copyright © ${new Date().getFullYear()} <a href="https://github.com/senchabot-opensource">Senchabot</a></span><span><a href="https://senchabot.app/terms-of-service" target="_blank" rel="noopener">Terms of Service</a> • <a href="https://senchabot.app/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></span>`
+      copyright: `<span>Copyright © ${new Date().getFullYear()} <a href="https://github.com/senchabot-opensource">Senchabot</a></span><span><a href="https://senchabot.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a> • <a href="https://senchabot.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></span>`
     },
     search: {
       provider: 'local',
@@ -242,6 +242,38 @@ export default defineConfig({
               //   link: "/discord-bot/variables",
               // },
             ]
+          },
+          {
+            text: 'Kick',
+            collapsed: false,
+            items: [
+              {
+                text: 'Getting Started',
+                link: '/kick-bot/getting-started'
+              },
+              {
+                text: 'Commands',
+                link: '/kick-bot/commands'
+              },
+              {
+                text: 'Custom Commands',
+                link: '/kick-bot/custom-commands'
+              },
+              {
+                text: 'Modules',
+                collapsed: false,
+                items: [
+                  {
+                    text: 'Custom API System',
+                    link: '/kick-bot/custom-api-system'
+                  },
+                  {
+                    text: 'Command Timer System',
+                    link: '/kick-bot/command-timer-system'
+                  }
+                ]
+              }
+            ]
           }
           // Variables - Twitch & Discord
           // { text: "Variables", link: "/variables" },
@@ -365,6 +397,38 @@ export default defineConfig({
               //   text: "Değişkenler",
               //   link: "/tr/discord-bot/variables",
               // },
+            ]
+          },
+          {
+            text: 'Kick',
+            collapsed: false,
+            items: [
+              {
+                text: 'Başlamadan Önce',
+                link: '/tr/kick-bot/getting-started'
+              },
+              {
+                text: 'Komutlar',
+                link: '/tr/kick-bot/commands'
+              },
+              {
+                text: 'Özel Komutlar',
+                link: '/tr/kick-bot/custom-commands'
+              },
+              {
+                text: 'Modüller',
+                collapsed: false,
+                items: [
+                  {
+                    text: 'Custom API Sistemi',
+                    link: '/tr/kick-bot/custom-api-system'
+                  },
+                  {
+                    text: 'Komut Zamanlayıcı Sistemi',
+                    link: '/tr/kick-bot/command-timer-system'
+                  }
+                ]
+              }
             ]
           }
           // Variables - Twitch & Discord - TR

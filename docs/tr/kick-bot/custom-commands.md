@@ -19,7 +19,7 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 ::: details Örnek Kullanım
 
 ```
-!acmd senchabot https://senchabot.com/
+!acmd socials Follow me on Kick: https://kick.com/yourname
 ```
 
 :::
@@ -33,7 +33,7 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 ::: details Örnek Kullanım
 
 ```
-!ucmd senchabot https://github.com/senchabot-opensource/monorepo
+!ucmd socials Updated socials: https://kick.com/yourname
 ```
 
 :::
@@ -47,12 +47,12 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 ::: details Örnek Kullanım
 
 ```
-!dcmd senchabot
+!dcmd socials
 ```
 
 :::
 
-### Alias Add
+### Takma Ad Ekleme
 
 ```
 !acmda [komut_adı] [komut_takma_adı]
@@ -61,21 +61,7 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 ::: details Örnek Kullanım
 
 ```
-!acmda senchabot senchabot-link
-```
-
-:::
-
-#### Çoklu takma ad ekleme <Badge type="warning" text="new" />
-
-```
-!acmda [komut_adı] [komut_takma_adları (boşluk bırakarak)]
-```
-
-::: details Örnek Kullanım
-
-```
-!acmda senchabot senchabot-link senchabot-github senchabot-app
+!acmda socials social
 ```
 
 :::
@@ -89,21 +75,7 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 ::: details Örnek Kullanım
 
 ```
-!dcmda senchabot-link
-```
-
-:::
-
-#### Çoklu takma ad silme <Badge type="danger" text="planned | not active"/>
-
-```
-!dcmda [komut_takma_adları (boşluk bırakarak)]
-```
-
-::: details Örnek Kullanım
-
-```
-!dcmda senchabot-link senchabot-github
+!dcmda social
 ```
 
 :::
@@ -121,3 +93,13 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 ```
 
 :::
+
+## Sistem Komutu Örnekleri
+
+Özel komutlarla birlikte aşağıdaki sistem komutlarını da aynı kanalda kullanabilirsiniz.
+
+```
+!help
+!followage
+!uptime
+```

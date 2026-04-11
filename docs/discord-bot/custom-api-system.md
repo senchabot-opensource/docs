@@ -13,7 +13,7 @@ This system allows you to send a GET request to a URL through the specified temp
 #### Adding Commands to Your Server
 
 ```
-!acmd [command_name] [command_content {customapi.https://...}]
+/acmd [name:<command_name>] [content:<command_content {customapi.https://...}>]
 ```
 
 ## What You Can Do with Custom API
@@ -40,7 +40,7 @@ This system allows you to send a GET request to a URL through the specified temp
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmd song Currently Playing: {customapi.https://spotify.aidenwallis.co.uk/u/...}
+			   /acmd name:song content:"Currently Playing: {customapi.https://spotify.aidenwallis.co.uk/u/...}"
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: song
@@ -75,7 +75,7 @@ Use the link in the format `https://nowplaying.aidenwallis.co.uk/...` under the 
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmd text {customapi.https://techy-api.vercel.app/api/text}
+			   /acmd name:text content:"{customapi.https://techy-api.vercel.app/api/text}"
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: text

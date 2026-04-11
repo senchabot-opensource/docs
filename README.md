@@ -1,10 +1,10 @@
 # Senchabot Documentation
 
-This repo contains the official Senchabot documentation, which can be viewed online [HERE](https://docs.senchabot.app). Before submitting pull-requests, please remember to _fully_ read the [Contributing](CONTRIBUTING.md) guidelines.
+This repo contains the official Senchabot documentation, which can be viewed online [HERE](https://docs.senchabot.com). Before submitting pull-requests, please remember to _fully_ read the [Contributing](CONTRIBUTING.md) guidelines.
 
 ## Markdown Syntax and Example Usage
 
-For Markdown Syntax and Example Uses, visit [MARKDOWN-EXTENSIONS](https://docs.senchabot.app/MARKDOWN-EXTENSIONS)
+For Markdown Syntax and Example Uses, visit [MARKDOWN-EXTENSIONS](https://docs.senchabot.com/MARKDOWN-EXTENSIONS)
 
 ## Need some help?
 

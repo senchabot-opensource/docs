@@ -5,7 +5,13 @@
 Komutu [Senchabot](https://twitch.tv/senchabot/)'un sohbetine yazarak botu kanalınıza davet ediniz.
 
 ```
-!invite [your_channel_name]
+!invite
 ```
 
-Ardından Senchabot'a `moderatör` rolü veriniz.
+Ardından kanal sohbetinde aşağıdaki komutla Senchabot'a `moderatör` rolü veriniz.
+
+```
+/mod Senchabot
+```
+
+Sonrasında, !cmds komutunu kullanarak Senchabot için sohbet mesajlarını okuma ve gönderme izinlerinin açık olduğundan emin olun.

@@ -17,16 +17,16 @@ Both internal and external links gets special treatments.
 ### External Links
 
 ```
-https://senchabot.app
+https://senchabot.com
 ```
 
 ```md
-Here our cool [website](https://senchabot.app)
+Here our cool [website](https://senchabot.com)
 ```
 
 <div class="info custom-block" style="padding-top: 8px">
 
-Here our cool [website](https://senchabot.app)
+Here our cool [website](https://senchabot.com)
 
 </div>
 

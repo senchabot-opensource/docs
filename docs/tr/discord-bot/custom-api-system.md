@@ -13,7 +13,7 @@ Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kana
 #### Sunucuna Komut Ekle
 
 ```
-!acmd [komut_adı] [komut_içeriği {customapi.https://...}]
+/acmd [name:<komut_adı>] [content:<komut_içeriği {customapi.https://...}>]
 ```
 
 ## Custom API'yle Yapılabilecekler
@@ -40,7 +40,7 @@ Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kana
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmd şarkı Şu An Çalan Şarkı: {customapi.https://spotify.aidenwallis.co.uk/u/...}
+			/acmd name:şarkı content:"Şu An Çalan Şarkı: {customapi.https://spotify.aidenwallis.co.uk/u/...}"
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: şarkı
@@ -75,7 +75,7 @@ Aiden Wallis'in sitesinde bulunan _Now Playin Widget_ başlığı altındaki `ht
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmd metin {customapi.https://techy-api.vercel.app/api/text}.
+			/acmd name:metin content:"{customapi.https://techy-api.vercel.app/api/text}".
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: metin

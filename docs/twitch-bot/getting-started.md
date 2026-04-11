@@ -5,7 +5,13 @@
 Invite the bot to your channel by writing the command in [Senchabot](https://twitch.tv/senchabot/)'s chat.
 
 ```
-!invite [your_channel_name]
+!invite
 ```
 
-Then, give moderation role to Senchabot.
+Then, give `moderator` role to Senchabot with the command below in your channel chat.
+
+```
+/mod Senchabot
+```
+
+After that, make sure Senchabot has the permissions needed to read and send chat messages by typing !cmds.

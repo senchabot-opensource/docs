@@ -9,7 +9,7 @@ outline: [2, 3]
 ### Komut Ekleme
 
 ```
-!acmd [komut_adı] [komut_içeriği]
+/acmd [name:<komut_adı>] [content:<komut_içeriği>]
 ```
 
 ::: details Örnek Kullanım
@@ -17,7 +17,7 @@ outline: [2, 3]
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmd senchabot https://senchabot.app/
+		/acmd name:senchabot content:https://senchabot.com/
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: senchabot
@@ -28,14 +28,14 @@ outline: [2, 3]
 ### Komut Güncelleme
 
 ```
-!ucmd [komut_adı] [yeni_komut_içeriği]
+/ucmd [name:<komut_adı>] [content:<yeni_komut_içeriği>]
 ```
 
 ::: details Örnek Kullanım
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!ucmd senchabot https://docs.senchabot.app
+		/ucmd name:senchabot content:https://senchabot.com
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Updated: senchabot
@@ -46,14 +46,14 @@ outline: [2, 3]
 ### Komut Silme
 
 ```
-!dcmd [komut_adı]
+/dcmd [name:<komut_adı>]
 ```
 
 ::: details Örnek Kullanım
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!dcmd senchabot
+		/dcmd name:senchabot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Deleted: senchabot
@@ -64,14 +64,14 @@ outline: [2, 3]
 ### Alias Add
 
 ```
-!acmda [komut_adı] [komut_takma_adı]
+/acmda [name:<komut_adı>] [alias:<komut_takma_adı>]
 ```
 
 ::: details Örnek Kullanım
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmda senchabot discord-bot
+		/acmda name:senchabot alias:discord-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Aliases Added: discord-bot
@@ -82,7 +82,7 @@ outline: [2, 3]
 #### Çoklu takma ad ekleme <Badge type="warning" text="new" />
 
 ```
-!acmda [komut_adı] [komut_takma_adları (boşluk bırakarak)]
+/acmda [name:<komut_adı>] [aliases:<komut_takma_adları (boşluk bırakarak)>]
 ```
 
 ::: details Örnek Kullanım
@@ -90,7 +90,7 @@ outline: [2, 3]
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmda senchabot discord-bot twitch-bot
+		/acmda name:senchabot aliases:discord-bot twitch-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Aliases Added: discord-bot, twitch-bot
@@ -101,7 +101,7 @@ outline: [2, 3]
 ### Takma Ad Silme
 
 ```
-!dcmda [komut_takma_adı]
+/dcmda [alias:<komut_takma_adı>]
 ```
 
 ::: details Örnek Kullanım
@@ -109,7 +109,7 @@ outline: [2, 3]
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!dcmda discord-bot
+		/dcmda alias:discord-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Alias Deleted: discord-bot
@@ -120,7 +120,7 @@ outline: [2, 3]
 #### Çoklu takma ad silme <Badge type="danger" text="planned | not active"/>
 
 ```
-!dcmda [komut_takma_adları (boşluk bırakarak)]
+/dcmda [aliases:<komut_takma_adları (boşluk bırakarak)>]
 ```
 
 ::: details Örnek Kullanım
@@ -128,7 +128,7 @@ outline: [2, 3]
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!dcmda discord-bot twitch-bot
+		/dcmda aliases:discord-bot twitch-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Alias Deleted: discord-bot, twitch-bot
@@ -139,7 +139,7 @@ outline: [2, 3]
 ## Kanal Komutlarına Erişim
 
 ```
-!cmds
+/cmds
 ```
 
 ::: details Örnek Yanıt
@@ -147,7 +147,7 @@ outline: [2, 3]
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!cmds
+		/cmds
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Commands: senchabot, discord, twitch, streamers

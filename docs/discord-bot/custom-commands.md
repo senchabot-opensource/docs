@@ -9,7 +9,7 @@ outline: [2, 3]
 ### Command Add
 
 ```
-!acmd [command_name] [command_content]
+/acmd [name:<command_name>] [content:<command_content>]
 ```
 
 ::: details Example Usage
@@ -17,7 +17,7 @@ outline: [2, 3]
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmd senchabot https://senchabot.app/
+		/acmd name:senchabot content:https://senchabot.com/
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: senchabot
@@ -25,15 +25,11 @@ outline: [2, 3]
 </DiscordMessages>
 :::
 
-::: info Information
-
-In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) update command does not work. The `!lurk` command is an exception in this regard.
-:::
 
 ### Command Update
 
 ```
-!ucmd [command_name] [new_command_content]
+/ucmd [name:<command_name>] [content:<new_command_content>]
 ```
 
 ::: details Example Usage
@@ -41,7 +37,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!ucmd senchabot https://docs.senchabot.app
+		/ucmd name:senchabot content:https://senchabot.com
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Updated: senchabot
@@ -52,7 +48,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 ### Command Delete
 
 ```
-!dcmd [command_name]
+/dcmd [name:<command_name>]
 ```
 
 ::: details Example Usage
@@ -60,7 +56,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!dcmd senchabot
+		/dcmd name:senchabot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Deleted: senchabot
@@ -71,7 +67,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 ### Alias Add
 
 ```
-!acmda [command_name] [command_alias]
+/acmda [name:<command_name>] [alias:<command_alias>]
 ```
 
 ::: details Example Usage
@@ -79,7 +75,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmda senchabot discord-bot
+		/acmda name:senchabot alias:discord-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Aliases Added: discord-bot
@@ -90,7 +86,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 #### Add multiple aliases <Badge type="warning" text="new" />
 
 ```
-!acmda [command_name] [command_alias(es) separated by space]
+/acmda [name:<command_name>] [aliases:<command_aliases separated by space>]
 ```
 
 ::: details Example Usage
@@ -98,7 +94,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!acmda senchabot discord-bot twitch-bot
+		/acmda name:senchabot aliases:discord-bot twitch-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Aliases Added: discord-bot, twitch-bot
@@ -109,7 +105,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 ### Alias Delete
 
 ```
-!dcmda [command_alias]
+/dcmda [alias:<command_alias>]
 ```
 
 ::: details Example Usage
@@ -117,7 +113,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!dcmda discord-bot
+		/dcmda alias:discord-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Alias Deleted: discord-bot
@@ -128,7 +124,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 #### Delete multiple aliases <Badge type="danger" text="planned | not active"/>
 
 ```
-!dcmda [command_alias(es) separated by space]
+/dcmda [aliases:<command_aliases separated by space>]
 ```
 
 ::: details Example Usage
@@ -136,7 +132,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!dcmda discord-bot twitch-bot
+		/dcmda aliases:discord-bot twitch-bot
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Command Alias Deleted: discord-bot, twitch-bot
@@ -147,7 +143,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 ## Access to Server Commands
 
 ```
-!cmds
+/cmds
 ```
 
 ::: details Example Usage
@@ -155,7 +151,7 @@ In global commands, the [`!ucmd`](/twitch-bot/custom-commands#command-update) up
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-		!cmds
+		/cmds
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		Commands: senchabot, discord, twitch, streamers

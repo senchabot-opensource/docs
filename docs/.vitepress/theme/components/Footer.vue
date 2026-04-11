@@ -7,9 +7,9 @@
             Copyright © {{ new Date().getFullYear() }} <a href="https://github.com/senchabot-opensource">Senchabot</a>
         </span>
         <span>
-            <a href="https://senchabot.app/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>
+            <a href="https://senchabot.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>
             • 
-            <a href="https://senchabot.app/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://senchabot.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
         </span>
     </footer>
 </template>
