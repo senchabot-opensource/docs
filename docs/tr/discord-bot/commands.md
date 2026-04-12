@@ -1,63 +1,75 @@
 # Komutlar
 
-## Ön Tanımlı Komutlar <Badge type="warning" text="NEW"/>
+## Sistem Komutları <Badge type="warning" text="NEW"/>
 
-| Komut        | Senchabot'un Yanıtı                                                                                                                                                                                                                  |
-| :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| invite       | Senchabot'un sunucu davet linkini gönderir.                                                                                                                                                                                          |
-| cmds         | {channel.name}'s Channel Commands: ...                                                                                                                                                                                               |
-| help         | Senchabot's Commands: cmds, acmd, dcmd, ucmd, acmda, dcmda, sozluk, ping, invite, help.                                                                                                                                              |
-| senchabot    | An open-source, multi-platform bot designed for seamless integration with Twitch and Discord • [senchabot.app](https://senchabot.app) • [github.com/senchabot-opensource/monorepo](https://github.com/senchabot-opensource/monorepo) |
-| kampus       | discord.gg/kampus - github.com/kamp-us                                                                                                                                                                                               |
-| frontendship | discord.gg/frontendship                                                                                                                                                                                                              |
-| ping         | pong! VoHiYo                                                                                                                                                                                                                         |
-<!-- PURGE -->
-<!-- ## Temizleme <Badge type="warning" text="NEW"/>
+| Komut | Yanıt |
+| :-- | :-- |
+| /set-twitch | Kanal için Twitch canlı yayın duyurusu ekler. |
+| /set-kick | Kanal için Kick canlı yayın duyurusu ekler. |
+| /del-twitch | Twitch canlı yayın duyurusunu kaldırır. |
+| /del-kick | Kick canlı yayın duyurusunu kaldırır. |
+| /streamer-list | Canlı yayın duyuruları için eklenmiş Twitch ve Kick yayıncılarını listeler. |
+| /purge | Kanal mesajlarını veya bot etkinliklerini toplu siler. |
+| /invite | Botun davet bağlantısını gösterir. |
+| /do-not-track-my-messages | Mesaj takibinden çıkış yapar. |
+| /track-my-messages | Mesaj takibine tekrar dahil olur. |
+| /cmds | Sunucu için kullanılabilir komutları listeler. |
 
-```
-/purge events
-```
-Tüm zamanlanmış etkinlikleri iptal eder.
+::: info Bilgilendirme
 
-::: details Örnek Kullanım
-
-Kullanıcı Mesajı
-
-Senchabot'un Yanıtı
-
-::: 
-
-```
-/purge last-100-channel-messages message-content-contains: user-name-contains:
-```
-14 günden eski olmayan mesajları kullanıcı adı veya mesaj iceriğindeki karakterlere göre siler.
--->
-
-## Sözlük <Badge type="warning" text="NEW"/>
-
-```
-!sozluk [term_name]
-```
-
-::: details Örnek Kullanım
-
-<!-- EXAMPLE - !sozluk senchabot -->
-<DiscordMessages>
-<!-- TODO: NEW COMPONENT (user message) => change user message -->
-    <DiscordMessage profile="user">
-        <DiscordMarkdown>
-            !sozluk senchabot
-        </DiscordMarkdown>
-    </DiscordMessage>
-    <DiscordMessage profile="bot" role-color="#1fab89">
-        <DiscordMarkdown>
-        Senchabot: Açık kaynak Discord ve Twitch botu.
-        </DiscordMarkdown>
-    </DiscordMessage>
-</DiscordMessages>
+Özel slash komut yönetimi komutları [`Özel Komutlar`](/tr/discord-bot/custom-commands) sayfasında belgelenmiştir.
 :::
 
-<!-- Result Photo ? -->
+<!-- Custom Commands Button -->
+<style src="@theme/style.css" scoped></style>
+<div>
+    <a class="content-ref-s" href="/tr/discord-bot/custom-commands">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Özel Komutlar</span>
+        </span>
+        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
+</div>
+
+## Purge <Badge type="warning" text="NEW"/>
+
+```
+/purge last-100-channel-messages message-content:giveaway
+```
+
+::: details Örnek Kullanım
+
+<DiscordMessages>
+    <DiscordMessage profile="user">
+        /purge last-100-channel-messages message-content:giveaway
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        Purge tamamlandı. Eşleşen mesajlar silindi.
+    </DiscordMessage>
+</DiscordMessages>
+
+*Eşleşen yeni mesajları veya bot tarafından oluşturulan etkinlikleri siler.*
+:::
+
+## Yayıncı Listesi <Badge type="warning" text="NEW"/>
+
+```
+/streamer-list
+```
+
+::: details Örnek Kullanım
+
+<DiscordMessages>
+    <DiscordMessage profile="user">
+        /streamer-list
+    </DiscordMessage>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        Takip edilen yayıncılar: shroud (Twitch), xqc (Kick)
+    </DiscordMessage>
+</DiscordMessages>
+
+*Takip edilen canlı yayın yayıncılarını listeler.*
+:::
 
 ## Modül Komutları
 
