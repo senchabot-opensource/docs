@@ -64,7 +64,8 @@ Custom slash command management commands are documented in [`Custom Commands`](/
         /streamer-list
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
-        Tracked streamers: shroud (Twitch), xqc (Kick)
+        **Twitch streamers:** shroud
+        **Kick streamers:** xqc
     </DiscordMessage>
 </DiscordMessages>
 

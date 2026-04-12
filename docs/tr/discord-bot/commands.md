@@ -64,7 +64,8 @@
         /streamer-list
     </DiscordMessage>
     <DiscordMessage profile="bot" role-color="#1fab89">
-        Takip edilen yayıncılar: shroud (Twitch), xqc (Kick)
+        **Twitch streamers:** shroud
+        **Kick streamers:** xqc
     </DiscordMessage>
 </DiscordMessages>
 
