@@ -84,7 +84,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/senchabot-opensource/' },
-      { icon: 'discord', link: 'https://discord.com/invite/h3NqsbHW4a' },
+      { icon: 'discord', link: 'https://discord.com/invite/qUxwcjRzND' },
       {
         icon: 'linkedin',
         link: 'https://www.linkedin.com/company/senchabot'
