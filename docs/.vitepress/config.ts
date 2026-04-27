@@ -21,7 +21,7 @@ export default defineConfig({
       {
         name: 'description',
         content:
-          'Open-source multi-platform bot development project, which works on Twitch and Discord.'
+          'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
       }
     ],
     ['meta', { name: 'theme-color', content: '#20AB8C' }],
@@ -39,7 +39,7 @@ export default defineConfig({
       {
         name: 'og:description',
         content:
-          'Open-source multi-platform bot development project, which works on Twitch and Discord.'
+          'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
       }
     ],
     ['meta', { name: 'twitter:site', content: '@senchabot' }],
@@ -48,7 +48,8 @@ export default defineConfig({
       'meta',
       {
         name: 'twitter:description',
-        content: 'Open-source Discord and Twitch bot'
+        content:
+          'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
       }
     ],
     [
@@ -83,24 +84,27 @@ export default defineConfig({
     i18nRouting: true,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/senchabot-opensource/' },
       { icon: 'discord', link: 'https://discord.com/invite/qUxwcjRzND' },
       {
-        icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/senchabot'
+        icon: 'youtube',
+        link: 'https://www.youtube.com/@Senchabot'
+      },
+      {
+        icon: 'twitter',
+        link: 'https://twitter.com/senchabot'
       }
     ], //  available icons https://vitepress.dev/reference/default-theme-config#sociallinks
 
     nav: [
       {
         text: 'Developers',
-        link: 'https://github.com/senchabot-opensource/monorepo'
+        link: 'https://github.com/senchabot-opensource'
       }
     ],
     // Footer
     footer: {
       message: `<span>Released under the  <a href="https://github.com/senchabot-opensource/monorepo/blob/dev/LICENSE">GPL-3.0 License</a></span>`,
-      copyright: `<span>Copyright © ${new Date().getFullYear()} <a href="https://github.com/senchabot-opensource">Senchabot</a></span><span><a href="https://senchabot.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a> • <a href="https://senchabot.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></span>`
+      copyright: `<span>Copyright © ${new Date().getFullYear()} <a href="https://senchabot.com">Senchabot</a></span><span><a href="https://senchabot.com/terms-of-service" target="_blank" rel="noopener">Terms of Service</a> • <a href="https://senchabot.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></span>`
     },
     search: {
       provider: 'local',
@@ -152,7 +156,7 @@ export default defineConfig({
           // },
           // Twitch - EN
           {
-            text: 'Twitch',
+            text: 'Twitch Bot',
             collapsed: false,
             items: [
               {
@@ -203,7 +207,7 @@ export default defineConfig({
           },
           // Discord - EN
           {
-            text: 'Discord',
+            text: 'Discord Bot',
             collapsed: false,
             items: [
               {
@@ -244,7 +248,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Kick',
+            text: 'Kick Bot',
             collapsed: false,
             items: [
               {
@@ -308,7 +312,7 @@ export default defineConfig({
           // },
           // Twitch - TR
           {
-            text: 'Twitch',
+            text: 'Twitch Bot',
             collapsed: false,
             items: [
               {
@@ -359,7 +363,7 @@ export default defineConfig({
           },
           // Discord - TR
           {
-            text: 'Discord',
+            text: 'Discord Bot',
             collapsed: false,
             items: [
               {
@@ -400,7 +404,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Kick',
+            text: 'Kick Bot',
             collapsed: false,
             items: [
               {
