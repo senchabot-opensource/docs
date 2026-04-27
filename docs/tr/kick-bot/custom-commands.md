@@ -1,8 +1,10 @@
 ---
 outline: [2, 3]
+title: Kick Botu — Özel Komutlar
+description: Kick kanalınız için Senchabot ile özel komut oluşturun, güncelleyin, silin ve takma ad ekleyin.
 ---
 
-# Özel Komutlar <Badge type="warning" text="NEW"/>
+# Kick Botu — Özel Komutlar <Badge type="warning" text="NEW"/>
 
 ## İzinleri Ayarlama
 
@@ -100,6 +102,5 @@ Web panelinden özel bir komut oluştururken (örn. `!discord`), komutu kimlerin
 
 ```
 !help
-!followage
 !uptime
 ```

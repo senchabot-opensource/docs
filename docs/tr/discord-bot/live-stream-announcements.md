@@ -1,8 +1,10 @@
 ---
 outline: [2, 4]
+title: Discord Botu — Canlı Yayın Duyuruları
+description: Discord sunucunuzda Senchabot ile Twitch ve Kick canlı yayın duyurularını yapılandırın.
 ---
 
-# Canlı Yayın Duyuruları <Badge type="warning" text="NEW"/>
+# Discord Botu — Canlı Yayın Duyuruları <Badge type="warning" text="NEW"/>
 
 ## Yayın ve Yayıncı Özel Ayarları
 
@@ -310,6 +312,120 @@ Twitch yayıncıları eklenirken `channel` opsiyonu girilmediğinde yayıncılar
         </template>
         <DiscordMarkdown>
             Varsayılan yayın duyuru mesajı içeriği kaldırıldı. Özelleştirilmiş duyuru mesajı olmayan yayıncıların duyuruları belirtilen formatta gönderilecektir. `{twitch.username}, {stream.category} yayınına başladı! {stream.title}: {twitch.url}`
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+## Kategori Filtreleri <Badge type="warning" text="NEW"/>
+
+Her duyuru kanalı için yayın kategorisine göre canlı yayın duyurularını filtreleyin. Sunucu başına en fazla **2 kategori filtresi** ayarlayabilirsiniz.
+
+### Kategori Filtresi Ekleme
+
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="               "
+    optionPillKey2="filter-regex"
+    optionPillValue2="               "
+    optionPillKey3="condition"
+    optionPillValue3="               "
+    >
+</ApplicationCommands>
+
+**Parametreler:**
+- `channel` — **(Zorunlu)** Duyuruların gönderileceği Discord yazı kanalı.
+- `filter-regex` — **(Zorunlu)** Yayın kategorisi adı(lar)ıyla eşleşen bir regex deseni. Birden fazla kategori eşleştirmek için `|` kullanın (örn. `Just Chatting|IRL`).
+- `condition` — **(Zorunlu)** **matches** (kategori eşleşirse duyur) veya **does not match** (kategori eşleşirse atla) seçeneklerinden birini seçin.
+
+::: details Örnek Kullanım
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="twitch-yayınları"
+    optionPillKey2="filter-regex"
+    optionPillValue2="Just Chatting"
+    optionPillKey3="condition"
+    optionPillValue3="matches"
+    >
+</ApplicationCommands>
+<br>
+<DiscordMessages>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true" profile="user" :command="true">set-twitch announcement game-category-filter</DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            `twitch-yayınları` isimli duyuru kanalına atılacak Twitch yayın duyurularının kategori filtresi `Just Chatting` şekilde `matches` olarak ayarlandı.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+
+*Yalnızca "Just Chatting" kategorisindeki Twitch yayınları `#twitch-yayınları` kanalında duyurulacaktır.*
+:::
+
+::: details Örnek Kullanım (Eşleşmezse)
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="twitch-yayınları"
+    optionPillKey2="filter-regex"
+    optionPillValue2="Just Chatting"
+    optionPillKey3="condition"
+    optionPillValue3="does not match"
+    >
+</ApplicationCommands>
+<br>
+<DiscordMessages>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true" profile="user" :command="true">set-twitch announcement game-category-filter</DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            `twitch-yayınları` isimli duyuru kanalına atılacak Twitch yayın duyurularının kategori filtresi `Just Chatting` şekilde `does not match` olarak ayarlandı.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+
+*"Just Chatting" kategorisindeki Twitch yayınları atlanacak; diğer tüm kategoriler `#twitch-yayınları` kanalında duyurulacaktır.*
+:::
+
+::: tip Birden Fazla Kategori
+Tek bir filtreye `|` (pipe) karakteri kullanarak birden fazla kategori ekleyebilirsiniz, örn. `Just Chatting|IRL|Art`.
+:::
+
+### Kategori Filtresini Kaldırma
+
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="               "
+    >
+</ApplicationCommands>
+
+::: details Örnek Kullanım
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="twitch-yayınları"
+    >
+</ApplicationCommands>
+<br>
+<DiscordMessages>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true" profile="user" :command="true">del-twitch announcement game-category-filter</DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            `twitch-yayınları` isimli yazı kanalı için Twitch yayın duyuru kategori filtrelemesi kaldırıldı.
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>

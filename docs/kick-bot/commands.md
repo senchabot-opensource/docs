@@ -1,23 +1,29 @@
-# Commands
+---
+title: Kick Bot — Commands
+description: Complete reference for Senchabot Kick system commands including shoutouts and uptime.
+---
+
+# Kick Bot — Commands
 
 ## Kick Bot System Commands <Badge type="warning" text="NEW"/>
 
 | Command | Response |
 | :-- | :-- |
 | !ping | Check if the bot is responding. |
-| !invite | Invite the bot to your Kick channel. |
-| !leave | Remove the bot from your Kick channel. |
+| !invite | Invite the bot to your Kick channel (run in the bot's channel chat). |
+| !leave | Remove the bot from your Kick channel (broadcaster only). |
 | !so | Give a shoutout to another Kick streamer. |
-| !followage | Follow duration command. Shows how long a viewer has followed the channel. |
-| !uptime | Show how long a Kick channel has been live on air. |
+| !uptime | Show how long the Kick channel has been live. |
 | !cmds | List available commands for the channel. |
 | !help | Show system command list. |
-| !atimer | Create a timer for an existing custom command. |
-| !dtimer | Delete a command timer. |
-| !timers | List active command timers. |
-| !timer | Show timer command usage help. |
+| !gamecategory | Set the stream category/game (broadcaster or moderator). |
 
-
+::: warning Unavailable on Kick
+The following commands are currently unavailable in Kick chat:
+- `!clip` — Clip creation is not supported on Kick.
+- `!followage` — Follow duration lookup is not supported by the Kick API.
+- `!atimer`, `!dtimer`, `!timers`, `!timer` — Timer chat commands are currently disabled (the timer service exists but cannot be managed via chat yet).
+:::
 
 <!-- Custom Commands Button -->
 <style src="@theme/custom.css" scoped></style>
@@ -51,45 +57,6 @@ Follow @xqc over at kick.com/xqc <3
 ```
 
 *Returns the above message and generates a shoutout.*
-:::
-
-## Followage <Badge type="warning" text="NEW"/>
-
-```
-!followage
-```
-
-```
-!followage @user
-```
-
-::: details Example Usage
-
-User Message
-
-```
-!followage
-```
-
-Senchabot's Response
-
-```
-@user has been following this channel for 1 year, 2 months.
-```
-
-User Message
-
-```
-!followage @xqc
-```
-
-Senchabot's Response
-
-```
-@xqc has been following this channel for 3 years, 4 months.
-```
-
-*Returns follow duration for yourself or for the mentioned user.*
 :::
 
 ## Module Commands
@@ -137,5 +104,5 @@ Senchabot's Response
 <br/>
 
 ::: info Cooldown System
-Command usage cooldown time is 2 seconds per user.
+Command usage cooldown time is 1 second per user.
 :::

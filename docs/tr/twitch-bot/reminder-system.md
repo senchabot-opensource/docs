@@ -1,4 +1,9 @@
-# Hatırlatıcı Sistemi <Badge type="danger" text="planned | not active" />
+---
+title: Twitch Botu — Hatırlatıcı Sistemi
+description: Planlanan Twitch hatırlatıcı sistemi.
+---
+
+# Twitch Botu — Hatırlatıcı Sistemi <Badge type="danger" text="planned | not active" />
 
 ```
 !reminder "[content]" [time]

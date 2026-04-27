@@ -1,4 +1,9 @@
-# Komutlar
+---
+title: Discord Botu — Komutlar
+description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Kick yayın duyuruları yönetimi, purge ve sunucu ayarları dahil.
+---
+
+# Discord Botu — Komutlar
 
 ## Sistem Komutları <Badge type="warning" text="NEW"/>
 
@@ -14,6 +19,7 @@
 | /do-not-track-my-messages | Mesaj takibinden çıkış yapar. |
 | /track-my-messages | Mesaj takibine tekrar dahil olur. |
 | /cmds | Sunucu için kullanılabilir komutları listeler. |
+| /help | Sistem komut listesini gösterir. |
 
 ::: info Bilgilendirme
 
@@ -107,6 +113,16 @@
     </a>
 </div>
 
+## Planlandı {#planned}
+
+Aşağıdaki komutlar planlanmıştır ancak henüz aktif değildir:
+
+| Komut | Açıklama |
+| :-- | :-- |
+| /set-youtube | Kanal için YouTube canlı yayın duyurusu ekler. |
+| /del-youtube | YouTube canlı yayın duyurusunu kaldırır. |
+| /youtube-list | Takip edilen YouTube kanallarını listeler. |
+
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css" scoped></style>
 <div>
@@ -121,5 +137,5 @@
 <br/>
 
 ::: info Cooldown Sistemi
-Komut kullanım bekleme süresi kullanıcı başına 2 saniyedir.
+Komut kullanım bekleme süresi kullanıcı başına 1 saniyedir.
 :::

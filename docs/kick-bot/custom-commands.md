@@ -1,8 +1,10 @@
 ---
 outline: [2, 3]
+title: Kick Bot — Custom Commands
+description: Create, update, delete, and alias custom commands for your Kick channel with Senchabot.
 ---
 
-# Custom Commands <Badge type="warning" text="NEW"/>
+# Kick Bot — Custom Commands <Badge type="warning" text="NEW"/>
 
 ## Permissions
 
@@ -100,6 +102,5 @@ Use system commands together with your custom commands in the same channel.
 
 ```
 !help
-!followage
 !uptime
 ```

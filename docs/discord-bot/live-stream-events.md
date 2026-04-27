@@ -1,4 +1,9 @@
-# Live Stream Events <Badge type="warning" text="NEW"/>
+---
+title: Discord Bot — Live Stream Events
+description: Configure livestream event channels in your Discord server with Senchabot.
+---
+
+# Discord Bot — Live Stream Events <Badge type="warning" text="NEW"/>
 
 Senchabot creates server activity by tracking [live stream announcements](/discord-bot/live-stream-announcements) in the specified channels.
 

@@ -1,14 +1,20 @@
 ---
 outline: [2, 3]
+title: Twitch Botu — Custom API Sistemi
+description: Senchabot Custom API sistemi ile Twitch özel komutlarınıza harici veri çekin.
 ---
 
-# Custom API Sistemi <Badge type="warning" text="NEW"/>
+# Twitch Botu — Custom API Sistemi <Badge type="warning" text="NEW"/>
 
 Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kanalınıza eklemiş olduğunuz özel komut aracılığıyla yanıt almanıza olanak tanıyan sistemdir.
 
 ```
 {customapi.https://...}
 ```
+
+::: tip Sınırlama
+Her komut yanıtında yalnızca **bir** `{customapi.https://...}` etiketi işlenir.
+:::
 
 #### Yayın Sohbetine Komut Ekle
 

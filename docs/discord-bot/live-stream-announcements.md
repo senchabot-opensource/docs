@@ -1,8 +1,10 @@
 ---
 outline: [2, 4]
+title: Discord Bot — Live Stream Announcements
+description: Configure Twitch and Kick livestream announcements in your Discord server with Senchabot.
 ---
 
-# Live Stream Announcements <Badge type="warning" text="NEW"/>
+# Discord Bot — Live Stream Announcements <Badge type="warning" text="NEW"/>
 
 ## Live Stream and Broadcaster Custom Settings
 
@@ -315,6 +317,120 @@ When adding Twitch streamers without specifying the `channel` option, their anno
         </template>
         <DiscordMarkdown>
             Varsayılan yayın duyuru mesajı içeriği kaldırıldı. Özelleştirilmiş duyuru mesajı olmayan yayıncıların duyuruları belirtilen formatta gönderilecektir. `{twitch.username}, {stream.category} yayınına başladı! {stream.title}: {twitch.url}`
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+:::
+
+## Category Filters <Badge type="warning" text="NEW"/>
+
+Filter livestream announcements by stream category for each announcement channel. You can set up to **2 category filters per server**.
+
+### Adding a Category Filter
+
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="               "
+    optionPillKey2="filter-regex"
+    optionPillValue2="               "
+    optionPillKey3="condition"
+    optionPillValue3="               "
+    >
+</ApplicationCommands>
+
+**Parameters:**
+- `channel` — **(Required)** The Discord text channel where announcements are posted.
+- `filter-regex` — **(Required)** A regex pattern matching the stream category name(s). Use `|` to match multiple categories (e.g., `Just Chatting|IRL`).
+- `condition` — **(Required)** Choose **matches** (only announce if category matches) or **does not match** (skip if category matches).
+
+::: details Example Usage
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="twitch-streams"
+    optionPillKey2="filter-regex"
+    optionPillValue2="Just Chatting"
+    optionPillKey3="condition"
+    optionPillValue3="matches"
+    >
+</ApplicationCommands>
+<br>
+<DiscordMessages>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true" profile="user" :command="true">set-twitch announcement game-category-filter</DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            The category filter for Twitch stream announcements to be sent to the `twitch-streams` text channel has been set to `Just Chatting` `matches`.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+
+*Only Twitch streams in the "Just Chatting" category will be announced to `#twitch-streams`.*
+:::
+
+::: details Example Usage (Does Not Match)
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="set-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="twitch-streams"
+    optionPillKey2="filter-regex"
+    optionPillValue2="Just Chatting"
+    optionPillKey3="condition"
+    optionPillValue3="does not match"
+    >
+</ApplicationCommands>
+<br>
+<DiscordMessages>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true" profile="user" :command="true">set-twitch announcement game-category-filter</DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            The category filter for Twitch stream announcements to be sent to the `twitch-streams` text channel has been set to `Just Chatting` `does not match`.
+        </DiscordMarkdown>
+    </DiscordMessage>
+</DiscordMessages>
+
+*Twitch streams in the "Just Chatting" category will be skipped; all other categories will be announced to `#twitch-streams`.*
+:::
+
+::: tip Multiple Categories
+Use the `|` (pipe) character to match multiple categories in a single filter, e.g., `Just Chatting|IRL|Art`.
+:::
+
+### Removing a Category Filter
+
+<br>
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="               "
+    >
+</ApplicationCommands>
+
+::: details Example Usage
+<ApplicationCommands
+    appCmd-icon="https://cdn.discordapp.com/avatars/1039550209274945587/026fae6fce576363a3ea9c6ebba467bb.webp"
+    appCmd-name="del-twitch announcement game-category-filter"
+    optionPillKey="channel"
+    optionPillValue="twitch-streams"
+    >
+</ApplicationCommands>
+<br>
+<DiscordMessages>
+    <DiscordMessage profile="bot" role-color="#1fab89">
+        <template #interactions>
+            <DiscordInteraction :ephemeral="true" profile="user" :command="true">del-twitch announcement game-category-filter</DiscordInteraction>
+        </template>
+        <DiscordMarkdown>
+            For the text channel named `twitch-streams`, Twitch stream announcement category filtering removed.
         </DiscordMarkdown>
     </DiscordMessage>
 </DiscordMessages>

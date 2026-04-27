@@ -1,8 +1,10 @@
 ---
 outline: [2, 3]
+title: Discord Bot — Custom Commands
+description: Create, update, delete, and alias custom slash commands for your Discord server with Senchabot.
 ---
 
-# Custom Commands <Badge type="warning" text="NEW"/>
+# Discord Bot — Custom Commands <Badge type="warning" text="NEW"/>
 
 ## Server Commands
 

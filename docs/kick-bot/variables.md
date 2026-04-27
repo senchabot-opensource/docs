@@ -1,9 +1,9 @@
 ---
-title: Twitch Bot — Command Variables
-description: Use dynamic variables like user names, dates, random numbers, and channel names in your Twitch custom commands.
+title: Kick Bot — Command Variables
+description: Use dynamic variables like user names, dates, random numbers, and channel names in your Kick custom commands.
 ---
 
-# Twitch Bot — Command Variables
+# Kick Bot — Command Variables
 
 Variables added to the command content.
 
@@ -15,24 +15,22 @@ Variables added to the command content.
 
 Returns the username of the person using the command.
 
-Alias: `{user_name}`
+Alias: `{cmd.author}`
 
 ::: details Example Usage
 
 Command Add
 
 ```
-!acmd good-morning Good morning {user.name}!
-
+!acmd hello Hello {user.name}, welcome to the stream!
 ```
 
 User Message and Response
 
 ```
-senchabot-app: !good-morning
+senchabot-app: !hello
 
-Senchabot: Good morning senchabot-app!
-
+Senchabot: Hello senchabot-app, welcome to the stream!
 ```
 
 :::
@@ -46,7 +44,7 @@ Returns a random number between 18-70.
 Command Add
 
 ```
-!acmd age {random.number}
+!acmd age I think... You're {random.number} years old!
 ```
 
 User Message and Response
@@ -68,15 +66,15 @@ Returns the date of the day it is used.
 Command Add
 
 ```
-!acmd date Date: {date}
+!acmd today Today is {date}
 ```
 
 User Message and Response
 
 ```
-senchabot-app: !date
+senchabot-app: !today
 
-Senchabot: Date: 09/09/2023
+Senchabot: Today is 09/09/2023
 ```
 
 :::
@@ -85,22 +83,20 @@ Senchabot: Date: 09/09/2023
 
 Returns the date the custom command was created.
 
-Alias: `{cmd_date}`
-
 ::: details Example Usage
 
 Command Add
 
 ```
-!acmd christmas Happy christmas! -{cmd.date}
+!acmd created This command was created on {cmd.date}
 ```
 
 User Message and Response
 
 ```
-senchabot-app: !christmas
+senchabot-app: !created
 
-Senchabot: Happy christmas! -25/12/2023
+Senchabot: This command was created on 25/12/2023
 ```
 
 :::
@@ -114,15 +110,15 @@ Returns the name of the channel that the command is used.
 Command Add
 
 ```
-!acmd twitch-bot {channel.name} prefers to use the Senchabot!
+!acmd kick-bot {channel.name} is using Senchabot!
 ```
 
 User Message and Response
 
 ```
-senchabot-app: !twitch-bot
+senchabot-app: !kick-bot
 
-Senchabot: senchabot-app, prefers to use the Senchabot!
+Senchabot: senchabot-app is using Senchabot!
 ```
 
 :::

@@ -1,37 +1,75 @@
-# Komut Değişkenleri
+---
+title: Discord Botu — Komut Değişkenleri
+description: Senchabot ile Discord özel komutlarınızda ve canlı yayın duyurularınızda dinamik değişkenler kullanın.
+---
+
+# Discord Botu — Komut Değişkenleri
 
 Komut içeriğine eklenen değişkenlerdir.
 
 ```
-!acmd [komut_adı] [komut_içeriği {komut.değişkeni}]
+/acmd [name:<komut_adı>] [content:<komut_içeriği {komut.değişkeni}>]
 ```
 
-## `{user.name}`
+## Özel Komut Değişkenleri
+
+Bu değişkenler Discord özel komutlarında Twitch ve Kick'te olduğu gibi çalışır.
+
+### `{user.name}`
 
 Komutu kullanan kişinin kullanıcı adını yazar.
+
+Takma ad: `{cmd.author}`
 
 ::: details Örnek Kullanım
 
 Komut Ekleme
 
 ```
-!acmd günaydın Günaydın {user.name}!
-
+/acmd name:selam content:"Selam {user.name}!"
 ```
 
-Kullanıcı Mesajı ve Yanıtı
+Kullanıcı Mesajı
 
 ```
-senchabot-app: !günaydın
+/selam
+```
 
-Senchabot: Günaydın senchabot-app!
+Senchabot'un Yanıtı
 
+```
+Selam senchabot-app!
 ```
 
 :::
 
-Twitch Stream Variables
-{twitch.username}
-{twitch.url}
-{stream.title}
-{stream.category}
+### `{random_number}`
+
+18-70 arasında rastgele sayı döndürür.
+
+### `{date}`
+
+Mevcut tarihi döndürür.
+
+### `{cmd.date}`
+
+Özel komutun oluşturulduğu tarihi döndürür.
+
+### `{channel.name}`
+
+Komutun kullanıldığı kanalın adını döndürür.
+
+### `{customapi.https://...}`
+
+Harici bir API'den veri çeker. Her komut yanıtında yalnızca **bir** custom API etiketi işlenir.
+
+## Twitch Stream Değişkenleri
+
+Bu değişkenler Twitch canlı yayın duyuru mesajlarında kullanılır.
+
+| Değişken | Açıklama |
+| :-- | :-- |
+| `{twitch.username}` | Twitch yayıncısının kullanıcı adı. |
+| `{twitch.url}` | Twitch yayın URL'si. |
+| `{stream.title}` | Mevcut yayın başlığı. |
+| `{stream.category}` | Mevcut yayın kategorisi/oyunu. |

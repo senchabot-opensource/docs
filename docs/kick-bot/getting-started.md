@@ -1,4 +1,9 @@
-# Getting Started
+---
+title: Kick Bot — Getting Started
+description: Invite Senchabot to your Kick channel and start managing your community with custom commands, timers, and moderation tools.
+---
+
+# Kick Bot — Getting Started
 
 ## Invite to Your Kick Channel
 

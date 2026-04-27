@@ -1,4 +1,9 @@
-# Başlamadan Önce
+---
+title: Kick Botu — Başlamadan Önce
+description: Senchabot'u Kick kanalınıza davet edin ve özel komutlar, zamanlayıcılar ve moderasyon araçlarıyla topluluğunuzu yönetmeye başlayın.
+---
+
+# Kick Botu — Başlamadan Önce
 
 ## Kick Kanalınıza Davet Edin
 
