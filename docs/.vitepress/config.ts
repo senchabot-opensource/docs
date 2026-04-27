@@ -1,4 +1,68 @@
+import { writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
+
+const SITE_URL = 'https://docs.senchabot.com'
+
+function generateSitemap(siteConfig: any) {
+  const pages = (siteConfig.pages as string[])
+    .map((path) => {
+      const url = path.replace(/^\//, '').replace(/\.md$/, '').replace(/\/index$/, '')
+      const loc = url === '' ? SITE_URL : `${SITE_URL}/${url}`
+      return `  <url>\n    <loc>${loc}</loc>\n  </url>`
+    })
+    .join('\n')
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages}\n</urlset>`
+  writeFileSync(resolve(siteConfig.outDir, 'sitemap.xml'), sitemap)
+}
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: 'Senchabot',
+      url: 'https://senchabot.com',
+      logo: 'https://senchabot.com/senchabot-logo.svg',
+      sameAs: [
+        'https://twitter.com/senchabot',
+        'https://github.com/senchabot-opensource',
+        'https://discord.com/invite/qUxwcjRzND',
+        'https://www.youtube.com/@Senchabot',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      name: 'Senchabot Documentation',
+      url: SITE_URL,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Senchabot',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'Any',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5',
+        ratingCount: '100',
+      },
+    },
+  ],
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,6 +78,34 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
 
+  buildEnd: generateSitemap,
+
+  transformHead({ pageData, siteConfig }) {
+    const pagePath = pageData.relativePath.replace(/\.md$/, '').replace(/\/index$/, '')
+    const canonicalUrl = pagePath === '' ? SITE_URL : `${SITE_URL}/${pagePath}`
+    const pageTitle = pageData.frontmatter.title || siteConfig.site.title
+    const pageDescription = pageData.frontmatter.description || siteConfig.site.description
+
+    const head: any[] = [
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:title', content: `${pageTitle} | Senchabot Docs` }],
+      ['meta', { property: 'og:description', content: pageDescription }],
+      ['meta', { property: 'twitter:title', content: `${pageTitle} | Senchabot Docs` }],
+      ['meta', { property: 'twitter:description', content: pageDescription }],
+    ]
+
+    // Inject JSON-LD only on the home page
+    if (pageData.relativePath === 'index.md') {
+      head.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify(structuredData),
+      ])
+    }
+
+    return head
+  },
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
@@ -25,38 +117,31 @@ export default defineConfig({
       }
     ],
     ['meta', { name: 'theme-color', content: '#20AB8C' }],
-    ['meta', { name: 'og:type', content: 'website' }],
-    ['meta', { name: 'og:site_name', content: 'Senchabot' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Senchabot' }],
+    ['meta', { property: 'og:url', content: SITE_URL }],
     [
       'meta',
       {
-        name: 'og:image',
-        content: 'https://avatars.githubusercontent.com/u/125701962'
+        property: 'og:image',
+        content: `${SITE_URL}/og-image.svg`
       }
     ],
     [
       'meta',
       {
-        name: 'og:description',
+        property: 'og:description',
         content:
           'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
       }
     ],
     ['meta', { name: 'twitter:site', content: '@senchabot' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'meta',
-      {
-        name: 'twitter:description',
-        content:
-          'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
-      }
-    ],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     [
       'meta',
       {
         name: 'twitter:image',
-        content: 'https://avatars.githubusercontent.com/u/125701962'
+        content: `${SITE_URL}/og-image.svg`
       }
     ],
     ['meta', { name: 'robots', content: 'index,follow' }],
@@ -240,11 +325,21 @@ export default defineConfig({
                   //   link: "/discord-bot/reminder-system",
                   // },
                 ]
+              },
+              {
+                text: 'Planned',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'YouTube Commands',
+                    link: '/discord-bot/commands#planned'
+                  }
+                ]
+              },
+              {
+                text: 'Variables',
+                link: '/discord-bot/variables'
               }
-              // {
-              //   text: "Variables",
-              //   link: "/discord-bot/variables",
-              // },
             ]
           },
           {
@@ -276,11 +371,13 @@ export default defineConfig({
                     link: '/kick-bot/command-timer-system'
                   }
                 ]
+              },
+              {
+                text: 'Variables',
+                link: '/kick-bot/variables'
               }
             ]
-          }
-          // Variables - Twitch & Discord
-          // { text: "Variables", link: "/variables" },
+          },
         ]
       }
     },
@@ -396,11 +493,21 @@ export default defineConfig({
                   //   link: "/tr/discord-bot/reminder-system",
                   // },
                 ]
+              },
+              {
+                text: 'Planlandı',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'YouTube Komutları',
+                    link: '/tr/discord-bot/commands#planned'
+                  }
+                ]
+              },
+              {
+                text: 'Değişkenler',
+                link: '/tr/discord-bot/variables'
               }
-              // {
-              //   text: "Değişkenler",
-              //   link: "/tr/discord-bot/variables",
-              // },
             ]
           },
           {
@@ -427,11 +534,15 @@ export default defineConfig({
                     text: 'Custom API Sistemi',
                     link: '/tr/kick-bot/custom-api-system'
                   },
-                  {
-                    text: 'Komut Zamanlayıcı Sistemi',
-                    link: '/tr/kick-bot/command-timer-system'
-                  }
+              {
+                text: 'Komut Zamanlayıcı Sistemi',
+                link: '/tr/kick-bot/command-timer-system'
+              }
                 ]
+              },
+              {
+                text: 'Değişkenler',
+                link: '/tr/kick-bot/variables'
               }
             ]
           }

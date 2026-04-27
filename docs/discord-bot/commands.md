@@ -1,4 +1,9 @@
-# Commands
+---
+title: Discord Bot — Commands
+description: Complete reference for Senchabot Discord slash commands including Twitch and Kick live stream announcement management, purge, and server settings.
+---
+
+# Discord Bot — Commands
 
 ## System Commands <Badge type="warning" text="NEW"/>
 
@@ -14,6 +19,7 @@
 | /do-not-track-my-messages | Opt out of message tracking. |
 | /track-my-messages | Opt in to message tracking. |
 | /cmds | List available commands for the server. |
+| /help | Show system command list. |
 
 ::: info Information
 
@@ -107,6 +113,16 @@ Custom slash command management commands are documented in [`Custom Commands`](/
     </a>
 </div>
 
+## Planned {#planned}
+
+The following commands are planned but not yet active:
+
+| Command | Description |
+| :-- | :-- |
+| /set-youtube | Add YouTube livestream announcement for a channel. |
+| /del-youtube | Remove YouTube livestream announcement. |
+| /youtube-list | List tracked YouTube channels. |
+
 <!-- Reminder System - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css" scoped></style>
 <div>
@@ -121,5 +137,5 @@ Custom slash command management commands are documented in [`Custom Commands`](/
 <br/>
 
 ::: info Cooldown System
-Command usage cooldown time is 2 seconds per user.
+Command usage cooldown time is 1 second per user.
 :::

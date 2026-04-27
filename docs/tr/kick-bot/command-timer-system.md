@@ -1,4 +1,9 @@
-# Komut Zamanlayıcı Sistemi <Badge type="warning" text="NEW" />
+---
+title: Kick Botu — Komut Zamanlayıcı Sistemi
+description: Planlanan Kick komut zamanlayıcı sistemi.
+---
+
+# Kick Botu — Komut Zamanlayıcı Sistemi <Badge type="warning" text="NEW" />
 
 ## Komut Zamanlayıcı Ekleme
 

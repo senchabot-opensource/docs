@@ -1,4 +1,9 @@
-# Başlamadan Önce
+---
+title: Twitch Botu — Başlamadan Önce
+description: Senchabot'u Twitch kanalınıza davet edin ve özel komutlar, zamanlayıcılar ve moderasyon araçlarıyla topluluğunuzu yönetmeye başlayın.
+---
+
+# Twitch Botu — Başlamadan Önce
 
 ## Twitch Kanalınıza Davet Edin
 

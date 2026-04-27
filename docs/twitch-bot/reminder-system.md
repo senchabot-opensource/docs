@@ -1,4 +1,9 @@
-# Reminder System <Badge type="danger" text="planned | not active" />
+---
+title: Twitch Bot — Reminder System
+description: Planned reminder system for Twitch channels.
+---
+
+# Twitch Bot — Reminder System <Badge type="danger" text="planned | not active" />
 
 ```
 !reminder "[content]" [time]

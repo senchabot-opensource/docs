@@ -1,14 +1,20 @@
 ---
 outline: [2, 3]
+title: Kick Botu — Custom API Sistemi
+description: Senchabot Custom API sistemi ile Kick özel komutlarınıza harici veri çekin.
 ---
 
-# Custom API Sistemi <Badge type="warning" text="NEW"/>
+# Kick Botu — Custom API Sistemi <Badge type="warning" text="NEW"/>
 
 Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kanalınıza eklediğiniz özel komut üzerinden yanıt almanıza olanak tanır.
 
 ```
 {customapi.https://...}
 ```
+
+::: tip Sınırlama
+Her komut yanıtında yalnızca **bir** `{customapi.https://...}` etiketi işlenir.
+:::
 
 #### Kanal Sohbetine Komut Ekle
 

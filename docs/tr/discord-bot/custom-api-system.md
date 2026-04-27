@@ -1,14 +1,20 @@
 ---
 outline: [2, 3]
+title: Discord Botu — Custom API Sistemi
+description: Senchabot Custom API sistemi ile Discord özel komutlarınıza harici veri çekin.
 ---
 
-# Custom API Sistemi <Badge type="warning" text="NEW"/>
+# Discord Botu — Custom API Sistemi <Badge type="warning" text="NEW"/>
 
 Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kanalınıza eklemiş olduğunuz özel komut aracılığıyla yanıt almanıza olanak tanıyan sistemdir.
 
 ```
 {customapi.https://...}
 ```
+
+::: tip Sınırlama
+Her komut yanıtında yalnızca **bir** `{customapi.https://...}` etiketi işlenir.
+:::
 
 #### Sunucuna Komut Ekle
 
@@ -32,7 +38,6 @@ Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kana
     </a>
 </div>
 
-
 ```
 {customapi.https://spotify.aidenwallis.co.uk/u/...}
 ```
@@ -40,7 +45,7 @@ Belirtilen şablon aracılığıyla bir URL'ye GET isteği göndermenize ve kana
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-			/acmd name:şarkı content:"Şu An Çalan Şarkı: {customapi.https://spotify.aidenwallis.co.uk/u/...}"
+			   /acmd name:şarkı content:"Şu An Çalan Şarkı: {customapi.https://spotify.aidenwallis.co.uk/u/...}"
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: şarkı
@@ -75,7 +80,7 @@ Aiden Wallis'in sitesinde bulunan _Now Playin Widget_ başlığı altındaki `ht
 <!-- EXAMPLE - Custom Commands -->
 <DiscordMessages>
 	<DiscordMessage profile="user">
-			/acmd name:metin content:"{customapi.https://techy-api.vercel.app/api/text}".
+			   /acmd name:metin content:"{customapi.https://techy-api.vercel.app/api/text}".
 	</DiscordMessage>
 	<DiscordMessage profile="bot" role-color="#1fab89" >
 		New Command Added: metin
@@ -94,4 +99,3 @@ Aiden Wallis'in sitesinde bulunan _Now Playin Widget_ başlığı altındaki `ht
 	</DiscordMessage>
 </DiscordMessages>
 :::
-

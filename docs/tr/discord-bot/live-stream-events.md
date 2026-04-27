@@ -1,4 +1,9 @@
-# Canlı Yayın Etkinlikleri <Badge type="warning" text="NEW"/>
+---
+title: Discord Botu — Canlı Yayın Etkinlikleri
+description: Discord sunucunuzda Senchabot ile canlı yayın etkinlik kanallarını yapılandırın.
+---
+
+# Discord Botu — Canlı Yayın Etkinlikleri <Badge type="warning" text="NEW"/>
 
 Senchabot, belirtilen kanallarda [canlı yayın duyurularını](/tr/discord-bot/live-stream-announcements) takip ederek sunucu etkinliği oluşturur.
 

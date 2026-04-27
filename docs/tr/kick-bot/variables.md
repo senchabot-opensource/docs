@@ -1,9 +1,9 @@
 ---
-title: Twitch Botu — Komut Değişkenleri
-description: Twitch özel komutlarınızda kullanıcı adı, tarih, rastgele sayı ve kanal adı gibi dinamik değişkenleri kullanın.
+title: Kick Botu — Komut Değişkenleri
+description: Kick özel komutlarınızda kullanıcı adı, tarih, rastgele sayı ve kanal adı gibi dinamik değişkenleri kullanın.
 ---
 
-# Twitch Botu — Komut Değişkenleri
+# Kick Botu — Komut Değişkenleri
 
 Komut içeriğine eklenen değişkenlerdir.
 
@@ -15,24 +15,22 @@ Komut içeriğine eklenen değişkenlerdir.
 
 Komutu kullanan kişinin kullanıcı adını döndürür.
 
-Takma ad: `{user_name}`
+Takma ad: `{cmd.author}`
 
 ::: details Örnek Kullanım
 
 Komut Ekleme
 
 ```
-!acmd günaydın Günaydın {user.name}!
-
+!acmd merhaba Merhaba {user.name}, yayına hoş geldin!
 ```
 
 Kullanıcı Mesajı ve Yanıtı
 
 ```
-senchabot-app: !günaydın
+senchabot-app: !merhaba
 
-Senchabot: Günaydın senchabot-app!
-
+Senchabot: Merhaba senchabot-app, yayına hoş geldin!
 ```
 
 :::
@@ -46,7 +44,7 @@ Senchabot: Günaydın senchabot-app!
 Komut Ekleme
 
 ```
-!acmd yas {random.number} yaşındasın, bence!
+!acmd yas Bence {random.number} yaşındasın!
 ```
 
 Kullanıcı Mesajı ve Yanıtı
@@ -54,7 +52,7 @@ Kullanıcı Mesajı ve Yanıtı
 ```
 senchabot-app: !yas
 
-Senchabot: 29 yaşındasın, bence!
+Senchabot: Bence 29 yaşındasın!
 ```
 
 :::
@@ -68,15 +66,15 @@ Komutun çalıştırıldığı tarihi döndürür.
 Komut Ekleme
 
 ```
-!acmd tarih Bugünün tarihi: {date}
+!acmd bugun Bugün {date}
 ```
 
 Kullanıcı Mesajı ve Yanıtı
 
 ```
-senchabot-app: !tarih
+senchabot-app: !bugun
 
-Senchabot: Bugünün tarihi: 09/09/2023
+Senchabot: Bugün 09/09/2023
 ```
 
 :::
@@ -85,22 +83,20 @@ Senchabot: Bugünün tarihi: 09/09/2023
 
 Komutun oluşturulduğu tarihi döndürür.
 
-Takma ad: `{cmd_date}`
-
 ::: details Örnek Kullanım
 
 Komut Ekleme
 
 ```
-!acmd zafer 30 Ağustos Zafer Bayramı Kutlu Olsun! -{cmd.date}
+!acmd olusturuldu Bu komut {cmd.date} tarihinde oluşturuldu
 ```
 
 Kullanıcı Mesajı ve Yanıtı
 
 ```
-senchabot-app: !zafer
+senchabot-app: !olusturuldu
 
-Senchabot: 30 Ağustos Zafer Bayramı Kutlu Olsun! -30/08/2023
+Senchabot: Bu komut 25/12/2023 tarihinde oluşturuldu
 ```
 
 :::
@@ -114,15 +110,15 @@ Komutun çalıştırıldığı kanalın adını döndürür.
 Komut Ekleme
 
 ```
-!acmd twitch-botu {channel.name}, Senchabot'u kullanmayı tercih ediyor!
+!acmd kick-bot {channel.name}, Senchabot kullanıyor!
 ```
 
 Kullanıcı Mesajı ve Yanıtı
 
 ```
-senchabot-app: !twitch-botu
+senchabot-app: !kick-bot
 
-Senchabot: senchabot-app, Senchabot'u kullanmayı tercih ediyor!
+Senchabot: senchabot-app, Senchabot kullanıyor!
 ```
 
 :::

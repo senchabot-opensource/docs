@@ -1,4 +1,9 @@
-# Getting Started
+---
+title: Twitch Bot — Getting Started
+description: Invite Senchabot to your Twitch channel and start managing your community with custom commands, timers, and moderation tools.
+---
+
+# Twitch Bot — Getting Started
 
 ## Invite to Your Twitch Channel
 

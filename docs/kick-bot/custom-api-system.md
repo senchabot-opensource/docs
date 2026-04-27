@@ -1,14 +1,20 @@
 ---
 outline: [2, 3]
+title: Kick Bot — Custom API System
+description: Fetch external data into your Kick custom commands using the Senchabot Custom API system.
 ---
 
-# Custom API System <Badge type="warning" text="NEW"/>
+# Kick Bot — Custom API System <Badge type="warning" text="NEW"/>
 
 This system allows you to send a GET request to a URL through the specified template and receive a response through a custom command you added to your channel.
 
 ```
 {customapi.https://...}
 ```
+
+::: tip Limitation
+Only **one** `{customapi.https://...}` tag is processed per command response.
+:::
 
 #### Add Command to Channel Chat
 

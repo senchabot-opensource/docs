@@ -1,4 +1,9 @@
-# Note Taking System <Badge type="danger" text="planned | not active" />
+---
+title: Twitch Botu — Not Sistemi
+description: Planlanan Twitch not sistemi.
+---
+
+# Twitch Botu — Not Sistemi <Badge type="danger" text="planned | not active" />
 
 ```
 !note [content]

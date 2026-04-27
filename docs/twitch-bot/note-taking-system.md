@@ -1,4 +1,9 @@
-# Note Taking System <Badge type="danger" text="planned | not active" />
+---
+title: Twitch Bot — Note Taking System
+description: Planned note-taking system for Twitch channels.
+---
+
+# Twitch Bot — Note Taking System <Badge type="danger" text="planned | not active" />
 
 ```
 !note [content]

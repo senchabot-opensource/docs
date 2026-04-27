@@ -1,12 +1,17 @@
-# Komutlar
+---
+title: Twitch Botu — Komutlar
+description: Senchabot Twitch sistem komutlarının tam referansı; takip çağrısı, takip süresi, klip, raid grupları ve zamanlayıcılar dahil.
+---
+
+# Twitch Botu — Komutlar
 
 ## Twitch Botu Sistem Komutları <Badge type="warning" text="NEW"/>
 
 | Komut | Yanıt |
 | :-- | :-- |
 | !ping | Botun yanıt verip vermediğini kontrol eder. |
-| !invite | Botu Twitch kanalına davet eder. |
-| !leave | Botu Twitch kanalından kaldırır. |
+| !invite | Botu Twitch kanalına davet eder (botun kendi kanal sohbetinde çalıştırılır). |
+| !leave | Botu Twitch kanalından kaldırır (yalnızca yayıncı). |
 | !so | Başka bir Twitch yayıncısına takip çağrısı yapar. |
 | !followage | Takip süresi komutu. İzleyicinin kanalı ne kadar süredir takip ettiğini gösterir. |
 | !uptime | Yayının ne kadar süredir canlı yayında olduğunu gösterir. |
@@ -17,10 +22,10 @@
 | !timers | Aktif komut zamanlayıcılarını listeler. |
 | !timer | Zamanlayıcı komut kullanım yardımını gösterir. |
 | !clip | O anki yayından klip oluşturur. |
-| !argroup | Bir yayıncıyı raid grubuna ekler. |
-| !srgroup | Kanalı bir raid grubuna abone eder. |
+| !gamecategory | Yayın kategorisini/oyununu ayarlar (yayıncı veya moderatör). |
+| !argroup | Bir yayıncıyı raid grubuna ekler (yalnızca yayıncı). |
+| !srgroup | Kanalı bir raid grubuna abone eder (yalnızca yayıncı). |
 | !randomraid | Bir gruptan veya takiplerden rastgele raid başlatır. |
-
 
 <!-- Custom Commands Button -->
 <style src="@theme/custom.css" scoped></style>
@@ -36,7 +41,7 @@
 ## Takip Çağrısı <Badge type="warning" text="NEW"/>
 
 ```
-!so {user.name}
+!so [kullanıcı_adı]
 ```
 
 ::: details Örnek Kullanım
@@ -63,7 +68,7 @@ Follow @senchabot over at twitch.tv/senchabot <3
 ```
 
 ```
-!followage @user
+!followage @kullanıcıadı
 ```
 
 ::: details Örnek Kullanım
@@ -93,6 +98,25 @@ Senchabot'un Yanıtı
 ```
 
 *Kendiniz veya etiketlenen kullanıcı için takip süresini gösterir.*
+:::
+
+## Yayın Süresi <Badge type="warning" text="NEW"/>
+
+::: details Örnek Kullanım
+
+Kullanıcı Mesajı
+
+```
+!uptime
+```
+
+Senchabot'un Yanıtı
+
+```
+Yayın 3 saat 12 dakikadır canlı.
+```
+
+*Mevcut kanalın yayın süresini gösterir.*
 :::
 
 ## Rastgele Raid <Badge type="warning" text="NEW"/>
@@ -177,5 +201,5 @@ Rastgele raid hedefi seçildi: twitch.tv/streamername
 <br/>
 
 ::: info Cooldown Sistemi
-Komut kullanım bekleme süresi kullanıcı başına 2 saniyedir.
+Komut kullanım bekleme süresi kullanıcı başına 1 saniyedir.
 :::

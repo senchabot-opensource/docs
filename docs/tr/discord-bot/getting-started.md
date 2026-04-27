@@ -1,4 +1,9 @@
-# Senchabot - Discord Kullanım Kılavuzu
+---
+title: Discord Botu — Başlamadan Önce
+description: Senchabot'u Discord sunucunuza davet edin ve slash komutları, Twitch ve Kick canlı yayın duyuruları ve moderasyon araçlarıyla topluluğunuzu yönetmeye başlayın.
+---
+
+# Discord Botu — Başlamadan Önce
 
 ## Discord Sunucunuza Davet Edin
 

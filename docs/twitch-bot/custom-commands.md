@@ -1,8 +1,10 @@
 ---
 outline: [2, 3]
+title: Twitch Bot — Custom Commands
+description: Create, update, delete, and alias custom commands for your Twitch channel with Senchabot.
 ---
 
-# Custom Commands <Badge type="warning" text="NEW"/>
+# Twitch Bot — Custom Commands <Badge type="warning" text="NEW"/>
 
 ## Permissions
 

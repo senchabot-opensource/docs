@@ -1,8 +1,10 @@
 ---
 outline: [2, 3]
+title: Twitch Botu — Özel Komutlar
+description: Twitch kanalınız için Senchabot ile özel komut oluşturun, güncelleyin, silin ve takma ad ekleyin.
 ---
 
-# Özel Komutlar <Badge type="warning" text="NEW"/>
+# Twitch Botu — Özel Komutlar <Badge type="warning" text="NEW"/>
 
 ## İzinleri Ayarlama
 

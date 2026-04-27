@@ -1,15 +1,20 @@
-# Commands
+---
+title: Twitch Bot — Commands
+description: Complete reference for Senchabot Twitch system commands including shoutouts, followage, clips, raid groups, and timers.
+---
+
+# Twitch Bot — Commands
 
 ## Twitch Bot System Commands <Badge type="warning" text="NEW"/>
 
-| Command      | Response                                                                                                                                                                                                                             |
-| :----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Command | Response |
+| :-- | :-- |
 | !ping | Check if the bot is responding. |
-| !invite | Invite the bot to your Twitch channel. |
-| !leave | Remove the bot from your Twitch channel. |
+| !invite | Invite the bot to your Twitch channel (run in the bot's channel chat). |
+| !leave | Remove the bot from your Twitch channel (broadcaster only). |
 | !so | Give a shoutout to another Twitch streamer. |
 | !followage | Follow duration command. Shows how long a viewer has followed the channel. |
-| !uptime | Show how long the stream has been live on air. |
+| !uptime | Show how long the stream has been live. |
 | !cmds | List available commands for the channel. |
 | !help | Show system command list. |
 | !atimer | Create a timer for an existing custom command. |
@@ -17,8 +22,9 @@
 | !timers | List active command timers. |
 | !timer | Show timer command usage help. |
 | !clip | Create a clip from the current stream moment. |
-| !argroup | Add a streamer to your raid group. |
-| !srgroup | Subscribe your channel to a raid group. |
+| !gamecategory | Set the stream category/game (broadcaster or moderator). |
+| !argroup | Add a streamer to your raid group (broadcaster only). |
+| !srgroup | Subscribe your channel to a raid group (broadcaster only). |
 | !randomraid | Start a random raid from a group or from follows. |
 
 <!-- Custom Commands Button -->
@@ -35,7 +41,7 @@
 ## Shoutout <Badge type="warning" text="NEW"/>
 
 ```
-!so {user.name}
+!so [username]
 ```
 
 ::: details Example Usage
@@ -92,6 +98,25 @@ Senchabot's Response
 ```
 
 *Returns follow duration for yourself or for the mentioned user.*
+:::
+
+## Uptime <Badge type="warning" text="NEW"/>
+
+::: details Example Usage
+
+User Message
+
+```
+!uptime
+```
+
+Senchabot's Response
+
+```
+Stream has been live for 3 hours, 12 minutes.
+```
+
+*Shows uptime for the current channel.*
 :::
 
 ## Random Raid <Badge type="warning" text="NEW"/>
@@ -176,5 +201,5 @@ Random raid target selected: twitch.tv/streamername
 <br/>
 
 ::: info Cooldown System
-Command usage cooldown time is 2 seconds per user.
+Command usage cooldown time is 1 second per user.
 :::

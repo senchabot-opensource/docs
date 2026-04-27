@@ -1,14 +1,20 @@
 ---
 outline: [2, 3]
+title: Twitch Bot — Custom API System
+description: Fetch external data into your Twitch custom commands using the Senchabot Custom API system.
 ---
 
-# Custom API System <Badge type="warning" text="NEW"/>
+# Twitch Bot — Custom API System <Badge type="warning" text="NEW"/>
 
 This system allows you to send a GET request to a URL through the specified template and receive a response through a custom command you have added to your channel.
 
 ```
 {customapi.https://...}
 ```
+
+::: tip Limitation
+Only **one** `{customapi.https://...}` tag is processed per command response.
+:::
 
 #### Adding Commands to the Broadcast Chat
 

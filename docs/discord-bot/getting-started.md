@@ -1,4 +1,9 @@
-# Getting Started
+---
+title: Discord Bot — Getting Started
+description: Invite Senchabot to your Discord server and start managing your community with slash commands, Twitch and Kick live stream announcements, and moderation tools.
+---
+
+# Discord Bot — Getting Started
 
 ## Invite to Your Discord Server
 

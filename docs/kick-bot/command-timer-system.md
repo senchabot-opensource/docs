@@ -1,4 +1,9 @@
-# Command Timer System <Badge type="warning" text="NEW" />
+---
+title: Kick Bot — Command Timer System
+description: Planned command timer system for Kick channels.
+---
+
+# Kick Bot — Command Timer System <Badge type="warning" text="NEW" />
 
 ## Add Command Timer
 

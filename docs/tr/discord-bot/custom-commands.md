@@ -1,8 +1,10 @@
 ---
 outline: [2, 3]
+title: Discord Botu — Özel Komutlar
+description: Discord sunucunuz için Senchabot ile özel slash komutları oluşturun, güncelleyin, silin ve takma ad ekleyin.
 ---
 
-# Özel Komutlar <Badge type="warning" text="NEW"/>
+# Discord Botu — Özel Komutlar <Badge type="warning" text="NEW"/>
 
 ## Sunucu Komutları
 

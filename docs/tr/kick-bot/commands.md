@@ -1,22 +1,29 @@
-# Komutlar
+---
+title: Kick Botu — Komutlar
+description: Senchabot Kick sistem komutlarının tam referansı; takip çağrısı ve yayın süresi dahil.
+---
+
+# Kick Botu — Komutlar
 
 ## Kick Botu Sistem Komutları <Badge type="warning" text="NEW"/>
 
 | Komut | Yanıt |
 | :-- | :-- |
 | !ping | Botun yanıt verip vermediğini kontrol eder. |
-| !invite | Botu Kick kanalına davet eder. |
-| !leave | Botu Kick kanalından kaldırır. |
+| !invite | Botu Kick kanalına davet eder (botun kendi kanal sohbetinde çalıştırılır). |
+| !leave | Botu Kick kanalından kaldırır (yalnızca yayıncı). |
 | !so | Başka bir Kick yayıncısına takip çağrısı yapar. |
-| !followage | Takip süresi komutu. İzleyicinin kanalı ne kadar süredir takip ettiğini gösterir. |
 | !uptime | Kick kanalının ne kadar süredir canlı yayında olduğunu gösterir. |
 | !cmds | Bot ve kanal için kullanılabilir komutları listeler. |
 | !help | Sistem komut listesini gösterir. |
-| !atimer | Mevcut bir özel komut için zamanlayıcı oluşturur. |
-| !dtimer | Komut zamanlayıcısını siler. |
-| !timers | Aktif komut zamanlayıcılarını listeler. |
-| !timer | Zamanlayıcı komut kullanım yardımını gösterir. |
+| !gamecategory | Yayın kategorisini/oyununu ayarlar (yayıncı veya moderatör). |
 
+::: warning Kick'te Kullanılamaz
+Aşağıdaki komutlar şu anda Kick sohbetinde kullanılamamaktadır:
+- `!clip` — Kick'te klip oluşturma desteklenmemektedir.
+- `!followage` — Kick API'si takip süresi sorgulamasını desteklememektedir.
+- `!atimer`, `!dtimer`, `!timers`, `!timer` — Zamanlayıcı sohbet komutları şu anda devre dışıdır (zamanlayıcı servisi mevcuttur ancak sohbet üzerinden yönetilemez).
+:::
 
 <!-- Custom Commands Button -->
 <style src="@theme/custom.css" scoped></style>
@@ -50,45 +57,6 @@ Follow @xqc over at kick.com/xqc <3
 ```
 
 *Yukarıdaki mesajı yazdırır ve takip çağrısı oluşturur.*
-:::
-
-## Takip Süresi <Badge type="warning" text="NEW"/>
-
-```
-!followage
-```
-
-```
-!followage @user
-```
-
-::: details Örnek Kullanım
-
-Kullanıcı Mesajı
-
-```
-!followage
-```
-
-Senchabot'un Yanıtı
-
-```
-@user bu kanalı 1 yıl 2 aydır takip ediyor.
-```
-
-Kullanıcı Mesajı
-
-```
-!followage @xqc
-```
-
-Senchabot'un Yanıtı
-
-```
-@xqc bu kanalı 3 yıl 4 aydır takip ediyor.
-```
-
-*Kendiniz veya etiketlenen kullanıcı için takip süresini gösterir.*
 :::
 
 ## Modül Komutları
@@ -136,5 +104,5 @@ Senchabot'un Yanıtı
 <br/>
 
 ::: info Cooldown Sistemi
-Komut kullanım bekleme süresi kullanıcı başına 2 saniyedir.
+Komut kullanım bekleme süresi kullanıcı başına 1 saniyedir.
 :::
