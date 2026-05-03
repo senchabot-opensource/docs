@@ -1,5 +1,5 @@
-import { writeFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { writeFileSync, mkdirSync } from 'node:fs'
+import { resolve, dirname } from 'node:path'
 import { defineConfig } from 'vitepress'
 
 const SITE_URL = 'https://docs.senchabot.com'
@@ -15,6 +15,31 @@ function generateSitemap(siteConfig: any) {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages}\n</urlset>`
   writeFileSync(resolve(siteConfig.outDir, 'sitemap.xml'), sitemap)
+}
+
+const redirects: Record<string, string> = {
+  '/kick-bot': '/kick-bot/getting-started',
+  '/tr/kick-bot': '/tr/kick-bot/getting-started',
+  '/twitch-bot': '/twitch-bot/getting-started',
+  '/tr/twitch-bot': '/tr/twitch-bot/getting-started',
+  '/discord-bot': '/discord-bot/getting-started',
+  '/tr/discord-bot': '/tr/discord-bot/getting-started',
+}
+
+function generateRedirects(siteConfig: any) {
+  for (const [from, to] of Object.entries(redirects)) {
+    const filePath = resolve(siteConfig.outDir, from.replace(/^\//, '') + '.html')
+    mkdirSync(dirname(filePath), { recursive: true })
+    const html = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=${to}">
+    <link rel="canonical" href="${SITE_URL}${to}">
+  </head>
+</html>`
+    writeFileSync(filePath, html)
+  }
 }
 
 const structuredData = {
@@ -78,7 +103,10 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
 
-  buildEnd: generateSitemap,
+  buildEnd(siteConfig) {
+    generateSitemap(siteConfig)
+    generateRedirects(siteConfig)
+  },
 
   transformHead({ pageData, siteConfig }) {
     const pagePath = pageData.relativePath.replace(/\.md$/, '').replace(/\/index$/, '')
@@ -242,7 +270,7 @@ export default defineConfig({
           // Twitch - EN
           {
             text: 'Twitch Bot',
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: 'Getting Started',
@@ -306,7 +334,7 @@ export default defineConfig({
               },
               {
                 text: 'Modules',
-                collapsed: true,
+                collapsed: false,
                 items: [
                   {
                     text: 'Live Stream Announcements',
@@ -344,7 +372,7 @@ export default defineConfig({
           },
           {
             text: 'Kick Bot',
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: 'Getting Started',
@@ -410,7 +438,7 @@ export default defineConfig({
           // Twitch - TR
           {
             text: 'Twitch Bot',
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: 'Başlamadan Önce',
@@ -474,7 +502,7 @@ export default defineConfig({
               },
               {
                 text: 'Modüller',
-                collapsed: true,
+                collapsed: false,
                 items: [
                   {
                     text: 'Canlı Yayın Duyuruları',
@@ -512,7 +540,7 @@ export default defineConfig({
           },
           {
             text: 'Kick Bot',
-            collapsed: false,
+            collapsed: true,
             items: [
               {
                 text: 'Başlamadan Önce',
