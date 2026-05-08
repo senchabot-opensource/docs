@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Senchabot is a multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.
+description: Senchabot is a multi-purpose Discord, Twitch, and Kick bot for content creators to manage their communities.
 ---
 
 # Introduction

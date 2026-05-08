@@ -28,8 +28,6 @@ const redirects: Record<string, string> = {
 
 function generateRedirects(siteConfig: any) {
   for (const [from, to] of Object.entries(redirects)) {
-    const filePath = resolve(siteConfig.outDir, from.replace(/^\//, '') + '.html')
-    mkdirSync(dirname(filePath), { recursive: true })
     const html = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +36,16 @@ function generateRedirects(siteConfig: any) {
     <link rel="canonical" href="${SITE_URL}${to}">
   </head>
 </html>`
+
+    // Redirect for path without trailing slash (e.g., /twitch-bot)
+    const filePath = resolve(siteConfig.outDir, from.replace(/^\//, '') + '.html')
+    mkdirSync(dirname(filePath), { recursive: true })
     writeFileSync(filePath, html)
+
+    // Redirect for path with trailing slash (e.g., /twitch-bot/)
+    const indexFilePath = resolve(siteConfig.outDir, from.replace(/^\//, ''), 'index.html')
+    mkdirSync(dirname(indexFilePath), { recursive: true })
+    writeFileSync(indexFilePath, html)
   }
 }
 
@@ -141,7 +148,7 @@ export default defineConfig({
       {
         name: 'description',
         content:
-          'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
+          'A multi-purpose Discord, Twitch, and Kick bot for content creators to manage their communities.'
       }
     ],
     ['meta', { name: 'theme-color', content: '#20AB8C' }],
@@ -160,7 +167,7 @@ export default defineConfig({
       {
         property: 'og:description',
         content:
-          'A multi-platform Twitch, Kick, and Discord bot for content creators to manage their communities.'
+          'A multi-purpose Discord, Twitch, and Kick bot for content creators to manage their communities.'
       }
     ],
     ['meta', { name: 'twitter:site', content: '@senchabot' }],
@@ -295,6 +302,14 @@ export default defineConfig({
                   {
                     text: 'Command Timer System',
                     link: '/twitch-bot/command-timer-system'
+                  },
+                  {
+                    text: 'Random Raid System',
+                    link: '/twitch-bot/random-raid-system'
+                  },
+                  {
+                    text: 'Song Requests',
+                    link: '/twitch-bot/song-requests'
                   }
                 ]
               },
@@ -397,6 +412,10 @@ export default defineConfig({
                   {
                     text: 'Command Timer System',
                     link: '/kick-bot/command-timer-system'
+                  },
+                  {
+                    text: 'Song Requests',
+                    link: '/kick-bot/song-requests'
                   }
                 ]
               },
@@ -463,6 +482,14 @@ export default defineConfig({
                   {
                     text: 'Komut Zamanlayıcı Sistemi',
                     link: '/tr/twitch-bot/command-timer-system'
+                  },
+                  {
+                    text: 'Rastgele Raid Sistemi',
+                    link: '/tr/twitch-bot/random-raid-system'
+                  },
+                  {
+                    text: 'Şarkı İstekleri',
+                    link: '/tr/twitch-bot/song-requests'
                   }
                 ]
               },
@@ -565,6 +592,10 @@ export default defineConfig({
               {
                 text: 'Komut Zamanlayıcı Sistemi',
                 link: '/tr/kick-bot/command-timer-system'
+              },
+              {
+                text: 'Şarkı İstekleri',
+                link: '/tr/kick-bot/song-requests'
               }
                 ]
               },

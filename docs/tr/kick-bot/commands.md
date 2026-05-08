@@ -17,6 +17,8 @@ description: Senchabot Kick sistem komutlarının tam referansı; takip çağrı
 | !cmds | Bot ve kanal için kullanılabilir komutları listeler. |
 | !help | Sistem komut listesini gösterir. |
 | !gamecategory | Yayın kategorisini/oyununu ayarlar (yayıncı veya moderatör). |
+| !songreq | Şarkı iste. `!songreq Şarkı Adı - Sanatçı` |
+| !songskip | Mevcut şarkıyı atla (yalnızca moderatör). |
 
 ::: warning Kick'te Kullanılamaz
 Aşağıdaki komutlar şu anda Kick sohbetinde kullanılamamaktadır:
@@ -76,6 +78,17 @@ Follow @xqc over at kick.com/xqc <3
     <a class="content-ref-s" href="/tr/kick-bot/command-timer-system">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Komut Zamanlayıcı Sistemi <Badge type="warning" text="NEW" /></span>
+        </span>
+        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
+</div>
+
+<!-- Song Requests - CONTENT REFERANCE SMALL -->
+<style src="@theme/custom.css" scoped></style>
+<div>
+    <a class="content-ref-s" href="/tr/kick-bot/song-requests">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Şarkı İstekleri <Badge type="warning" text="NEW" /></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>
