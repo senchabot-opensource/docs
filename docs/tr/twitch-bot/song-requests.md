@@ -7,8 +7,8 @@ description: Twitch sohbetinden gelen şarkı isteklerini manuel veya Spotify ot
 
 Şarkı İstekleri sistemi, izleyicilerin sohbet üzerinden şarkı istemesine olanak tanır. İki mod destekler:
 
-- **Manuel Mod** (ücretsiz) — Şarkılar dashboard'da yönettiğiniz bir kuyruğa kaydedilir. Canlı yayında çalgı çalıp şarkı söyleyen müzisyenler için idealdir.
-- **Spotify Modu** (Pro) — Şarkılar otomatik olarak Spotify'da aranır ve çalma sırasına eklenir veya oynatılır.
+- **Manuel Mod** — Şarkılar dashboard'da yönettiğiniz bir kuyruğa kaydedilir. Canlı yayında çalgı çalıp şarkı söyleyen müzisyenler için idealdir.
+- **Spotify Modu** — Şarkılar otomatik olarak Spotify'da aranır ve çalma sırasına eklenir veya oynatılır.
 
 ## Komutlar
 
@@ -44,12 +44,11 @@ Senchabot'un Yanıtı
 *İsteği dashboard kuyruğuna kaydeder.*
 :::
 
-## Spotify Modu <Badge type="tip" text="Pro" />
+## Spotify Modu <Badge type="tip" text="Free" />
 
 Spotify modu, istenen şarkıyı otomatik olarak Spotify'da arar ve oynatmaya veya kuyruğa eklemeye çalışır.
 
 Gereksinimler:
-- Pro plan aboneliği
 - Dashboard ayarlarında bağlı Spotify hesabı
 - Açık ve aktif Spotify uygulaması
 
@@ -118,7 +117,7 @@ Kanalınızın **Ayarlar → Genel** bölümünde:
 | Şarkı İsteği Komutu | `!songreq` komutunu etkinleştir veya devre dışı bırak |
 | Şarkı İstekleri: Yalnızca Aboneler | Abonelere ve moderatörlere kısıtla |
 | Şarkı İstekleri: Kanal Puanı Gerektir | Kanal puanı ile kullanıma izin ver (yalnızca Twitch) |
-| Spotify Otomatik Oynatma | Spotify ve Manuel mod arasında geçiş yap (Spotify için Pro gerekir) |
+| Spotify Otomatik Oynatma | Spotify ve Manuel mod arasında geçiş yap |
 | Şarkı İsteği Kullanıcı Bekleme Süresi | Kullanıcı başına bekleme süresi (saniye) |
 | Şarkı İsteği Genel Bekleme Süresi | Kanal geneli bekleme süresi (saniye) |
 | Kullanıcı Başına Maksimum Bekleyen İstek | Kullanıcı başına aktif istek limiti (varsayılan: 1) |

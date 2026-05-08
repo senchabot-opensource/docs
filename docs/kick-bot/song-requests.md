@@ -7,8 +7,8 @@ description: Manage song requests from your Kick chat with manual or Spotify aut
 
 The Song Request system lets viewers request songs via chat. It supports two modes:
 
-- **Manual Mode** (free) — Songs are saved to a queue you manage from the dashboard. Perfect for musicians playing instruments and singing live.
-- **Spotify Mode** (Pro) — Songs are automatically searched and played/queued on Spotify.
+- **Manual Mode** — Songs are saved to a queue you manage from the dashboard. Perfect for musicians playing instruments and singing live.
+- **Spotify Mode** — Songs are automatically searched and played/queued on Spotify.
 
 ## Commands
 
@@ -44,12 +44,11 @@ Added your request to the queue.
 *Saves the request to the dashboard queue.*
 :::
 
-## Spotify Mode <Badge type="tip" text="Pro" />
+## Spotify Mode <Badge type="tip" text="Free" />
 
 Spotify mode automatically searches for the requested song on Spotify and attempts to play it or add it to the queue.
 
 Requires:
-- Pro plan subscription
 - Linked Spotify account in dashboard settings
 - Spotify app open and active
 
@@ -117,7 +116,7 @@ In your channel's **Settings → General**:
 | :-- | :-- |
 | Song Request Command | Enable or disable `!songreq` |
 | Song Requests: Subscribers Only | Restrict to subscribers + mods |
-| Spotify Auto-Playback | Toggle between Spotify and Manual mode (requires Pro for Spotify) |
+| Spotify Auto-Playback | Toggle between Spotify and Manual mode |
 | Song Request User Cooldown | Per-user cooldown in seconds |
 | Song Request Global Cooldown | Global channel cooldown in seconds |
 | Max Pending Requests Per User | Limit active requests per user (default: 1) |
