@@ -28,6 +28,12 @@ description: Complete reference for Senchabot Twitch system commands including s
 | !randomraid | Start a random raid from a group or from follows. |
 | !songreq | Request a song. `!songreq Song Title - Artist` |
 | !songskip | Skip the current song (moderator only). |
+| !acmd | Add a custom command for the channel. `!acmd <name> <content>` |
+| !ucmd | Update an existing custom command. `!ucmd <name> <content>` |
+| !dcmd | Delete a custom command. `!dcmd <name>` |
+| !acmda | Add an alias for a custom command. `!acmda <alias> <name>` |
+| !dcmda | Delete a custom command alias. `!dcmda <alias>` |
+| !setlang | Set the bot's language for this channel. `!setlang <code>` |
 
 <!-- Custom Commands Button -->
 <style src="@theme/custom.css" scoped></style>
@@ -195,6 +201,17 @@ Random raid target selected: twitch.tv/streamername
     <a class="content-ref-s" href="/twitch-bot/song-requests">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Song Requests <Badge type="warning" text="NEW" /></span>
+        </span>
+        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
+</div>
+
+<!-- Triggers - CONTENT REFERANCE SMALL -->
+<style src="@theme/custom.css" scoped></style>
+<div>
+    <a class="content-ref-s" href="/twitch-bot/triggers">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Triggers <Badge type="warning" text="NEW" /></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>

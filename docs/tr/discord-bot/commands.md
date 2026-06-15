@@ -20,6 +20,10 @@ description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Ki
 | /track-my-messages | Mesaj takibine tekrar dahil olur. |
 | /cmds | Sunucu için kullanılabilir komutları listeler. |
 | /help | Sistem komut listesini gösterir. |
+| /acmd | Sunucu için özel komut ekler. |
+| /ucmd | Mevcut bir özel komutu günceller. |
+| /dcmd | Özel komutu siler. |
+| /set-lang | Bu sunucu için botun dilini ayarlar. |
 
 ::: info Bilgilendirme
 
@@ -108,6 +112,17 @@ description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Ki
     <a class="content-ref-s" href="/tr/discord-bot/custom-api-system">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Custom API Sistemi <Badge type="warning" text="NEW"/></span>
+        </span>
+        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
+</div>
+
+<!-- Triggers - CONTENT REFERANCE SMALL -->
+<style src="@theme/style.css" scoped></style>
+<div>
+    <a class="content-ref-s" href="/tr/discord-bot/triggers">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Tetikleyiciler <Badge type="warning" text="NEW"/></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>

@@ -310,6 +310,10 @@ export default defineConfig({
                   {
                     text: 'Song Requests',
                     link: '/twitch-bot/song-requests'
+                  },
+                  {
+                    text: 'Triggers',
+                    link: '/twitch-bot/triggers'
                   }
                 ]
               },
@@ -362,6 +366,10 @@ export default defineConfig({
                   {
                     text: 'Custom API System',
                     link: '/discord-bot/custom-api-system'
+                  },
+                  {
+                    text: 'Triggers',
+                    link: '/discord-bot/triggers'
                   }
                   // {
                   //   text: "Reminder System",
@@ -416,6 +424,10 @@ export default defineConfig({
                   {
                     text: 'Song Requests',
                     link: '/kick-bot/song-requests'
+                  },
+                  {
+                    text: 'Triggers',
+                    link: '/kick-bot/triggers'
                   }
                 ]
               },
@@ -490,6 +502,10 @@ export default defineConfig({
                   {
                     text: 'Şarkı İstekleri',
                     link: '/tr/twitch-bot/song-requests'
+                  },
+                  {
+                    text: 'Tetikleyiciler',
+                    link: '/tr/twitch-bot/triggers'
                   }
                 ]
               },
@@ -542,6 +558,10 @@ export default defineConfig({
                   {
                     text: 'Custom API Sistemi',
                     link: '/tr/discord-bot/custom-api-system'
+                  },
+                  {
+                    text: 'Tetikleyiciler',
+                    link: '/tr/discord-bot/triggers'
                   }
                   // {
                   //   text: "Hatırlatıcı Sistemi",
@@ -596,6 +616,10 @@ export default defineConfig({
               {
                 text: 'Şarkı İstekleri',
                 link: '/tr/kick-bot/song-requests'
+              },
+              {
+                text: 'Tetikleyiciler',
+                link: '/tr/kick-bot/triggers'
               }
                 ]
               },
