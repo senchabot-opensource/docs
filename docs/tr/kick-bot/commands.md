@@ -19,6 +19,12 @@ description: Senchabot Kick sistem komutlarının tam referansı; takip çağrı
 | !gamecategory | Yayın kategorisini/oyununu ayarlar (yayıncı veya moderatör). |
 | !songreq | Şarkı iste. `!songreq Şarkı Adı - Sanatçı` |
 | !songskip | Mevcut şarkıyı atla (yalnızca moderatör). |
+| !acmd | Kanal için özel komut ekler. `!acmd <isim> <içerik>` |
+| !ucmd | Mevcut bir özel komutu günceller. `!ucmd <isim> <içerik>` |
+| !dcmd | Özel komutu siler. `!dcmd <isim>` |
+| !acmda | Özel komut için takma ad ekler. `!acmda <takma_ad> <isim>` |
+| !dcmda | Özel komut takma adını siler. `!dcmda <takma_ad>` |
+| !setlang | Bu kanal için botun dilini ayarlar. `!setlang <kod>` |
 
 ::: warning Kick'te Kullanılamaz
 Aşağıdaki komutlar şu anda Kick sohbetinde kullanılamamaktadır:
@@ -89,6 +95,16 @@ Follow @xqc over at kick.com/xqc <3
     <a class="content-ref-s" href="/tr/kick-bot/song-requests">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Şarkı İstekleri <Badge type="warning" text="NEW" /></span>
+        </span>
+        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
+</div>
+
+<style src="@theme/custom.css" scoped></style>
+<div>
+    <a class="content-ref-s" href="/tr/kick-bot/triggers">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Tetikleyiciler <Badge type="warning" text="NEW" /></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>

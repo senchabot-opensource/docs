@@ -19,6 +19,12 @@ description: Complete reference for Senchabot Kick system commands including sho
 | !gamecategory | Set the stream category/game (broadcaster or moderator). |
 | !songreq | Request a song. `!songreq Song Title - Artist` |
 | !songskip | Skip the current song (moderator only). |
+| !acmd | Add a custom command for the channel. `!acmd <name> <content>` |
+| !ucmd | Update an existing custom command. `!ucmd <name> <content>` |
+| !dcmd | Delete a custom command. `!dcmd <name>` |
+| !acmda | Add an alias for a custom command. `!acmda <alias> <name>` |
+| !dcmda | Delete a custom command alias. `!dcmda <alias>` |
+| !setlang | Set the bot's language for this channel. `!setlang <code>` |
 
 ::: warning Unavailable on Kick
 The following commands are currently unavailable in Kick chat:
@@ -89,6 +95,16 @@ Follow @xqc over at kick.com/xqc <3
     <a class="content-ref-s" href="/kick-bot/song-requests">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Song Requests <Badge type="warning" text="NEW" /></span>
+        </span>
+        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
+    </a>
+</div>
+
+<style src="@theme/custom.css" scoped></style>
+<div>
+    <a class="content-ref-s" href="/kick-bot/triggers">
+        <span class="ref-details-s">
+            <span class="content-ref-page-title-s">Triggers <Badge type="warning" text="NEW" /></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>
