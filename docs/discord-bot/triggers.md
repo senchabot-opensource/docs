@@ -3,136 +3,96 @@ title: Discord Bot — Triggers
 description: "Channel message triggers for Senchabot Discord bot: match types, permissions, response actions, variables, and cooldowns."
 ---
 
-# Discord Bot — Triggers <Badge type="warning" text="NEW"/>
+# Discord Bot — Triggers <Badge type="warning" text="UPDATED"/>
 
-Triggers are message-driven rules you configure from the dashboard. When a
-message in a tracked channel matches your rule, the bot fires the action you
-picked — anything from a friendly reply to deleting the triggering message or
-running another custom command.
+Triggers are message-driven rules you configure from the dashboard (**Dashboard → Discord → `<server>` → Triggers**). When a message in a tracked channel matches your rule, the bot fires the action you picked — such as sending a reply in chat, direct messaging the member, running a custom command, or deleting the triggering message.
 
-Triggers are managed per server (Discord guild). They are evaluated in order
-against every message in channels the bot can see; the first matching trigger
-whose permission and cooldown checks pass will fire.
+Triggers are managed per server (Discord guild). They are evaluated in order against every message in channels the bot can see; the first matching trigger whose permission and cooldown checks pass will fire.
+
+## When should it run?
+
+On Discord, triggers listen for chat messages:
+
+| When should it run? | Trigger Condition | Configuration / Match Value |
+|---|---|---|
+| **A message is sent in chat** | When a member sends a message in a visible channel that matches your pattern | Choose a match type and enter a match value |
+
+::: info Discord event sources
+Stream events (such as stream uptime, stream category changes, and stream start/end) are designed for streaming platforms (Twitch & Kick) and do not apply to Discord servers.
+:::
 
 ## Match types
 
-| Type         | Matches when...                                                    |
-|--------------|--------------------------------------------------------------------|
-| `exact`      | the whole message equals your value                                |
-| `contains`   | the message contains your value                                    |
-| `word`       | the value appears as a whole word (word-boundary)                  |
-| `starts_with`| the message starts with your value                                 |
-| `ends_with`  | the message ends with your value                                   |
-| `regex`      | a Go `regexp.MatchString` succeeds against your value              |
-| `command`    | the trimmed message starts with `!` followed by your value         |
+| Match type | Matches when... |
+|---|---|
+| **Exact match** | the whole message equals your value |
+| **Contains** | the message contains your value |
+| **Word match** | the value appears as a whole standalone word (word-boundary) |
+| **Starts with** | the message starts with your value |
+| **Ends with** | the message ends with your value |
+| **Command** | the trimmed message starts with `!` followed by your command name (e.g., value `rules` matches `!rules` and `!rules general`) |
+| **Regex** | a regular expression pattern matches the message |
 
-By default matching is **case-insensitive**. Toggle "case sensitive" on to
-make the comparison literal (the `regex` type is always case-sensitive and
-respects whatever flags you embed in the pattern).
+### Case sensitivity & regex
+
+- By default, text matching (**Exact match**, **Contains**, **Word match**, **Starts with**, **Ends with**, **Command**) is **case-insensitive**. Toggle **"Case sensitive"** on to make the comparison literal.
+- **Regex matching**: Regex patterns match exactly as written (case-sensitive by default). Because lowercasing regular expression patterns would corrupt character classes (such as `[A-Z]`) and escape sequences (such as `\S`), regex triggers are always evaluated verbatim and the case-sensitive checkbox is locked on. To make a regex pattern case-insensitive, prefix it with `(?i)` (e.g. `(?i)hello`).
 
 ## Permissions
 
-| Level        | Who fires it                                                |
-|--------------|-------------------------------------------------------------|
-| `everyone`   | any guild member                                            |
-| `subscriber` | server boosters, mods, admins, and the guild owner          |
-| `vip`        | users with the VIP role, mods, admins, and the guild owner  |
-| `moderator`  | mods, admins, and the guild owner                           |
-| `broadcaster`| only the guild owner (channel creator)                      |
+| Permission | Who fires it |
+|---|---|
+| **Everyone** | Any guild member |
+| **Subscriber** | Server boosters, mods, admins, and the guild owner |
+| **VIP** | Users with the VIP role, mods, admins, and the guild owner |
+| **Moderator** | Mods, admins, and the guild owner |
+| **Broadcaster** | Only the guild owner (server creator) |
 
 ## Response actions
 
-| Action                | Effect                                                                 |
-|-----------------------|------------------------------------------------------------------------|
-| `reply`               | post the response text in the same channel                             |
-| `dm`                  | DM the response text to the triggering user                            |
-| `run_command`         | execute a custom command by name (the response text is the command name, with the `!` prefix stripped if present) |
-| `delete_message`      | delete the triggering message                                          |
+| Response action | Effect |
+|---|---|
+| **Reply in chat** | Post the response text in the same channel |
+| **Send DM** | DM the response text to the triggering user |
+| **Run command** | Execute a custom command by name (the response text is the command name, with the `!` prefix stripped if present) |
+| **Delete message** | Delete the triggering message (requires **Manage Messages** permission) |
 
-::: warning Moderation actions on Discord
-The `increment_counter`, `timeout_user`, and `ban_user` actions from the
-shared trigger engine are reserved on Discord. They are accepted by the
-configuration UI but currently do not perform any moderation on the server.
-If you need to moderate a user, use Discord's native moderation tools (right
-click → Timeout / Kick / Ban) — the bot will not do it for you from a
-trigger.
+::: warning Moderation & Stream actions on Discord
+The **Increment counter**, **Timeout user**, **Ban user**, and stream metadata actions (**Update Stream Category**, **Update Stream Tags**, **Update Stream Title, Tags & Category**) from the shared trigger engine are designed for streaming platforms or reserved. On Discord, to moderate a member beyond message deletion, use Discord's native moderation tools or bot moderation commands.
 :::
 
-The `delete_message` action requires the bot to have the **Manage Messages**
-permission on the channel.
+The **Delete message** action requires the bot to have the **Manage Messages** permission on the channel.
 
 ## Variables
 
-Use these placeholders in the response text — they are substituted when the
-trigger fires:
+Use these placeholders in the response text — they are substituted when the trigger fires:
 
 - `{user}` / `{user.name}` / `{user_name}` — the triggering member's display name
-- `{message}` — the full triggering message
+- `{channel}` — the channel name where the message was sent
+- `{message}` — the full triggering message content
 
 ## Cooldown
 
-Set a per-user cooldown in seconds. Set to `0` to disable. The cooldown key is
-`(trigger, user, channel)`, so two members can fire the same trigger in
-parallel without blocking each other beyond their own cooldown.
+Set a per-user cooldown in seconds. Set to `0` to disable. The cooldown key is `(trigger, user, channel)`, so two members can fire the same trigger in parallel without blocking each other beyond their own cooldown.
+
+## Examples
+
+Below are practical configuration examples for the supported response actions on Discord:
+
+### A message is sent in chat
+
+| Response Action | Match Type & Value | Additional Settings | Behavior / Example Response Text |
+|---|---|---|---|
+| **Reply in chat** | **Contains**: `rules` | — | Response text: `Please check out our server rules in #rules-and-info!` (Directs members asking about rules) |
+| **Send DM** | **Command**: `onboard` | Who can trigger: **Everyone** | Response text: `Welcome to the server {user}! Here is your onboarding checklist: https://discord.gg/guide` (Sends private guide) |
+| **Run command** | **Exact match**: `!help` | — | Response text: `guide` (Executes the `!guide` command via `!trigger.run: guide`) |
+| **Delete message** | **Regex**: `(?i)discord\.gg\/(?!myvanity)` | — | Response text: `@{user} Unauthorized Discord invite links are not permitted.` (Deletes invite link and posts warning) |
 
 ## Caching
 
-Trigger lists are cached per channel for **30 seconds**; dashboard edits
-invalidate the cache immediately, so saves propagate to the bot without
-waiting for the TTL.
+Trigger lists are cached per channel for **30 seconds**; dashboard edits invalidate the cache immediately, so saves propagate to the bot without waiting for the TTL.
 
 ## Cross-platform
 
-A trigger configured for a shared channel applies to every platform the
-channel is registered for. The same trigger can therefore match chat messages
-on Twitch, Kick, and Discord from one dashboard entry.
+A trigger configured for a shared channel applies to every platform the channel is registered for. The same trigger can therefore match chat messages on Twitch, Kick, and Discord from one dashboard entry.
 
-## Moderation
-
-Auto-moderation lives next to Triggers on the dashboard at
-**Dashboard → `<platform>` → `<channel>` → Moderation**
-(`/dashboard/discord/<server-id>/moderation`). That page exposes two
-sections:
-
-- **Moderation Presets** — turn-key rules you can toggle on or off. When
-  enabled, each preset behaves like a built-in trigger that fires
-  `delete_message` on the offending message.
-- **Trigger Presets** — pre-built trigger rules you can enable as-is or use
-  as a starting point for custom rules.
-
-### Moderation presets
-
-| Preset                  | What it catches                                                 |
-|-------------------------|-----------------------------------------------------------------|
-| All caps                | messages that are mostly uppercase                              |
-| Links                   | URLs posted in chat                                             |
-| Emote spam              | messages dominated by repeated emotes                           |
-| Duplicate messages      | the same message posted N times within the configured window    |
-
-For the **Duplicate messages** preset you can tune the threshold (how many
-repeats count, 2–10) and the window (how many seconds to look back, 5–120).
-
-### Blocked words
-
-The Moderation page also exposes a **Blocked words** list — any message
-containing a listed word is auto-deleted by the bot.
-
-### Trigger presets
-
-The Trigger Presets section is a gallery of ready-made trigger rules
-(spam filters, link filters, raid-protect, etc.). Enabling a preset adds it
-as a regular trigger, which you can then edit, clone, or disable like any
-other trigger.
-
-::: info Discord action differences
-The Discord executor only wires up `delete_message` from the shared trigger
-actions. The moderation presets therefore delete the offending message
-instead of timing out or banning the user. The `delete_message` action
-requires the bot to have **Manage Messages** permission on the channel.
-:::
-
-::: tip Combining presets with custom triggers
-Moderation presets are independent from custom triggers. If you turn off the
-"Links" preset and add a trigger of your own that matches `contains` `http`,
-your trigger handles the case instead.
-:::

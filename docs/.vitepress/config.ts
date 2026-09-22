@@ -314,6 +314,14 @@ export default defineConfig({
                   {
                     text: 'Triggers',
                     link: '/twitch-bot/triggers'
+                  },
+                  {
+                    text: 'Moderation',
+                    link: '/twitch-bot/moderation'
+                  },
+                  {
+                    text: 'Stream Manager',
+                    link: '/twitch-bot/stream-manager'
                   }
                 ]
               },
@@ -428,6 +436,14 @@ export default defineConfig({
                   {
                     text: 'Triggers',
                     link: '/kick-bot/triggers'
+                  },
+                  {
+                    text: 'Moderation',
+                    link: '/kick-bot/moderation'
+                  },
+                  {
+                    text: 'Stream Manager',
+                    link: '/kick-bot/stream-manager'
                   }
                 ]
               },
@@ -506,6 +522,14 @@ export default defineConfig({
                   {
                     text: 'Tetikleyiciler',
                     link: '/tr/twitch-bot/triggers'
+                  },
+                  {
+                    text: 'Moderasyon',
+                    link: '/tr/twitch-bot/moderation'
+                  },
+                  {
+                    text: 'Yayın Yöneticisi',
+                    link: '/tr/twitch-bot/stream-manager'
                   }
                 ]
               },
@@ -620,6 +644,14 @@ export default defineConfig({
               {
                 text: 'Tetikleyiciler',
                 link: '/tr/kick-bot/triggers'
+              },
+              {
+                text: 'Moderasyon',
+                link: '/tr/kick-bot/moderation'
+              },
+              {
+                text: 'Yayın Yöneticisi',
+                link: '/tr/kick-bot/stream-manager'
               }
                 ]
               },
