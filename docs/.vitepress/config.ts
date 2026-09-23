@@ -453,6 +453,10 @@ export default defineConfig({
               }
             ]
           },
+          {
+            text: 'Extensions',
+            link: '/extensions'
+          },
         ]
       }
     },
@@ -660,6 +664,10 @@ export default defineConfig({
                 link: '/tr/kick-bot/variables'
               }
             ]
+          },
+          {
+            text: 'Extensions',
+            link: '/tr/extensions'
           }
           // Variables - Twitch & Discord - TR
           // { text: "Değişkenler", link: "/variables" },

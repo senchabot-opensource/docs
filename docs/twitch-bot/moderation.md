@@ -5,47 +5,20 @@ description: "Automated chat moderation for Senchabot Twitch bot: ALL CAPS detec
 
 # Twitch Bot — Moderation <Badge type="warning" text="NEW"/>
 
-Auto-moderation protects your stream chat in real-time by automatically enforcing rules against spam and unwanted links. Configure moderation from the dashboard at **Dashboard → Twitch → `<channel>` → Moderation** (`/dashboard/twitch/<channel-id>/moderation`).
+Your chat moderates itself while you stream. Turn it on at **Dashboard → Twitch → `<channel>` → Moderation** (`/dashboard/twitch/<channel-id>/moderation`): pick a preset, choose what happens on a violation, done.
 
-## Moderation Presets
+## What it watches
 
-Senchabot provides turn-key moderation presets that monitor chat and take action automatically:
+### ALL CAPS
+Catches messages that are 70%+ uppercase. Per violation, pick one: delete + warn, timeout + warn, warn only, delete only, or timeout only. Warnings support `{username}`; timeouts run 1 minute to 7 days (10,080 min, default 1 minute).
 
-### 1. ALL CAPS Detection
+**Repeat offenders** escalate on their own: the first strike gets your normal action, then an automatic timeout kicks in after N violations inside your time window (threshold 2–100, window 1–1,440 min, custom timeout length).
 
-Catches and handles messages dominated by uppercase characters (70%+ caps).
-
-- **Moderation Action**: Choose how to handle violations:
-  - **Delete message and warn**
-  - **Timeout user and warn**
-  - **Warn only**
-  - **Delete message only**
-  - **Timeout user only**
-- **Warning Message**: Customize the notice posted in chat (supports `{username}`).
-- **Timeout Duration**: Set the timeout length from **1 to 10,080 minutes** (up to 7 days; defaults to 1 minute).
-- **Timeout Repeat Offenders**: When enabled, the first violation uses your primary action (e.g. warn or delete), and users who reach a configurable violation threshold within a time window receive an automatic timeout:
-  - **Timeout at violation**: Number of repeat violations before timeout (2 to 100).
-  - **Repeat window**: Timeframe for tracking repeat offenses in minutes (1 to 1,440 minutes).
-  - **Timeout duration**: Custom timeout length applied to repeat offenders.
-
-### 2. Link Blocker
-
-Removes URLs posted in chat by unauthorized viewers to prevent scam links and self-promotion.
-
-- **Allow Subscribers to Send Links**: When disabled, only channel moderators and the broadcaster may post links in chat.
-- **Minimum Subscriber Months**: When subscriber links are allowed, set the minimum subscriber tenure (1 to 120 months) required to post links. Viewers below this threshold will have their links blocked.
-- **Moderation Action**: Choose between delete & warn, timeout & warn, warn only, delete only, or timeout only.
-- **Warning Message**: Custom notice posted when a link is removed (supports `{username}`).
-- **Timeout Duration**: Configurable timeout length (1 to 10,080 minutes).
-- **Timeout Repeat Offenders**: Automatically time out viewers who repeatedly attempt to post unauthorized links:
-  - **Timeout at violation**: Number of link attempts (2 to 100).
-  - **Repeat window**: Window in minutes (1 to 1,440 minutes).
-  - **Timeout duration**: Timeout length applied to repeat offenders.
+### Link Blocker
+Strips URLs from viewers who shouldn't post them — no scam links, no self-promo. Optionally let subscribers share links, with a minimum tenure (1–120 months) below which links still get blocked. Same five actions, custom warning, 1-minute-to-7-day timeouts, and the same repeat-offender escalation.
 
 ## Blocked Words
+One list of terms that get auto-deleted on sight. Add and remove words from the dashboard anytime.
 
-The **Blocked Words** list lets you specify terms that are automatically deleted and moderated whenever they appear in chat. Add words directly from the dashboard and manage them at any time.
-
-## Trigger Presets
-
-Alongside moderation presets, the Moderation page includes ready-made **Trigger Presets** (link filters, caps filters, and raid protections) that you can install as custom triggers with one click.
+## Bonus: Trigger Presets
+The same page ships one-click **Trigger Presets** — link filters, caps filters, raid protection — installable as custom triggers.
