@@ -5,47 +5,20 @@ description: "Senchabot Kick botu için otomatik sohbet moderasyonu: BÜYÜK HAR
 
 # Kick Botu — Moderasyon <Badge type="warning" text="YENİ"/>
 
-Otomatik moderasyon, sohbetteki spam ve istenmeyen bağlantılara karşı kuralları gerçek zamanlı uygulayarak yayınınızı korur. Moderasyonu panelden **Panel → Kick → `<kanal>` → Moderasyon** (`/dashboard/kick/<kanal-id>/moderation`) adresinden yapılandırabilirsiniz.
+Sohbetin, sen yayın yaparken kendini modere eder. **Panel → Kick → `<kanal>` → Moderasyon** (`/dashboard/kick/<kanal-id>/moderation`) adresinden aç: bir ön ayar seç, ihlalde ne olacağını belirle, bitti.
 
-## Moderasyon Ön Ayarları
+## Neleri izler
 
-Senchabot, sohbeti izleyip otomatik işlem yapan kullanıma hazır moderasyon ön ayarları sunar:
+### BÜYÜK HARF
+%70 ve üzeri büyük harften oluşan mesajları yakalar. Her ihlal için birini seç: sil + uyar, zaman aşımı + uyar, sadece uyar, sadece sil veya sadece zaman aşımı. Uyarılar `{username}` destekler; zaman aşımları 1 dakikadan 7 güne kadar (10.080 dk, varsayılan 1 dakika).
 
-### 1. BÜYÜK HARF Tespiti
+**Tekrarlayan ihlaller** kendiliğinden ağırlaşır: ilk ihlalde normal işlemin uygulanır, ardından belirlediğin zaman aralığındaki N. ihlalde otomatik zaman aşımı devreye girer (eşik 2–100, aralık 1–1.440 dk, özel zaman aşımı süresi).
 
-Çoğunluğu büyük harflerden oluşan (%70+ büyük harf) mesajları tespit eder ve işlem uygular.
-
-- **Moderasyon İşlemi**: İhlallerde uygulanacak işlemi seçin:
-  - **Mesajı sil ve uyar**
-  - **Kullanıcıyı zaman aşımına al ve uyar**
-  - **Sadece uyar**
-  - **Yalnızca mesajı sil**
-  - **Yalnızca kullanıcıyı zaman aşımına al**
-- **Uyarı Mesajı**: Sohbete gönderilecek uyarıyı özelleştirin (`{username}` desteklenir).
-- **Zaman Aşımı Süresi**: Uygulanacak süreyi **1 ile 10.080 dakika** (7 güne kadar) arasında belirleyin (varsayılan: 1 dakika).
-- **Tekrarlayan İhlallerde Zaman Aşımı**: Etkinleştirildiğinde, ilk ihlalde yukarıdaki işlem (ör. silme veya uyarı) uygulanırken, belirlenen zaman aralığında seçilen ihlal sayısına ulaşan kullanıcılara otomatik zaman aşımı uygulanır:
-  - **Şu ihlalde zaman aşımı**: Zaman aşımını tetikleyecek tekrar sayısı (2 ile 100 arası).
-  - **Tekrar zaman aralığı**: İhlallerin takip edileceği süre (1 ile 1.440 dakika arası).
-  - **Zaman aşımı süresi**: Tekrarlayan suçlulara uygulanacak özel süre.
-
-### 2. Link Engelleyici
-
-Dolandırıcılık bağlantılarını ve izinsiz reklamları engellemek için bağlantı içeren mesajları kaldırır.
-
-- **Aboneler Link Gönderebilir**: Kapalıyken yalnızca kanal moderatörleri ve yayıncı sohbette bağlantı paylaşabilir.
-- **Minimum Abone Ay Sayısı**: Abonelerin bağlantı paylaşmasına izin verildiğinde, bağlantı paylaşabilmek için gereken asgari abonelik süresini (1 ile 120 ay) belirler. Bu sürenin altındaki kullanıcıların bağlantıları engellenir.
-- **Moderasyon İşlemi**: Mesajı sil ve uyar, zaman aşımına al ve uyar, sadece uyar, yalnızca sil veya yalnızca zaman aşımına al seçeneklerinden birini belirleyin.
-- **Link Kaldırma Mesajı**: Bağlantı kaldırıldığında gönderilecek uyarı metni (`{username}` desteklenir).
-- **Zaman Aşımı Süresi**: Yapılandırılabilir zaman aşımı süresi (1 ile 10.080 dakika).
-- **Tekrarlayan İhlallerde Zaman Aşımı**: İnatla bağlantı paylaşmaya çalışan kullanıcılara otomatik zaman aşımı uygular:
-  - **Şu ihlalde zaman aşımı**: İhlal eşiği (2 ile 100 arası).
-  - **Tekrar zaman aralığı**: Takip aralığı (1 ile 1.440 dakika arası).
-  - **Zaman aşımı süresi**: Tekrarlayan ihlallerde uygulanacak süre.
+### Link Engelleyici
+Bağlantı paylaşmaması gereken izleyicilerin URL'lerini temizler — dolandırıcılık da yok, izinsiz reklam da. İstersen abonelerin link paylaşmasına izin ver; minimum üyelik süresi (1–120 ay) altındakilerin bağlantıları engellenmeye devam eder. Aynı beş işlem, özel uyarı, 1 dakikadan 7 güne zaman aşımları ve aynı tekrar-ihlal yükseltmesi.
 
 ## Yasaklı Kelimeler
+Görüldüğü anda otomatik silinen tek bir kelime listesi. Kelimeleri panelden dilediğin zaman ekle, çıkar.
 
-**Yasaklı Kelimeler** listesi, sohbette geçtiğinde otomatik olarak silinecek ve moderasyona alınacak ifadeleri belirlemenizi sağlar. Kelimeleri doğrudan panelden yönetebilirsiniz.
-
-## Tetikleyici Ön Ayarları
-
-Moderasyon ön ayarlarının yanı sıra, Moderasyon sayfasında tek tıkla yükleyebileceğiniz hazır **Tetikleyici Ön Ayarları** (bağlantı filtreleri, büyük harf filtreleri vb.) yer alır.
+## Bonus: Tetikleyici Ön Ayarları
+Aynı sayfada tek tıkla kurulan hazır **Tetikleyici Ön Ayarları** da var — bağlantı filtreleri, büyük harf filtreleri, baskın koruması.
