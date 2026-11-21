@@ -1,7 +1,11 @@
 ---
 title: Discord Botu — Komutlar
-description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Kick yayın duyuruları yönetimi, purge ve sunucu ayarları dahil.
+description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Kick yayın duyuruları, YouTube video duyuruları, purge ve sunucu ayarları dahil.
 ---
+
+<script setup>
+import { DISCORD_TRIGGERS_ENABLED } from '../../.vitepress/theme/flags'
+</script>
 
 # Discord Botu — Komutlar
 
@@ -14,6 +18,9 @@ description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Ki
 | /del-twitch | Twitch canlı yayın duyurusunu kaldırır. |
 | /del-kick | Kick canlı yayın duyurusunu kaldırır. |
 | /streamer-list | Canlı yayın duyuruları için eklenmiş Twitch ve Kick yayıncılarını listeler. |
+| /set-youtube | Bir YouTube kanalının yeni videolarını bir kanalda duyurur. |
+| /del-youtube | Bir YouTube kanalının video duyurularını durdurur. |
+| /youtube-list | Videoları duyurulan YouTube kanallarını listeler. |
 | /purge | Kanal mesajlarını veya bot etkinliklerini toplu siler. |
 | /invite | Botun davet bağlantısını gösterir. |
 | /do-not-track-my-messages | Mesaj takibinden çıkış yapar. |
@@ -119,31 +126,10 @@ description: Senchabot Discord slash komutlarının tam referansı; Twitch ve Ki
 
 <!-- Triggers - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css" scoped></style>
-<div>
+<div v-if="DISCORD_TRIGGERS_ENABLED">
     <a class="content-ref-s" href="/tr/discord-bot/triggers">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Tetikleyiciler <Badge type="warning" text="NEW"/></span>
-        </span>
-        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
-    </a>
-</div>
-
-## Planlandı {#planned}
-
-Aşağıdaki komutlar planlanmıştır ancak henüz aktif değildir:
-
-| Komut | Açıklama |
-| :-- | :-- |
-| /set-youtube | Kanal için YouTube canlı yayın duyurusu ekler. |
-| /del-youtube | YouTube canlı yayın duyurusunu kaldırır. |
-| /youtube-list | Takip edilen YouTube kanallarını listeler. |
-
-<!-- Reminder System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css" scoped></style>
-<div>
-    <a class="content-ref-s" href="">
-        <span class="ref-details-s">
-            <span class="content-ref-page-title-s">Hatırlatıcı Sistemi <Badge type="danger" text="planned | not active" /></span>
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>

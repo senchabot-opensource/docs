@@ -3,6 +3,10 @@ title: Kick Botu — Tetikleyiciler
 description: "Senchabot Kick botu için tetikleyiciler: sohbet mesajları ve yayın olayları, eşleşme tipleri, izinler ve denetim hedef kitleleri, yanıt eylemleri, değişkenler ve bekleme süreleri."
 ---
 
+<script setup>
+import { DISCORD_TRIGGERS_ENABLED } from '../../.vitepress/theme/flags'
+</script>
+
 # Kick Botu — Tetikleyiciler <Badge type="warning" text="GÜNCELLENDİ"/>
 
 Tetikleyiciler, panodan yapılandırdığınız otomatik kurallardır (**Panel → Kick → `<kanal>` → Tetikleyiciler**). Bir **sohbet mesajı** kuralınızla eşleştiğinde veya **yayın olayları** gerçekleştiğinde (yayın başlangıcı, belirli bir yayın süresine ulaşılması, kategori değişikliği veya yayın bitişi) çalışabilirler.
@@ -197,7 +201,7 @@ Tetikleyici listeleri kanal başına **30 saniye** önbelleğe alınır; panel �
 
 ## Çapraz platform
 
-Paylaşılan bir kanal için yapılandırılan bir tetikleyici, desteklendiği tüm bağlı platformlarda (Twitch, Kick, Discord) geçerlidir.
+Paylaşılan bir kanal için yapılandırılan bir tetikleyici, desteklendiği tüm bağlı platformlarda (Twitch, Kick{{ DISCORD_TRIGGERS_ENABLED ? ', Discord' : '' }}) geçerlidir.
 
 ## Moderasyon
 

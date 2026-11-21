@@ -3,6 +3,10 @@ title: Twitch Bot — Triggers
 description: "Triggers for Senchabot Twitch bot: chat messages and stream events, match types, permissions and moderation audiences, response actions, variables, and cooldowns."
 ---
 
+<script setup>
+import { DISCORD_TRIGGERS_ENABLED } from '../.vitepress/theme/flags'
+</script>
+
 # Twitch Bot — Triggers <Badge type="warning" text="UPDATED"/>
 
 Triggers are automated rules you configure from the dashboard (**Dashboard → Twitch → `<channel>` → Triggers**). They can run when a **chat message** matches your rule or when **stream events** occur (stream start, uptime milestones, category changes, or stream end).
@@ -196,7 +200,7 @@ Trigger lists are cached per channel for **30 seconds**; dashboard edits invalid
 
 ## Cross-platform
 
-A trigger configured for a shared channel applies across all connected platforms (Twitch, Kick, Discord) where supported.
+A trigger configured for a shared channel applies across all connected platforms (Twitch, Kick{{ DISCORD_TRIGGERS_ENABLED ? ', Discord' : '' }}) where supported.
 
 ## Moderation
 
