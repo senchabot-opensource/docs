@@ -2,6 +2,8 @@ import { writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { defineConfig } from 'vitepress'
 
+import { DISCORD_TRIGGERS_ENABLED, DISCORD_VARIABLES_ENABLED } from './theme/flags'
+
 const SITE_URL = 'https://docs.senchabot.com'
 
 function generateSitemap(siteConfig: any) {
@@ -109,6 +111,16 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   ignoreDeadLinks: true,
+
+  // Pages of features that are off for now: not built, so they're out of the sitemap and search.
+  srcExclude: [
+    ...(DISCORD_TRIGGERS_ENABLED
+      ? []
+      : ['discord-bot/triggers.md', 'tr/discord-bot/triggers.md']),
+    ...(DISCORD_VARIABLES_ENABLED
+      ? []
+      : ['discord-bot/variables.md', 'tr/discord-bot/variables.md']),
+  ],
 
   buildEnd(siteConfig) {
     generateSitemap(siteConfig)
@@ -375,30 +387,24 @@ export default defineConfig({
                     text: 'Custom API System',
                     link: '/discord-bot/custom-api-system'
                   },
-                  {
-                    text: 'Triggers',
-                    link: '/discord-bot/triggers'
-                  }
-                  // {
-                  //   text: "Reminder System",
-                  //   link: "/discord-bot/reminder-system",
-                  // },
+                  ...(DISCORD_TRIGGERS_ENABLED
+                    ? [
+                        {
+                          text: 'Triggers',
+                          link: '/discord-bot/triggers'
+                        }
+                      ]
+                    : [])
                 ]
               },
-              {
-                text: 'Planned',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'YouTube Commands',
-                    link: '/discord-bot/commands#planned'
-                  }
-                ]
-              },
-              {
-                text: 'Variables',
-                link: '/discord-bot/variables'
-              }
+              ...(DISCORD_VARIABLES_ENABLED
+                ? [
+                    {
+                      text: 'Variables',
+                      link: '/discord-bot/variables'
+                    }
+                  ]
+                : [])
             ]
           },
           {
@@ -587,30 +593,24 @@ export default defineConfig({
                     text: 'Custom API Sistemi',
                     link: '/tr/discord-bot/custom-api-system'
                   },
-                  {
-                    text: 'Tetikleyiciler',
-                    link: '/tr/discord-bot/triggers'
-                  }
-                  // {
-                  //   text: "Hatırlatıcı Sistemi",
-                  //   link: "/tr/discord-bot/reminder-system",
-                  // },
+                  ...(DISCORD_TRIGGERS_ENABLED
+                    ? [
+                        {
+                          text: 'Tetikleyiciler',
+                          link: '/tr/discord-bot/triggers'
+                        }
+                      ]
+                    : [])
                 ]
               },
-              {
-                text: 'Planlandı',
-                collapsed: true,
-                items: [
-                  {
-                    text: 'YouTube Komutları',
-                    link: '/tr/discord-bot/commands#planned'
-                  }
-                ]
-              },
-              {
-                text: 'Değişkenler',
-                link: '/tr/discord-bot/variables'
-              }
+              ...(DISCORD_VARIABLES_ENABLED
+                ? [
+                    {
+                      text: 'Değişkenler',
+                      link: '/tr/discord-bot/variables'
+                    }
+                  ]
+                : [])
             ]
           },
           {

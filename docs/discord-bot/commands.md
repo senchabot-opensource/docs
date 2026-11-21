@@ -1,7 +1,11 @@
 ---
 title: Discord Bot — Commands
-description: Complete reference for Senchabot Discord slash commands including Twitch and Kick live stream announcement management, purge, and server settings.
+description: Complete reference for Senchabot Discord slash commands including Twitch and Kick live stream announcements, YouTube video announcements, purge, and server settings.
 ---
+
+<script setup>
+import { DISCORD_TRIGGERS_ENABLED } from '../.vitepress/theme/flags'
+</script>
 
 # Discord Bot — Commands
 
@@ -14,6 +18,9 @@ description: Complete reference for Senchabot Discord slash commands including T
 | /del-twitch | Remove Twitch livestream announcement. |
 | /del-kick | Remove Kick livestream announcement. |
 | /streamer-list | List tracked Twitch and Kick streamers. |
+| /set-youtube | Announce a YouTube channel's new videos in a channel. |
+| /del-youtube | Stop announcing a YouTube channel's videos. |
+| /youtube-list | List YouTube channels whose videos are announced. |
 | /purge | Bulk delete channel messages or bot-created events. |
 | /invite | Get the bot invite link. |
 | /do-not-track-my-messages | Opt out of message tracking. |
@@ -119,31 +126,10 @@ Custom slash command management commands are documented in [`Custom Commands`](/
 
 <!-- Triggers - CONTENT REFERANCE SMALL -->
 <style src="@theme/style.css" scoped></style>
-<div>
+<div v-if="DISCORD_TRIGGERS_ENABLED">
     <a class="content-ref-s" href="/discord-bot/triggers">
         <span class="ref-details-s">
             <span class="content-ref-page-title-s">Triggers <Badge type="warning" text="NEW"/></span>
-        </span>
-        <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
-    </a>
-</div>
-
-## Planned {#planned}
-
-The following commands are planned but not yet active:
-
-| Command | Description |
-| :-- | :-- |
-| /set-youtube | Add YouTube livestream announcement for a channel. |
-| /del-youtube | Remove YouTube livestream announcement. |
-| /youtube-list | List tracked YouTube channels. |
-
-<!-- Reminder System - CONTENT REFERANCE SMALL -->
-<style src="@theme/style.css" scoped></style>
-<div>
-    <a class="content-ref-s" href="">
-        <span class="ref-details-s">
-            <span class="content-ref-page-title-s">Reminder System <Badge type="danger" text="planned | not active" /></span> 
         </span>
         <svg style="width:32px;height:32px;" viewBox="0 0 24 24" class="content-ref-svg-s" aria-hidden="true"><path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg>
     </a>
